@@ -6,9 +6,10 @@
 //
 
 #import "AppDelegate.h"
-#import "JPUSHService.h"
+//#import "JPUSHService.h"
 #import <UserNotifications/UserNotifications.h>
-@interface AppDelegate ()<JPUSHRegisterDelegate>
+@interface AppDelegate ()
+//<JPUSHRegisterDelegate>
 
 @end
 
@@ -63,15 +64,15 @@
     }];
     
     //极光推送
-    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-    if (@available(iOS 12.0, *)) {
-        entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound|JPAuthorizationOptionProvidesAppNotificationSettings;
-    } else {
-        entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
-    }
-    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-    [JPUSHService setupWithOption:launchOptions appKey:@"123456789" channel:@"AppStore" apsForProduction:NO advertisingIdentifier:nil];
-    [JPUSHService setLogOFF];//关闭日志
+//    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+//    if (@available(iOS 12.0, *)) {
+//        entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound|JPAuthorizationOptionProvidesAppNotificationSettings;
+//    } else {
+//        entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+//    }
+//    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+//    [JPUSHService setupWithOption:launchOptions appKey:@"123456789" channel:@"AppStore" apsForProduction:NO advertisingIdentifier:nil];
+//    [JPUSHService setLogOFF];//关闭日志
     
     /// 设置桌面长按touch
     [self longPressFunction];
@@ -132,7 +133,7 @@
 #pragma mark -- 极光推送
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken{
     //sdk注册DeviceToken
-    [JPUSHService registerDeviceToken:deviceToken];
+//    [JPUSHService registerDeviceToken:deviceToken];
 }
 
 #pragma mark -- 设置桌面3D Touch

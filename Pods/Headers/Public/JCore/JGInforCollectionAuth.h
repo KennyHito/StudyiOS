@@ -1,1 +1,0 @@
-../../../JCore/JGInforCollectionAuth.h

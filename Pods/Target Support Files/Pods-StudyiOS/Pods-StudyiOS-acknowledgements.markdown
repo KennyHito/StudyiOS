@@ -162,14 +162,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-## JCore
-
-Copyright jpush.cn
-
-## JPush
-
-Copyright jiguang.cn
-
 ## MBProgressHUD
 
 Copyright © 2009-2020 Matej Bukovinski
@@ -351,16 +343,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
-
-## UMCommon
-
-Copyright 2011 - 2021 umeng.com. All rights reserved.
-
-
-## UMDevice
-
-Copyright 2011 - 2021 umeng.com. All rights reserved.
 
 
 ## YYText
