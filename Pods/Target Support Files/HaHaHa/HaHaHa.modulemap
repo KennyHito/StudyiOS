@@ -1,0 +1,6 @@
+framework module HaHaHa {
+  umbrella header "HaHaHa-umbrella.h"
+
+  export *
+  module * { export * }
+}

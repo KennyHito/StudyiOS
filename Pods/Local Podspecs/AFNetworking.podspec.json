@@ -1,0 +1,22 @@
+{
+  "name": "AFNetworking",
+  "version": "4.0.1",
+  "summary": "A short description of AFNetworking.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/李东博/AFNetworking",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "李东博": "lidongbo@lczq.com"
+  },
+  "source": {
+    "git": "https://github.com/李东博/AFNetworking.git",
+    "tag": "4.0.1"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "AFNetworking/**/*"
+}

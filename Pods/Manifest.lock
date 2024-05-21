@@ -1,0 +1,100 @@
+PODS:
+  - AFNetworking (4.0.1)
+  - FBRetainCycleDetector (0.1.4)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - FTPopOverMenu (2.1.3)
+  - HaHaHa (1.0.0):
+    - AFNetworking
+  - IQKeyboardManager (6.5.11)
+  - JCore (4.1.0)
+  - JPush (4.9.0):
+    - JCore (>= 2.0.0)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MJExtension (3.4.1)
+  - MJRefresh (3.7.5)
+  - MLeaksFinder (1.0.0):
+    - FBRetainCycleDetector
+  - ReactiveObjC (3.1.1)
+  - SDWebImage (5.15.2):
+    - SDWebImage/Core (= 5.15.2)
+  - SDWebImage/Core (5.15.2)
+  - Test01 (1.0.0):
+    - AFNetworking
+  - UMCommon (7.3.8):
+    - UMDevice
+  - UMDevice (2.2.1)
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - AFNetworking (from `./Lib/AFNetworking`)
+  - FMDB (~> 2.7.5)
+  - FTPopOverMenu (~> 2.1.1)
+  - HaHaHa (from `./Lib/HaHaHa`)
+  - IQKeyboardManager (~> 6.5.10)
+  - JPush
+  - Masonry (~> 1.1.0)
+  - MBProgressHUD (~> 1.2.0)
+  - MJExtension
+  - MJRefresh (~> 3.7.5)
+  - MLeaksFinder (= 1.0.0)
+  - ReactiveObjC (~> 3.1.1)
+  - SDWebImage
+  - Test01 (from `./Lib/Test01`)
+  - UMCommon
+  - UMDevice
+  - YYText (~> 1.0.7)
+
+SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - FBRetainCycleDetector
+    - FMDB
+    - FTPopOverMenu
+    - IQKeyboardManager
+    - JCore
+    - JPush
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - MLeaksFinder
+    - ReactiveObjC
+    - SDWebImage
+    - UMCommon
+    - UMDevice
+    - YYText
+
+EXTERNAL SOURCES:
+  AFNetworking:
+    :path: "./Lib/AFNetworking"
+  HaHaHa:
+    :path: "./Lib/HaHaHa"
+  Test01:
+    :path: "./Lib/Test01"
+
+SPEC CHECKSUMS:
+  AFNetworking: 3b79a35adabc6ec03a0f4a281d2e15401f422f84
+  FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  FTPopOverMenu: ddfbc47d626fb5ad34558b150e5b40070c53af59
+  HaHaHa: f72c252d7ca0940c4502eae136391492fa66620e
+  IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
+  JCore: ea26a5dde38ebf6e4e85b772d4ecce8e0e95fb55
+  JPush: 3d67f9844abca401a2beff8381dac015e09253a7
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SDWebImage: 8ab87d4b3e5cc4927bd47f78db6ceb0b94442577
+  Test01: 119ccf64feea50a1e1562a552eb702c6951a0a04
+  UMCommon: fdb5bac9e7ec2aca4f9cfc0febf414b59ed302cb
+  UMDevice: 053478c4b4d7292f31f0a275c227d3c4007a5571
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+
+PODFILE CHECKSUM: 31d7ded46c280c089d5f35ee55f5713ea1bc5588
+
+COCOAPODS: 1.15.2

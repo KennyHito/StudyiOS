@@ -1,0 +1,27 @@
+{
+  "name": "Test01",
+  "version": "1.0.0",
+  "summary": "Test01",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://www.baidu.com",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "张三": "zhagnsan@baidu.com"
+  },
+  "source": {
+    "git": "https://www.baidu.com",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "Test01/**/*",
+  "dependencies": {
+    "AFNetworking": [
+
+    ]
+  }
+}

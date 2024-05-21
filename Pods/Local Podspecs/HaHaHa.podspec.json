@@ -1,0 +1,27 @@
+{
+  "name": "HaHaHa",
+  "version": "1.0.0",
+  "summary": "HaHaHa",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/李东博/AFNetworking",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "李东博": "lidongbo@lczq.com"
+  },
+  "source": {
+    "git": "https://github.com/李东博/AFNetworking.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "HaHaHa/**/*",
+  "dependencies": {
+    "AFNetworking": [
+
+    ]
+  }
+}

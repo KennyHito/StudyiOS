@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>测试一下</title>
+</head>
+<body>
+    <div>
+    <b id="inputBox" onclick ="clickBtn()">这段文字来源于H5页面,点击文字可以与App原生进行交互,不妨试试呀!</b>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+function clickBtn(){
+    var dict = {"name":"我叫张三","age":"今年20岁"};
+    window.webkit.messageHandlers.FirstJsObect.postMessage(dict);
+ }
+</script>
+
+<style>
+    div {
+        background: #F5F5F5;
+    }
+    #inputBox {
+        font-size:20px;
+    }
+</style>

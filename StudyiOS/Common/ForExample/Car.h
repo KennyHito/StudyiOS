@@ -1,0 +1,18 @@
+//
+//  Car.h
+//  StudyiOS
+//
+//  Created by Apple on 2023/10/9.
+//
+
+#import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface Car : NSObject
+
++ (instancetype)callObjectTarget:(id)per;
+
+@end
+
+NS_ASSUME_NONNULL_END
