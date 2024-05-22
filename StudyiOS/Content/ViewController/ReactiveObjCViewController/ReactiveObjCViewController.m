@@ -36,7 +36,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self.bgView setHidden:YES];
     //示例1
     [self.view addSubview:self.userTextField];
     [self.userTextField.rac_textSignal subscribeNext:^(NSString * _Nullable x) {

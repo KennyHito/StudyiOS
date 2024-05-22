@@ -15,10 +15,7 @@ target 'StudyiOS' do
     pod 'AFNetworking',:path => LocationPath + 'AFNetworking'
     pod 'HaHaHa',:path => LocationPath + 'HaHaHa'
     pod 'Test01',:path => LocationPath + 'Test01'
-#    pod 'UMCommon'#由原来的UMCCommon变为UMCommon
-#    pod 'UMDevice'
     pod 'SDWebImage'
-#    pod 'AMap3DMap' #3D地图SDK
     pod 'MJExtension'
     pod 'MJRefresh', '~> 3.7.5'
     pod 'FMDB', '~> 2.7.5'
@@ -28,7 +25,6 @@ target 'StudyiOS' do
     pod 'IQKeyboardManager', '~> 6.5.10'
     pod 'MLeaksFinder' , '1.0.0', :configurations => ['Debug']
     pod 'MBProgressHUD', '~> 1.2.0'
-#    pod 'JPush' 
 end
 
 post_install do |installer|
