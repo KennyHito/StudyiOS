@@ -142,6 +142,7 @@
 		18C0318429AC78DB0098BE0D /* TryCatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C0318229AC78DB0098BE0D /* TryCatchViewController.m */; };
 		18C0318529AC78DB0098BE0D /* TryCatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */; };
 		18C494F32AE21F87002D4C3B /* PrivacyCheckGatherTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C494F22AE21F87002D4C3B /* PrivacyCheckGatherTool.m */; };
+		18D3F6962C48A9D000885044 /* 联储证券生产加固包.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D3F6952C48A9D000885044 /* 联储证券生产加固包.png */; };
 		18DBE7612ADFB94200E78A31 /* LaunchBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */; };
 		18DBE7622ADFB94200E78A31 /* LaunchLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE7602ADFB94200E78A31 /* LaunchLogo.png */; };
 		18DBE7662AE110C000E78A31 /* MultiThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBE7642AE110C000E78A31 /* MultiThreadViewController.m */; };
@@ -421,6 +422,7 @@
 		18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TryCatchViewController.xib; sourceTree = "<group>"; };
 		18C494F12AE21F87002D4C3B /* PrivacyCheckGatherTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacyCheckGatherTool.h; sourceTree = "<group>"; };
 		18C494F22AE21F87002D4C3B /* PrivacyCheckGatherTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivacyCheckGatherTool.m; sourceTree = "<group>"; };
+		18D3F6952C48A9D000885044 /* 联储证券生产加固包.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "联储证券生产加固包.png"; sourceTree = "<group>"; };
 		18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchBackground.jpg; sourceTree = "<group>"; };
 		18DBE7602ADFB94200E78A31 /* LaunchLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchLogo.png; sourceTree = "<group>"; };
 		18DBE7632AE110C000E78A31 /* MultiThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadViewController.h; sourceTree = "<group>"; };
@@ -879,6 +881,7 @@
 		186FD3FB2924B1C0003A31C0 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				18D3F6952C48A9D000885044 /* 联储证券生产加固包.png */,
 				1868F34F2AFA27FE0020FF1A /* gouwuche */,
 				1868F3172AF9CF100020FF1A /* test.html */,
 				1887B5742AF8768F00EEECAE /* Video */,
@@ -1565,6 +1568,7 @@
 				1887B5302AF4C58D00EEECAE /* headIcon-6.jpg in Resources */,
 				1887B52F2AF4C58D00EEECAE /* headIcon-7.jpg in Resources */,
 				1887B52E2AF4C58D00EEECAE /* headIcon-10.jpg in Resources */,
+				18D3F6962C48A9D000885044 /* 联储证券生产加固包.png in Resources */,
 				186FD4002924B1C0003A31C0 /* 3.png in Resources */,
 				1868F3462AFA22E30020FF1A /* fangda.png in Resources */,
 				186FD3F92924AB9A003A31C0 /* TimerViewController.xib in Resources */,
