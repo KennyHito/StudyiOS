@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FMDB-FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -25,6 +30,11 @@
 			<false/>
 		</dict>
 		<key>HaHaHa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManager-IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -65,6 +75,11 @@
 			<false/>
 		</dict>
 		<key>ReactiveObjC.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

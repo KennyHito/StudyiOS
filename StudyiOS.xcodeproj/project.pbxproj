@@ -142,6 +142,8 @@
 		18C0318429AC78DB0098BE0D /* TryCatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C0318229AC78DB0098BE0D /* TryCatchViewController.m */; };
 		18C0318529AC78DB0098BE0D /* TryCatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */; };
 		18C494F32AE21F87002D4C3B /* PrivacyCheckGatherTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C494F22AE21F87002D4C3B /* PrivacyCheckGatherTool.m */; };
+		18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */; };
+		18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */; };
 		18DBE7612ADFB94200E78A31 /* LaunchBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */; };
 		18DBE7622ADFB94200E78A31 /* LaunchLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE7602ADFB94200E78A31 /* LaunchLogo.png */; };
 		18DBE7662AE110C000E78A31 /* MultiThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBE7642AE110C000E78A31 /* MultiThreadViewController.m */; };
@@ -421,6 +423,9 @@
 		18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TryCatchViewController.xib; sourceTree = "<group>"; };
 		18C494F12AE21F87002D4C3B /* PrivacyCheckGatherTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacyCheckGatherTool.h; sourceTree = "<group>"; };
 		18C494F22AE21F87002D4C3B /* PrivacyCheckGatherTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivacyCheckGatherTool.m; sourceTree = "<group>"; };
+		18CCDCFC2C537B1500968855 /* PrisonBreakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrisonBreakViewController.h; sourceTree = "<group>"; };
+		18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrisonBreakViewController.m; sourceTree = "<group>"; };
+		18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrisonBreakViewController.xib; sourceTree = "<group>"; };
 		18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchBackground.jpg; sourceTree = "<group>"; };
 		18DBE7602ADFB94200E78A31 /* LaunchLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchLogo.png; sourceTree = "<group>"; };
 		18DBE7632AE110C000E78A31 /* MultiThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadViewController.h; sourceTree = "<group>"; };
@@ -670,6 +675,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				18CCDCF62C5379D100968855 /* PrisonBreakViewController */,
 				1868F35D2AFB272C0020FF1A /* AppleShareViewController */,
 				1868F3562AFB19040020FF1A /* MusicViewController */,
 				1868F3472AFA27370020FF1A /* GuoWuCheViewController */,
@@ -1327,6 +1333,16 @@
 			path = PrivacyCheckGatherTool;
 			sourceTree = "<group>";
 		};
+		18CCDCF62C5379D100968855 /* PrisonBreakViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18CCDCFC2C537B1500968855 /* PrisonBreakViewController.h */,
+				18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */,
+				18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */,
+			);
+			path = PrisonBreakViewController;
+			sourceTree = "<group>";
+		};
 		18DBE75E2ADFB94200E78A31 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1560,6 +1576,7 @@
 				1887B5352AF4C58D00EEECAE /* headIcon-2.jpg in Resources */,
 				1887B5762AF8769E00EEECAE /* qidong.mp4 in Resources */,
 				1868F3302AFA16160020FF1A /* city.json in Resources */,
+				18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */,
 				1887B5272AF4C58D00EEECAE /* headIcon-14.jpg in Resources */,
 				1868B54E2AEB4B2C000E8C04 /* Main.storyboard in Resources */,
 				1887B5302AF4C58D00EEECAE /* headIcon-6.jpg in Resources */,
@@ -1729,6 +1746,7 @@
 				1868F31F2AF9E7050020FF1A /* HsWeakScriptMessageDelegate.m in Sources */,
 				1887B55F2AF4C97D00EEECAE /* CLLockItemView.m in Sources */,
 				18DBE7742AE2189200E78A31 /* NSString+Common.m in Sources */,
+				18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */,
 				18B1ED32290F9CDB00647F15 /* main.m in Sources */,
 				182189FC2990EDA400EFBF5C /* ReactiveObjCViewController.m in Sources */,
 				1887B55D2AF4C97D00EEECAE /* CoreLockConst.m in Sources */,
@@ -2054,7 +2072,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2113,7 +2131,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -129,12 +129,12 @@
     
     // We need call super method to keep function. This will impliedly call `setNeedsDisplay`. But we have no way to avoid this when using animated image. So we call `setNeedsDisplay` again at the end.
     super.image = image;
-    if ([image.class conformsToProtocol:@protocol(SDAnimatedImage)]) {
+    if ([image.class conformsToProtocol:@protocol(SDAnimatedImage)] && [(id<SDAnimatedImage>)image animatedImageFrameCount] > 1) {
         if (!self.player) {
             id<SDAnimatedImageProvider> provider;
             // Check progressive loading
             if (self.isProgressive) {
-                provider = [self progressiveAnimatedCoderForImage:image];
+                provider = [(id<SDAnimatedImage>)image animatedCoder];
             } else {
                 provider = (id<SDAnimatedImage>)image;
             }
@@ -500,6 +500,17 @@
         }
     }
 }
+
+#if SD_UIKIT
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    // See: #3635
+    // From iOS 17, when UIImageView entering the background, it will receive the trait collection changes, and modify the CALayer.contents by `self.image.CGImage`
+    // However, For animated image, `self.image.CGImge != self.currentFrame.CGImage`, right ?
+    // So this cause the render issue, we need to reset the CALayer.contents again
+    [super traitCollectionDidChange:previousTraitCollection];
+    [self.imageViewLayer setNeedsDisplay];
+}
+#endif
 
 #if SD_MAC
 // NSImageView use a subview. We need this subview's layer for actual rendering.

@@ -51,6 +51,7 @@
                      @{Tab_Title:@"18、AVPlayer播放音频",Tab_Url:@"MusicViewController"},
                      @{Tab_Title:@"19、电商类软件加购动画效果",Tab_Url:@"GuoWuCheViewController"},
                      @{Tab_Title:@"20、苹果系统自带分享功能",Tab_Url:@"AppleShareViewController"},
+                     @{Tab_Title:@"21、判断手机是否越狱",Tab_Url:@"PrisonBreakViewController"},
     ];
     [self.tableView reloadData];
 }
