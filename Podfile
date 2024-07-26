@@ -34,7 +34,7 @@ target 'StudyiOS' do
       target.build_configurations.each do |config|
         config.build_settings["SWIFT_VERSION"] = "4.2"
         config.build_settings["VALID_ARCHS"] = "arm64 arm64e x86_64"
-        config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "10.0"
+        config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "11.0"
         config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
       end
     end
