@@ -32,9 +32,12 @@ target 'StudyiOS' do
     #-------------下面支持模拟器运行Podfile配置-----------------#
     installer.pods_project.targets.each do |target|
       target.build_configurations.each do |config|
+        #给每个库单独指定Swift 版本
         config.build_settings["SWIFT_VERSION"] = "4.2"
-        config.build_settings["VALID_ARCHS"] = "arm64 arm64e x86_64"
+        #给每个库单独指定最低支持的系统版本
         config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "11.0"
+        #给每个库单独指定VALID_ARCHS
+        config.build_settings["VALID_ARCHS"] = "arm64 x86_64"
         config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
       end
     end
