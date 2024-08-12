@@ -53,5 +53,6 @@
 #import "TTReadWhiteSafeDic.h"
 #import "MainTabBarViewController.h"
 #import "MovieViewController.h"
+#import "YYKeyChainData.h"
 
 #endif /* PrefixHeader_pch */

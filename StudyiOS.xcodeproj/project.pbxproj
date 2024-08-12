@@ -143,6 +143,7 @@
 		18C0318529AC78DB0098BE0D /* TryCatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */; };
 		18C2D5782C69E0D1003011DD /* YYKeyChainData_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C2D5762C69E0D1003011DD /* YYKeyChainData_1.png */; };
 		18C2D5792C69E0D1003011DD /* YYKeyChainData_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C2D5772C69E0D1003011DD /* YYKeyChainData_2.png */; };
+		18C2D57D2C69E153003011DD /* YYKeyChainData.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2D57B2C69E153003011DD /* YYKeyChainData.m */; };
 		18C494F32AE21F87002D4C3B /* PrivacyCheckGatherTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C494F22AE21F87002D4C3B /* PrivacyCheckGatherTool.m */; };
 		18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */; };
 		18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */; };
@@ -425,6 +426,9 @@
 		18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TryCatchViewController.xib; sourceTree = "<group>"; };
 		18C2D5762C69E0D1003011DD /* YYKeyChainData_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YYKeyChainData_1.png; sourceTree = "<group>"; };
 		18C2D5772C69E0D1003011DD /* YYKeyChainData_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YYKeyChainData_2.png; sourceTree = "<group>"; };
+		18C2D57B2C69E153003011DD /* YYKeyChainData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKeyChainData.m; sourceTree = "<group>"; };
+		18C2D57C2C69E153003011DD /* YYKeyChainData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKeyChainData.h; sourceTree = "<group>"; };
+		18C2D57E2C69E26A003011DD /* StudyiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StudyiOS.entitlements; sourceTree = "<group>"; };
 		18C494F12AE21F87002D4C3B /* PrivacyCheckGatherTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacyCheckGatherTool.h; sourceTree = "<group>"; };
 		18C494F22AE21F87002D4C3B /* PrivacyCheckGatherTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivacyCheckGatherTool.m; sourceTree = "<group>"; };
 		18CCDCFC2C537B1500968855 /* PrisonBreakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrisonBreakViewController.h; sourceTree = "<group>"; };
@@ -568,6 +572,7 @@
 		18227611292490B600242C9A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				18C2D57A2C69E13D003011DD /* YYKeyChainData */,
 				1868F3652AFB301E0020FF1A /* CacheTool */,
 				1868F3612AFB2E840020FF1A /* UIAlertController */,
 				1868F34B2AFA27590020FF1A /* ShoppingCartTool */,
@@ -1265,6 +1270,7 @@
 		18B1ED1E290F9CDA00647F15 /* StudyiOS */ = {
 			isa = PBXGroup;
 			children = (
+				18C2D57E2C69E26A003011DD /* StudyiOS.entitlements */,
 				186FD3FB2924B1C0003A31C0 /* Resource */,
 				182275FE2924908F00242C9A /* Categroy */,
 				18227611292490B600242C9A /* Common */,
@@ -1328,6 +1334,15 @@
 				186555D02AE2505F00E16698 /* studyInfo.plist */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		18C2D57A2C69E13D003011DD /* YYKeyChainData */ = {
+			isa = PBXGroup;
+			children = (
+				18C2D57C2C69E153003011DD /* YYKeyChainData.h */,
+				18C2D57B2C69E153003011DD /* YYKeyChainData.m */,
+			);
+			path = YYKeyChainData;
 			sourceTree = "<group>";
 		};
 		18C494F02AE21F77002D4C3B /* PrivacyCheckGatherTool */ = {
@@ -1694,6 +1709,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				187A93F62AF0DFAD000EAB05 /* MainTabBarViewController.m in Sources */,
+				18C2D57D2C69E153003011DD /* YYKeyChainData.m in Sources */,
 				1822760F2924908F00242C9A /* NSArray+ObjectAtIndex.m in Sources */,
 				1822760E2924908F00242C9A /* NSMutableArray+ObjectAtIndex.m in Sources */,
 				1868F3642AFB2EBD0020FF1A /* AlertControTool.m in Sources */,
@@ -2045,6 +2061,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StudyiOS/StudyiOS.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2105,6 +2122,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = StudyiOS/StudyiOS.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

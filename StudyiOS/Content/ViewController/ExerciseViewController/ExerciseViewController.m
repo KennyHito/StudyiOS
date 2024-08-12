@@ -67,6 +67,7 @@
     [self demo19];
     [self demo20];
     [self demo21];
+    [self demo22];
 }
 
 - (void)initData{
@@ -663,6 +664,11 @@
     NSArray *arr = @[@"12"];
     KLog(@"%@",arr[20]);
     //    [DDToast showToast:@"哈哈哈哈"];
+}
+
+#pragma mark -- demo22
+- (void)demo22{
+    KLog(@"YYKeyChainData : %@",[YYKeyChainData getUUIDByKeyChain]);
 }
 
 @end
