@@ -37,7 +37,8 @@ Target - Capabilities - KeychainSharing - ON
 ![图一](https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/YYKeyChainData_1.png)
 
 第二步,集成YYKeyChainData
-导入文件,
+
+导入头文件
 ```
 #import "YYKeyChainData.h"
 ```
