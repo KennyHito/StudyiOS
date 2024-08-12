@@ -141,6 +141,8 @@
 		18B1ED59290F9D7D00647F15 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B1ED55290F9D7D00647F15 /* HomeViewController.m */; };
 		18C0318429AC78DB0098BE0D /* TryCatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C0318229AC78DB0098BE0D /* TryCatchViewController.m */; };
 		18C0318529AC78DB0098BE0D /* TryCatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */; };
+		18C2D5782C69E0D1003011DD /* YYKeyChainData_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C2D5762C69E0D1003011DD /* YYKeyChainData_1.png */; };
+		18C2D5792C69E0D1003011DD /* YYKeyChainData_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C2D5772C69E0D1003011DD /* YYKeyChainData_2.png */; };
 		18C494F32AE21F87002D4C3B /* PrivacyCheckGatherTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C494F22AE21F87002D4C3B /* PrivacyCheckGatherTool.m */; };
 		18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */; };
 		18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */; };
@@ -421,6 +423,8 @@
 		18C0318129AC78DB0098BE0D /* TryCatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TryCatchViewController.h; sourceTree = "<group>"; };
 		18C0318229AC78DB0098BE0D /* TryCatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TryCatchViewController.m; sourceTree = "<group>"; };
 		18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TryCatchViewController.xib; sourceTree = "<group>"; };
+		18C2D5762C69E0D1003011DD /* YYKeyChainData_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YYKeyChainData_1.png; sourceTree = "<group>"; };
+		18C2D5772C69E0D1003011DD /* YYKeyChainData_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YYKeyChainData_2.png; sourceTree = "<group>"; };
 		18C494F12AE21F87002D4C3B /* PrivacyCheckGatherTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacyCheckGatherTool.h; sourceTree = "<group>"; };
 		18C494F22AE21F87002D4C3B /* PrivacyCheckGatherTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivacyCheckGatherTool.m; sourceTree = "<group>"; };
 		18CCDCFC2C537B1500968855 /* PrisonBreakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrisonBreakViewController.h; sourceTree = "<group>"; };
@@ -912,6 +916,8 @@
 		186FD4A7292611D3003A31C0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				18C2D5762C69E0D1003011DD /* YYKeyChainData_1.png */,
+				18C2D5772C69E0D1003011DD /* YYKeyChainData_2.png */,
 				186FD3FC2924B1C0003A31C0 /* 2.png */,
 				186FD3FD2924B1C0003A31C0 /* 3.png */,
 				186FD3FE2924B1C0003A31C0 /* 1.png */,
@@ -1577,6 +1583,7 @@
 				1887B5762AF8769E00EEECAE /* qidong.mp4 in Resources */,
 				1868F3302AFA16160020FF1A /* city.json in Resources */,
 				18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */,
+				18C2D5782C69E0D1003011DD /* YYKeyChainData_1.png in Resources */,
 				1887B5272AF4C58D00EEECAE /* headIcon-14.jpg in Resources */,
 				1868B54E2AEB4B2C000E8C04 /* Main.storyboard in Resources */,
 				1887B5302AF4C58D00EEECAE /* headIcon-6.jpg in Resources */,
@@ -1586,6 +1593,7 @@
 				1868F3462AFA22E30020FF1A /* fangda.png in Resources */,
 				186FD3F92924AB9A003A31C0 /* TimerViewController.xib in Resources */,
 				1868F3722AFB61B20020FF1A /* moren.jpg in Resources */,
+				18C2D5792C69E0D1003011DD /* YYKeyChainData_2.png in Resources */,
 				1868F36A2AFB55B80020FF1A /* 123.mp4 in Resources */,
 				1887B5012AF4C2A900EEECAE /* RuntimeViewController.xib in Resources */,
 				1887B5362AF4C58D00EEECAE /* headIcon-3.jpg in Resources */,
