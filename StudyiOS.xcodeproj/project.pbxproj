@@ -130,6 +130,8 @@
 		189295042AF4C239004B4A43 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189295032AF4C239004B4A43 /* TableViewController.m */; };
 		18929B1E2AD3D48C006D6CE4 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 18929B1D2AD3D48C006D6CE4 /* Person.m */; };
 		18929B212AD3D496006D6CE4 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 18929B202AD3D496006D6CE4 /* Car.m */; };
+		189C998F2C6C41C8008DFEE7 /* CountDownViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 189C998D2C6C41C8008DFEE7 /* CountDownViewcontroller.m */; };
+		189C99902C6C41C8008DFEE7 /* CountDownViewcontroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189C998E2C6C41C8008DFEE7 /* CountDownViewcontroller.xib */; };
 		18B1ED21290F9CDA00647F15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B1ED20290F9CDA00647F15 /* AppDelegate.m */; };
 		18B1ED27290F9CDA00647F15 /* ExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B1ED26290F9CDA00647F15 /* ExerciseViewController.m */; };
 		18B1ED2C290F9CDB00647F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B1ED2B290F9CDB00647F15 /* Assets.xcassets */; };
@@ -404,6 +406,9 @@
 		18929B1D2AD3D48C006D6CE4 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		18929B1F2AD3D496006D6CE4 /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		18929B202AD3D496006D6CE4 /* Car.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		189C998C2C6C41C8008DFEE7 /* CountDownViewcontroller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountDownViewcontroller.h; sourceTree = "<group>"; };
+		189C998D2C6C41C8008DFEE7 /* CountDownViewcontroller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownViewcontroller.m; sourceTree = "<group>"; };
+		189C998E2C6C41C8008DFEE7 /* CountDownViewcontroller.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountDownViewcontroller.xib; sourceTree = "<group>"; };
 		18B1ED1C290F9CDA00647F15 /* StudyiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B1ED1F290F9CDA00647F15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18B1ED20290F9CDA00647F15 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -684,6 +689,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				189C998B2C6C41BB008DFEE7 /* CountDownViewcontroller */,
 				18CCDCF62C5379D100968855 /* PrisonBreakViewController */,
 				1868F35D2AFB272C0020FF1A /* AppleShareViewController */,
 				1868F3562AFB19040020FF1A /* MusicViewController */,
@@ -1242,6 +1248,16 @@
 			path = ForExample;
 			sourceTree = "<group>";
 		};
+		189C998B2C6C41BB008DFEE7 /* CountDownViewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				189C998C2C6C41C8008DFEE7 /* CountDownViewcontroller.h */,
+				189C998D2C6C41C8008DFEE7 /* CountDownViewcontroller.m */,
+				189C998E2C6C41C8008DFEE7 /* CountDownViewcontroller.xib */,
+			);
+			path = CountDownViewcontroller;
+			sourceTree = "<group>";
+		};
 		18B1ED13290F9CDA00647F15 = {
 			isa = PBXGroup;
 			children = (
@@ -1615,6 +1631,7 @@
 				1868F3132AF8C4420020FF1A /* WSDatePickerView.xib in Resources */,
 				1887B53A2AF4C58D00EEECAE /* headIcon-18.jpg in Resources */,
 				180932E92AFB6C65002F4EBC /* loading-icon.png in Resources */,
+				189C99902C6C41C8008DFEE7 /* CountDownViewcontroller.xib in Resources */,
 				186555D12AE2505F00E16698 /* studyInfo.plist in Resources */,
 				1887B5292AF4C58D00EEECAE /* headIcon-17.jpg in Resources */,
 				1887B5342AF4C58D00EEECAE /* headIcon-0.jpg in Resources */,
@@ -1756,6 +1773,7 @@
 				18227632292490B600242C9A /* TTMiddleObject.m in Sources */,
 				1868B54C2AEA62ED000E8C04 /* HsConfig.m in Sources */,
 				1822762F292490B600242C9A /* DDFPSButton.m in Sources */,
+				189C998F2C6C41C8008DFEE7 /* CountDownViewcontroller.m in Sources */,
 				1887B5722AF4CBCE00EEECAE /* CoreArchive.m in Sources */,
 				1868F3682AFB30350020FF1A /* CacheTool.m in Sources */,
 				182276102924908F00242C9A /* NSString+TTMD5.m in Sources */,
