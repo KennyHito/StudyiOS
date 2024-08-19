@@ -141,6 +141,9 @@
 		18B1ED46290F9CDB00647F15 /* StudyiOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B1ED45290F9CDB00647F15 /* StudyiOSUITests.m */; };
 		18B1ED48290F9CDB00647F15 /* StudyiOSUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B1ED47290F9CDB00647F15 /* StudyiOSUITestsLaunchTests.m */; };
 		18B1ED59290F9D7D00647F15 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B1ED55290F9D7D00647F15 /* HomeViewController.m */; };
+		18B842762C73205D00886209 /* MainNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842752C73205D00886209 /* MainNavViewController.m */; };
+		18B842792C73210700886209 /* MainTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842782C73210700886209 /* MainTabBar.m */; };
+		18B842882C7334B300886209 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842872C7334B300886209 /* UIView+Frame.m */; };
 		18C0318429AC78DB0098BE0D /* TryCatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C0318229AC78DB0098BE0D /* TryCatchViewController.m */; };
 		18C0318529AC78DB0098BE0D /* TryCatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */; };
 		18C2D5782C69E0D1003011DD /* YYKeyChainData_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C2D5762C69E0D1003011DD /* YYKeyChainData_1.png */; };
@@ -426,6 +429,12 @@
 		18B1ED57290F9D7D00647F15 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		18B1ED60290F9D9E00647F15 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		18B1ED61290F9DAA00647F15 /* Contast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contast.h; sourceTree = "<group>"; };
+		18B842742C73205D00886209 /* MainNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavViewController.h; sourceTree = "<group>"; };
+		18B842752C73205D00886209 /* MainNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavViewController.m; sourceTree = "<group>"; };
+		18B842772C73210700886209 /* MainTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBar.h; sourceTree = "<group>"; };
+		18B842782C73210700886209 /* MainTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBar.m; sourceTree = "<group>"; };
+		18B842862C7334B300886209 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		18B842872C7334B300886209 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		18C0318129AC78DB0098BE0D /* TryCatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TryCatchViewController.h; sourceTree = "<group>"; };
 		18C0318229AC78DB0098BE0D /* TryCatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TryCatchViewController.m; sourceTree = "<group>"; };
 		18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TryCatchViewController.xib; sourceTree = "<group>"; };
@@ -527,6 +536,7 @@
 		182275FE2924908F00242C9A /* Categroy */ = {
 			isa = PBXGroup;
 			children = (
+				18B842822C73346A00886209 /* UIView+Category */,
 				1868B5442AEA6133000E8C04 /* NSDictionary+Category */,
 				183FDBAA2ADD165B00009D2B /* NSMutableDictionary+Category */,
 				1821BCC72AC406C800C50D58 /* UIImage+Category */,
@@ -1341,8 +1351,12 @@
 			children = (
 				18B1ED1F290F9CDA00647F15 /* AppDelegate.h */,
 				18B1ED20290F9CDA00647F15 /* AppDelegate.m */,
+				18B842742C73205D00886209 /* MainNavViewController.h */,
+				18B842752C73205D00886209 /* MainNavViewController.m */,
 				187A93F42AF0DFAD000EAB05 /* MainTabBarViewController.h */,
 				187A93F52AF0DFAD000EAB05 /* MainTabBarViewController.m */,
+				18B842772C73210700886209 /* MainTabBar.h */,
+				18B842782C73210700886209 /* MainTabBar.m */,
 				18B1ED2B290F9CDB00647F15 /* Assets.xcassets */,
 				18B1ED2D290F9CDB00647F15 /* LaunchScreen.storyboard */,
 				18B1ED31290F9CDB00647F15 /* main.m */,
@@ -1350,6 +1364,15 @@
 				186555D02AE2505F00E16698 /* studyInfo.plist */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		18B842822C73346A00886209 /* UIView+Category */ = {
+			isa = PBXGroup;
+			children = (
+				18B842862C7334B300886209 /* UIView+Frame.h */,
+				18B842872C7334B300886209 /* UIView+Frame.m */,
+			);
+			path = "UIView+Category";
 			sourceTree = "<group>";
 		};
 		18C2D57A2C69E13D003011DD /* YYKeyChainData */ = {
@@ -1781,10 +1804,12 @@
 				1887B55C2AF4C97D00EEECAE /* CLLockNavVC.m in Sources */,
 				18227635292490B600242C9A /* DDToast.m in Sources */,
 				18227634292490B600242C9A /* TTReadWhiteSafeDic.m in Sources */,
+				18B842882C7334B300886209 /* UIView+Frame.m in Sources */,
 				1868B5482AEA614D000E8C04 /* NSDictionary+JSON.m in Sources */,
 				1868F3162AF8C4420020FF1A /* UIView+Extension.m in Sources */,
 				1868F3602AFB274D0020FF1A /* AppleShareViewController.m in Sources */,
 				1868F34A2AFA27410020FF1A /* GuoWuCheViewController.m in Sources */,
+				18B842792C73210700886209 /* MainTabBar.m in Sources */,
 				1868F31F2AF9E7050020FF1A /* HsWeakScriptMessageDelegate.m in Sources */,
 				1887B55F2AF4C97D00EEECAE /* CLLockItemView.m in Sources */,
 				18DBE7742AE2189200E78A31 /* NSString+Common.m in Sources */,
@@ -1808,6 +1833,7 @@
 				1868F3362AFA16CA0020FF1A /* AddressViewController.m in Sources */,
 				181174A82AF084EF0051CCB4 /* CustomCollectionViewCell.m in Sources */,
 				1868F32E2AFA16160020FF1A /* RXJDAddressPickerView.m in Sources */,
+				18B842762C73205D00886209 /* MainNavViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

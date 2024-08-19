@@ -30,6 +30,7 @@
 #import "NSString+Base64.h"
 #import "NSDictionary+JSON.h"
 #import "UIImage+Category.h"
+#import "UIView+Frame.h"
 
 /* 自定义功能 */
 #import "Contast.h"
@@ -54,5 +55,10 @@
 #import "MainTabBarViewController.h"
 #import "MovieViewController.h"
 #import "YYKeyChainData.h"
+#import "MainNavViewController.h"
+#import "MainTabBar.h"
+
+
+
 
 #endif /* PrefixHeader_pch */
