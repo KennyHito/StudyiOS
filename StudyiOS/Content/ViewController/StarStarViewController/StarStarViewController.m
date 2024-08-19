@@ -6,7 +6,6 @@
 //
 
 #import "StarStarViewController.h"
-#import "starView.h"
 
 @interface StarStarViewController ()<starStarDelegate>
 

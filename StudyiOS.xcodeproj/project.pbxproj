@@ -150,6 +150,8 @@
 		18B842A02C73361400886209 /* star_yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B8428C2C73361400886209 /* star_yellow@2x.png */; };
 		18B842A12C73361400886209 /* starView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B8428F2C73361400886209 /* starView.m */; };
 		18B842AC2C73363500886209 /* StarStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842AB2C73363500886209 /* StarStarViewController.m */; };
+		18B842B02C73388C00886209 /* RollingLightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842AF2C73388C00886209 /* RollingLightViewController.m */; };
+		18B842B42C7338B600886209 /* CBAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842B32C7338B600886209 /* CBAutoScrollLabel.m */; };
 		18C0318429AC78DB0098BE0D /* TryCatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C0318229AC78DB0098BE0D /* TryCatchViewController.m */; };
 		18C0318529AC78DB0098BE0D /* TryCatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */; };
 		18C2D5782C69E0D1003011DD /* YYKeyChainData_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C2D5762C69E0D1003011DD /* YYKeyChainData_1.png */; };
@@ -449,6 +451,10 @@
 		18B8428F2C73361400886209 /* starView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = starView.m; sourceTree = "<group>"; };
 		18B842AA2C73363500886209 /* StarStarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarStarViewController.h; sourceTree = "<group>"; };
 		18B842AB2C73363500886209 /* StarStarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarStarViewController.m; sourceTree = "<group>"; };
+		18B842AE2C73388C00886209 /* RollingLightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RollingLightViewController.h; sourceTree = "<group>"; };
+		18B842AF2C73388C00886209 /* RollingLightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RollingLightViewController.m; sourceTree = "<group>"; };
+		18B842B22C7338B600886209 /* CBAutoScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAutoScrollLabel.h; sourceTree = "<group>"; };
+		18B842B32C7338B600886209 /* CBAutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAutoScrollLabel.m; sourceTree = "<group>"; };
 		18C0318129AC78DB0098BE0D /* TryCatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TryCatchViewController.h; sourceTree = "<group>"; };
 		18C0318229AC78DB0098BE0D /* TryCatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TryCatchViewController.m; sourceTree = "<group>"; };
 		18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TryCatchViewController.xib; sourceTree = "<group>"; };
@@ -601,6 +607,7 @@
 		18227611292490B600242C9A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				18B842B12C7338AF00886209 /* CBAutoScrollLabel */,
 				18B842902C73361400886209 /* Star */,
 				18C2D57A2C69E13D003011DD /* YYKeyChainData */,
 				1868F3652AFB301E0020FF1A /* CacheTool */,
@@ -714,6 +721,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				18B842AD2C73388200886209 /* RollingLightViewController */,
 				18B842A92C73361F00886209 /* StarStarViewController */,
 				189C998B2C6C41BB008DFEE7 /* CountDownViewcontroller */,
 				18CCDCF62C5379D100968855 /* PrisonBreakViewController */,
@@ -1421,6 +1429,24 @@
 			path = StarStarViewController;
 			sourceTree = "<group>";
 		};
+		18B842AD2C73388200886209 /* RollingLightViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18B842AE2C73388C00886209 /* RollingLightViewController.h */,
+				18B842AF2C73388C00886209 /* RollingLightViewController.m */,
+			);
+			path = RollingLightViewController;
+			sourceTree = "<group>";
+		};
+		18B842B12C7338AF00886209 /* CBAutoScrollLabel */ = {
+			isa = PBXGroup;
+			children = (
+				18B842B22C7338B600886209 /* CBAutoScrollLabel.h */,
+				18B842B32C7338B600886209 /* CBAutoScrollLabel.m */,
+			);
+			path = CBAutoScrollLabel;
+			sourceTree = "<group>";
+		};
 		18C2D57A2C69E13D003011DD /* YYKeyChainData */ = {
 			isa = PBXGroup;
 			children = (
@@ -1807,6 +1833,7 @@
 				1887B55E2AF4C97D00EEECAE /* CLLockView.m in Sources */,
 				183FDBAE2ADD168E00009D2B /* NSMutableDictionary+CommonSafe.m in Sources */,
 				186555D62AE25C1800E16698 /* HsLcPrivacySetModel.m in Sources */,
+				18B842B42C7338B600886209 /* CBAutoScrollLabel.m in Sources */,
 				18C0318429AC78DB0098BE0D /* TryCatchViewController.m in Sources */,
 				18227631292490B600242C9A /* DDUIFunction.m in Sources */,
 				1868F35B2AFB19160020FF1A /* MusicViewController.m in Sources */,
@@ -1874,6 +1901,7 @@
 				1887B5792AF876E300EEECAE /* MovieViewController.m in Sources */,
 				1887B5592AF4C97D00EEECAE /* CLLockVC.m in Sources */,
 				186FD3F52924AB38003A31C0 /* BaseViewController.m in Sources */,
+				18B842B02C73388C00886209 /* RollingLightViewController.m in Sources */,
 				1868F3312AFA16160020FF1A /* RXJDButton.m in Sources */,
 				1887B5622AF4C97D00EEECAE /* CLLockMainView.m in Sources */,
 				1887B55B2AF4C97D00EEECAE /* CALayer+Anim.m in Sources */,

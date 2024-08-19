@@ -57,7 +57,8 @@
 #import "YYKeyChainData.h"
 #import "MainNavViewController.h"
 #import "MainTabBar.h"
-
+#import "starView.h"
+#import "CBAutoScrollLabel.h"
 
 
 

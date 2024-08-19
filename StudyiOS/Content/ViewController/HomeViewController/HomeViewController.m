@@ -54,6 +54,7 @@
                      @{Tab_Title:@"21、判断手机是否越狱",Tab_Url:@"PrisonBreakViewController"},
                      @{Tab_Title:@"22、倒计时功能",Tab_Url:@"CountDownViewcontroller"},
                      @{Tab_Title:@"23、星级评分功能",Tab_Url:@"StarStarViewController"},
+                     @{Tab_Title:@"24、UILabel滚动,类似于跑马灯效果",Tab_Url:@"RollingLightViewController"},
     ];
     [self.tableView reloadData];
 }
