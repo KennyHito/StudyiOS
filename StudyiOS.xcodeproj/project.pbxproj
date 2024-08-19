@@ -144,6 +144,12 @@
 		18B842762C73205D00886209 /* MainNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842752C73205D00886209 /* MainNavViewController.m */; };
 		18B842792C73210700886209 /* MainTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842782C73210700886209 /* MainTabBar.m */; };
 		18B842882C7334B300886209 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842872C7334B300886209 /* UIView+Frame.m */; };
+		18B8429D2C73361400886209 /* star_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B842892C73361400886209 /* star_gray.png */; };
+		18B8429E2C73361400886209 /* star_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B8428A2C73361400886209 /* star_gray@2x.png */; };
+		18B8429F2C73361400886209 /* star_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B8428B2C73361400886209 /* star_yellow.png */; };
+		18B842A02C73361400886209 /* star_yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B8428C2C73361400886209 /* star_yellow@2x.png */; };
+		18B842A12C73361400886209 /* starView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B8428F2C73361400886209 /* starView.m */; };
+		18B842AC2C73363500886209 /* StarStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842AB2C73363500886209 /* StarStarViewController.m */; };
 		18C0318429AC78DB0098BE0D /* TryCatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C0318229AC78DB0098BE0D /* TryCatchViewController.m */; };
 		18C0318529AC78DB0098BE0D /* TryCatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */; };
 		18C2D5782C69E0D1003011DD /* YYKeyChainData_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C2D5762C69E0D1003011DD /* YYKeyChainData_1.png */; };
@@ -435,6 +441,14 @@
 		18B842782C73210700886209 /* MainTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBar.m; sourceTree = "<group>"; };
 		18B842862C7334B300886209 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		18B842872C7334B300886209 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		18B842892C73361400886209 /* star_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_gray.png; sourceTree = "<group>"; };
+		18B8428A2C73361400886209 /* star_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_gray@2x.png"; sourceTree = "<group>"; };
+		18B8428B2C73361400886209 /* star_yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_yellow.png; sourceTree = "<group>"; };
+		18B8428C2C73361400886209 /* star_yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_yellow@2x.png"; sourceTree = "<group>"; };
+		18B8428E2C73361400886209 /* starView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = starView.h; sourceTree = "<group>"; };
+		18B8428F2C73361400886209 /* starView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = starView.m; sourceTree = "<group>"; };
+		18B842AA2C73363500886209 /* StarStarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarStarViewController.h; sourceTree = "<group>"; };
+		18B842AB2C73363500886209 /* StarStarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarStarViewController.m; sourceTree = "<group>"; };
 		18C0318129AC78DB0098BE0D /* TryCatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TryCatchViewController.h; sourceTree = "<group>"; };
 		18C0318229AC78DB0098BE0D /* TryCatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TryCatchViewController.m; sourceTree = "<group>"; };
 		18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TryCatchViewController.xib; sourceTree = "<group>"; };
@@ -587,6 +601,7 @@
 		18227611292490B600242C9A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				18B842902C73361400886209 /* Star */,
 				18C2D57A2C69E13D003011DD /* YYKeyChainData */,
 				1868F3652AFB301E0020FF1A /* CacheTool */,
 				1868F3612AFB2E840020FF1A /* UIAlertController */,
@@ -699,6 +714,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				18B842A92C73361F00886209 /* StarStarViewController */,
 				189C998B2C6C41BB008DFEE7 /* CountDownViewcontroller */,
 				18CCDCF62C5379D100968855 /* PrisonBreakViewController */,
 				1868F35D2AFB272C0020FF1A /* AppleShareViewController */,
@@ -1375,6 +1391,36 @@
 			path = "UIView+Category";
 			sourceTree = "<group>";
 		};
+		18B8428D2C73361400886209 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				18B842892C73361400886209 /* star_gray.png */,
+				18B8428A2C73361400886209 /* star_gray@2x.png */,
+				18B8428B2C73361400886209 /* star_yellow.png */,
+				18B8428C2C73361400886209 /* star_yellow@2x.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		18B842902C73361400886209 /* Star */ = {
+			isa = PBXGroup;
+			children = (
+				18B8428D2C73361400886209 /* image */,
+				18B8428E2C73361400886209 /* starView.h */,
+				18B8428F2C73361400886209 /* starView.m */,
+			);
+			path = Star;
+			sourceTree = "<group>";
+		};
+		18B842A92C73361F00886209 /* StarStarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18B842AA2C73363500886209 /* StarStarViewController.h */,
+				18B842AB2C73363500886209 /* StarStarViewController.m */,
+			);
+			path = StarStarViewController;
+			sourceTree = "<group>";
+		};
 		18C2D57A2C69E13D003011DD /* YYKeyChainData */ = {
 			isa = PBXGroup;
 			children = (
@@ -1631,11 +1677,13 @@
 				18C0318529AC78DB0098BE0D /* TryCatchViewController.xib in Resources */,
 				1887B5312AF4C58D00EEECAE /* headIcon-4.jpg in Resources */,
 				1868F3532AFA28070020FF1A /* cart.png in Resources */,
+				18B8429D2C73361400886209 /* star_gray.png in Resources */,
 				1887B52B2AF4C58D00EEECAE /* headIcon-12.jpg in Resources */,
 				1868F3742AFB67900020FF1A /* chubaobao.png in Resources */,
 				1887B5352AF4C58D00EEECAE /* headIcon-2.jpg in Resources */,
 				1887B5762AF8769E00EEECAE /* qidong.mp4 in Resources */,
 				1868F3302AFA16160020FF1A /* city.json in Resources */,
+				18B842A02C73361400886209 /* star_yellow@2x.png in Resources */,
 				18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */,
 				18C2D5782C69E0D1003011DD /* YYKeyChainData_1.png in Resources */,
 				1887B5272AF4C58D00EEECAE /* headIcon-14.jpg in Resources */,
@@ -1645,6 +1693,7 @@
 				1887B52E2AF4C58D00EEECAE /* headIcon-10.jpg in Resources */,
 				186FD4002924B1C0003A31C0 /* 3.png in Resources */,
 				1868F3462AFA22E30020FF1A /* fangda.png in Resources */,
+				18B8429E2C73361400886209 /* star_gray@2x.png in Resources */,
 				186FD3F92924AB9A003A31C0 /* TimerViewController.xib in Resources */,
 				1868F3722AFB61B20020FF1A /* moren.jpg in Resources */,
 				18C2D5792C69E0D1003011DD /* YYKeyChainData_2.png in Resources */,
@@ -1658,6 +1707,7 @@
 				186555D12AE2505F00E16698 /* studyInfo.plist in Resources */,
 				1887B5292AF4C58D00EEECAE /* headIcon-17.jpg in Resources */,
 				1887B5342AF4C58D00EEECAE /* headIcon-0.jpg in Resources */,
+				18B8429F2C73361400886209 /* star_yellow.png in Resources */,
 				1887B52C2AF4C58D00EEECAE /* headIcon-13.jpg in Resources */,
 				186FD4012924B1C0003A31C0 /* 1.png in Resources */,
 				1887B53B2AF4C58D00EEECAE /* headIcon-19.jpg in Resources */,
@@ -1750,6 +1800,7 @@
 			files = (
 				187A93F62AF0DFAD000EAB05 /* MainTabBarViewController.m in Sources */,
 				18C2D57D2C69E153003011DD /* YYKeyChainData.m in Sources */,
+				18B842AC2C73363500886209 /* StarStarViewController.m in Sources */,
 				1822760F2924908F00242C9A /* NSArray+ObjectAtIndex.m in Sources */,
 				1822760E2924908F00242C9A /* NSMutableArray+ObjectAtIndex.m in Sources */,
 				1868F3642AFB2EBD0020FF1A /* AlertControTool.m in Sources */,
@@ -1818,6 +1869,7 @@
 				182189FC2990EDA400EFBF5C /* ReactiveObjCViewController.m in Sources */,
 				1887B55D2AF4C97D00EEECAE /* CoreLockConst.m in Sources */,
 				18DBE7702AE2165200E78A31 /* AboutViewController.m in Sources */,
+				18B842A12C73361400886209 /* starView.m in Sources */,
 				1822762E292490B600242C9A /* TTStudySingle.m in Sources */,
 				1887B5792AF876E300EEECAE /* MovieViewController.m in Sources */,
 				1887B5592AF4C97D00EEECAE /* CLLockVC.m in Sources */,
