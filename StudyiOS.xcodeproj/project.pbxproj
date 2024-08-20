@@ -28,6 +28,8 @@
 		18227635292490B600242C9A /* DDToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 18227627292490B600242C9A /* DDToast.m */; };
 		18227636292490B600242C9A /* DDMBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822762A292490B600242C9A /* DDMBProgressHUD.m */; };
 		18227637292490B600242C9A /* TTCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822762D292490B600242C9A /* TTCrash.m */; };
+		18349A092C7423C500F83A52 /* changeLogo_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18349A072C7423C500F83A52 /* changeLogo_1.png */; };
+		18349A0A2C7423C500F83A52 /* changeLogo_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18349A082C7423C500F83A52 /* changeLogo_2.png */; };
 		183FDBAE2ADD168E00009D2B /* NSMutableDictionary+CommonSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FDBAD2ADD168E00009D2B /* NSMutableDictionary+CommonSafe.m */; };
 		186555D12AE2505F00E16698 /* studyInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 186555D02AE2505F00E16698 /* studyInfo.plist */; };
 		186555D62AE25C1800E16698 /* HsLcPrivacySetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 186555D52AE25C1800E16698 /* HsLcPrivacySetModel.m */; };
@@ -257,6 +259,8 @@
 		1822762A292490B600242C9A /* DDMBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMBProgressHUD.m; sourceTree = "<group>"; };
 		1822762C292490B600242C9A /* TTCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCrash.h; sourceTree = "<group>"; };
 		1822762D292490B600242C9A /* TTCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCrash.m; sourceTree = "<group>"; };
+		18349A072C7423C500F83A52 /* changeLogo_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeLogo_1.png; sourceTree = "<group>"; };
+		18349A082C7423C500F83A52 /* changeLogo_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeLogo_2.png; sourceTree = "<group>"; };
 		183FDBAC2ADD168E00009D2B /* NSMutableDictionary+CommonSafe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+CommonSafe.h"; sourceTree = "<group>"; };
 		183FDBAD2ADD168E00009D2B /* NSMutableDictionary+CommonSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+CommonSafe.m"; sourceTree = "<group>"; };
 		184D1E642AF249BE00657072 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -961,6 +965,8 @@
 		186FD4A7292611D3003A31C0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				18349A072C7423C500F83A52 /* changeLogo_1.png */,
+				18349A082C7423C500F83A52 /* changeLogo_2.png */,
 				18C2D5762C69E0D1003011DD /* YYKeyChainData_1.png */,
 				18C2D5772C69E0D1003011DD /* YYKeyChainData_2.png */,
 				186FD3FC2924B1C0003A31C0 /* 2.png */,
@@ -1689,6 +1695,7 @@
 				18DBE7712AE2165200E78A31 /* AboutViewController.xib in Resources */,
 				1887B5382AF4C58D00EEECAE /* headIcon-8.jpg in Resources */,
 				18B1ED2F290F9CDB00647F15 /* LaunchScreen.storyboard in Resources */,
+				18349A092C7423C500F83A52 /* changeLogo_1.png in Resources */,
 				1868F3522AFA28070020FF1A /* xin.png in Resources */,
 				18B1ED2C290F9CDB00647F15 /* Assets.xcassets in Resources */,
 				1868F3422AFA22250020FF1A /* videoPause.png in Resources */,
@@ -1722,6 +1729,7 @@
 				18B8429E2C73361400886209 /* star_gray@2x.png in Resources */,
 				186FD3F92924AB9A003A31C0 /* TimerViewController.xib in Resources */,
 				1868F3722AFB61B20020FF1A /* moren.jpg in Resources */,
+				18349A0A2C7423C500F83A52 /* changeLogo_2.png in Resources */,
 				18C2D5792C69E0D1003011DD /* YYKeyChainData_2.png in Resources */,
 				1868F36A2AFB55B80020FF1A /* 123.mp4 in Resources */,
 				1887B5012AF4C2A900EEECAE /* RuntimeViewController.xib in Resources */,
