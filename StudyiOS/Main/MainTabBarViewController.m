@@ -59,28 +59,8 @@
     NSLog(@"中间的按钮被点击了!");
     ChangeLogoViewController *vController = [[ChangeLogoViewController alloc] init];
     vController.hidesBottomBarWhenPushed = YES;
-    [[self topViewController].navigationController pushViewController:vController animated:YES];
-}
-
-#pragma mark -- 下面两个方法用来获取当前最顶层的ViewController
-- (UIViewController *)topViewController {
-    UIViewController *resultVC;
-    resultVC = [self _topViewController:[[UIApplication sharedApplication].keyWindow rootViewController]];
-    while (resultVC.presentedViewController) {
-        resultVC = [self _topViewController:resultVC.presentedViewController];
-    }
-    return resultVC;
-}
-
-- (UIViewController *)_topViewController:(UIViewController *)vc {
-    if ([vc isKindOfClass:[UINavigationController class]]) {
-        return [self _topViewController:[(UINavigationController *)vc topViewController]];
-    } else if ([vc isKindOfClass:[UITabBarController class]]) {
-        return [self _topViewController:[(UITabBarController *)vc selectedViewController]];
-    } else {
-        return vc;
-    }
-    return nil;
+    vController.title = @"切换Logo";
+    [[[GetTopVCTool shareInstance] topViewController].navigationController pushViewController:vController animated:YES];
 }
 
 @end

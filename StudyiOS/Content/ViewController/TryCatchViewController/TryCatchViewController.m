@@ -25,7 +25,7 @@
     
     //方法一: CrashHandler类方式,但是第一次可以挽救，点击第二次直接崩溃
     //设置icon
-    self.iconIv.image = [UIImage imageNamed:@"dangdang"];
+    self.iconIv.image = [UIImage imageNamed:@"lianchu"];
     //设置圆角
     self.iconIv.layer.masksToBounds = YES;
     self.iconIv.layer.cornerRadius = 10;

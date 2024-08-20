@@ -32,12 +32,13 @@ static int imageWidth = 100;
     [self.dataArr addObject:@{@"iconName":@"moren",@"imageName":@"moren.jpg"}];
     [self.dataArr addObject:@{@"iconName":@"dangdang",@"imageName":@"dangdang.png"}];
     [self.dataArr addObject:@{@"iconName":@"chubaobao",@"imageName":@"chubaobao.png"}];
+    [self.dataArr addObject:@{@"iconName":@"lianchu",@"imageName":@"lianchu.png"}];
 }
 
 - (void)setUpCollectionView{
     UICollectionViewFlowLayout * flow = [[UICollectionViewFlowLayout alloc]init];
-    flow.minimumLineSpacing = 10;
-    flow.minimumInteritemSpacing = 10;
+    flow.minimumLineSpacing = 30;//每个cell之间行间距
+    flow.minimumInteritemSpacing = 10;//每个cell之间列间距
     flow.itemSize = CGSizeMake(imageWidth, imageWidth);
     
     self.collectionV = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:flow];

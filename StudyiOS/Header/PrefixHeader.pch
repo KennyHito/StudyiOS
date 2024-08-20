@@ -33,6 +33,7 @@
 #import "UIView+Frame.h"
 
 /* 自定义功能 */
+#import "GetTopVCTool.h"
 #import "Contast.h"
 #import "DefineHeader.h"
 #import "MyPtraceHeader.h"

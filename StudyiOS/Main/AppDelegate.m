@@ -87,34 +87,13 @@
         [self resetApp];
     }];
     [alertController addAction:skipAction];
-    [[self topViewController] presentViewController:alertController animated:YES completion:nil];
+    [[[GetTopVCTool shareInstance] topViewController] presentViewController:alertController animated:YES completion:nil];
 }
 
 // 重置App 的根控制器（可以改成你需要的）
 - (void)resetApp{
-    UIViewController *topmostVC = [self topViewController];
+    UIViewController *topmostVC = [[GetTopVCTool shareInstance] topViewController];
     [topmostVC.navigationController popToRootViewControllerAnimated:YES];
-}
-
-#pragma mark -- 下面两个方法用来获取当前最顶层的ViewController
-- (UIViewController *)topViewController {
-    UIViewController *resultVC;
-    resultVC = [self _topViewController:[[UIApplication sharedApplication].keyWindow rootViewController]];
-    while (resultVC.presentedViewController) {
-        resultVC = [self _topViewController:resultVC.presentedViewController];
-    }
-    return resultVC;
-}
-
-- (UIViewController *)_topViewController:(UIViewController *)vc {
-    if ([vc isKindOfClass:[UINavigationController class]]) {
-        return [self _topViewController:[(UINavigationController *)vc topViewController]];
-    } else if ([vc isKindOfClass:[UITabBarController class]]) {
-        return [self _topViewController:[(UITabBarController *)vc selectedViewController]];
-    } else {
-        return vc;
-    }
-    return nil;
 }
 
 #pragma mark -- 设置桌面3D Touch
@@ -154,7 +133,7 @@
     }
     if(vc!=nil){
         vc.hidesBottomBarWhenPushed = YES;
-        [[self topViewController].navigationController pushViewController:vc animated:YES];
+        [[[GetTopVCTool shareInstance] topViewController].navigationController pushViewController:vc animated:YES];
     }
     if (completionHandler) {
         completionHandler(YES);

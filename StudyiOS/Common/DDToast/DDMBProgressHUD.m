@@ -3,7 +3,7 @@
 //  当当
 //
 //  Created by DDiOS on 2020/3/23.
-//  Copyright © 2020 DangDang. All rights reserved.
+//  Copyright © 2020 KennyHito. All rights reserved.
 //
 
 #import "DDMBProgressHUD.h"

@@ -3,7 +3,7 @@
 //  DDiPhone
 //
 //  Created by wangshun on 14/11/25.
-//  Copyright (c) 2014年 DangDang. All rights reserved.
+//  Copyright (c) 2014年 KennyHito. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

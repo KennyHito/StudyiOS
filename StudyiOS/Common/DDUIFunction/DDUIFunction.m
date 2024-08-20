@@ -3,7 +3,6 @@
 //  DDDevLib
 //
 //  Created by liuxubing on 28/11/14.
-//  Copyright (c) 2014 www.dangdang.com. All rights reserved.
 //
 
 #import "DDUIFunction.h"

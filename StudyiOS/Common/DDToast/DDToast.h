@@ -3,7 +3,6 @@
 //  DDDevLib
 //
 //  Created by Radar on 13-8-29.
-//  Copyright (c) 2013年 www.dangdang.com. All rights reserved.
 //
 //PS: 目前仅支持iPhone使用，iPad如果需要使用，需要继续完善
 /*
