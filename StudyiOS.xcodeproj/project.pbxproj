@@ -170,6 +170,9 @@
 		18C832162C75F8F0002AA9DD /* niao_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C8320D2C75F8F0002AA9DD /* niao_6.png */; };
 		18C832172C75F8F0002AA9DD /* niao_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C8320E2C75F8F0002AA9DD /* niao_7.png */; };
 		18C832182C75F8F0002AA9DD /* niao_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C8320F2C75F8F0002AA9DD /* niao_8.png */; };
+		18C832202C75F9C9002AA9DD /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8321A2C75F9C9002AA9DD /* Location.m */; };
+		18C832212C75F9C9002AA9DD /* LocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8321C2C75F9C9002AA9DD /* LocationModel.m */; };
+		18C832222C75F9C9002AA9DD /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8321E2C75F9C9002AA9DD /* LocationViewController.m */; };
 		18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */; };
 		18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */; };
 		18CD0D5B2C757A60006DEAFE /* SavePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D5A2C757A60006DEAFE /* SavePicViewController.m */; };
@@ -531,6 +534,12 @@
 		18C8320D2C75F8F0002AA9DD /* niao_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = niao_6.png; sourceTree = "<group>"; };
 		18C8320E2C75F8F0002AA9DD /* niao_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = niao_7.png; sourceTree = "<group>"; };
 		18C8320F2C75F8F0002AA9DD /* niao_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = niao_8.png; sourceTree = "<group>"; };
+		18C832192C75F9C9002AA9DD /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		18C8321A2C75F9C9002AA9DD /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		18C8321B2C75F9C9002AA9DD /* LocationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationModel.h; sourceTree = "<group>"; };
+		18C8321C2C75F9C9002AA9DD /* LocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationModel.m; sourceTree = "<group>"; };
+		18C8321D2C75F9C9002AA9DD /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		18C8321E2C75F9C9002AA9DD /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 		18CCDCFC2C537B1500968855 /* PrisonBreakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrisonBreakViewController.h; sourceTree = "<group>"; };
 		18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrisonBreakViewController.m; sourceTree = "<group>"; };
 		18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrisonBreakViewController.xib; sourceTree = "<group>"; };
@@ -852,6 +861,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				18C8321F2C75F9C9002AA9DD /* Location */,
 				18CD0DBD2C75F63B006DEAFE /* FlashlightViewController */,
 				18CD0D862C75F239006DEAFE /* FallsFlowViewController */,
 				18CD0D702C75944E006DEAFE /* TagSelectViewController */,
@@ -1633,6 +1643,19 @@
 			path = niao;
 			sourceTree = "<group>";
 		};
+		18C8321F2C75F9C9002AA9DD /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				18C832192C75F9C9002AA9DD /* Location.h */,
+				18C8321A2C75F9C9002AA9DD /* Location.m */,
+				18C8321B2C75F9C9002AA9DD /* LocationModel.h */,
+				18C8321C2C75F9C9002AA9DD /* LocationModel.m */,
+				18C8321D2C75F9C9002AA9DD /* LocationViewController.h */,
+				18C8321E2C75F9C9002AA9DD /* LocationViewController.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		18CCDCF62C5379D100968855 /* PrisonBreakViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2146,6 +2169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				187A93F62AF0DFAD000EAB05 /* MainTabBarViewController.m in Sources */,
+				18C832212C75F9C9002AA9DD /* LocationModel.m in Sources */,
 				18C2D57D2C69E153003011DD /* YYKeyChainData.m in Sources */,
 				18B842AC2C73363500886209 /* StarStarViewController.m in Sources */,
 				1822760F2924908F00242C9A /* NSArray+ObjectAtIndex.m in Sources */,
@@ -2181,8 +2205,10 @@
 				1887B5602AF4C97D00EEECAE /* CLLockInfoView.m in Sources */,
 				1821BCCD2AC4071900C50D58 /* UIImage+Category.m in Sources */,
 				1868F31C2AF9CF290020FF1A /* HTML5ViewController.m in Sources */,
+				18C832222C75F9C9002AA9DD /* LocationViewController.m in Sources */,
 				18227636292490B600242C9A /* DDMBProgressHUD.m in Sources */,
 				18CD0D632C7582A3006DEAFE /* RequestAPIModel.m in Sources */,
+				18C832202C75F9C9002AA9DD /* Location.m in Sources */,
 				18CD0D7B2C75E4D1006DEAFE /* UIImage+GIF.m in Sources */,
 				1868F32D2AFA16160020FF1A /* RXHexColor.m in Sources */,
 				1868F33E2AFA21290020FF1A /* VideoView.m in Sources */,
