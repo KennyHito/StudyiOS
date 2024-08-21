@@ -14,7 +14,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *content;
 @property (strong, nonatomic) NSString *created_at;
 @property (strong, nonatomic) NSString *ID;
-
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *origin;
 @property (strong, nonatomic) NSString *tag;

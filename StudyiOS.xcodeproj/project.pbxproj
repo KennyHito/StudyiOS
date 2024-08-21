@@ -170,6 +170,8 @@
 		18CD0D672C758A91006DEAFE /* LocalpushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D662C758A91006DEAFE /* LocalpushViewController.m */; };
 		18CD0D6B2C758CEB006DEAFE /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D6A2C758CEB006DEAFE /* QRCodeViewController.m */; };
 		18CD0D6F2C759216006DEAFE /* UITouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D6E2C759216006DEAFE /* UITouchViewController.m */; };
+		18CD0D732C759454006DEAFE /* TagSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D722C759454006DEAFE /* TagSelectViewController.m */; };
+		18CD0D762C75AD27006DEAFE /* TagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D752C75AD27006DEAFE /* TagModel.m */; };
 		18DBE7612ADFB94200E78A31 /* LaunchBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */; };
 		18DBE7622ADFB94200E78A31 /* LaunchLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE7602ADFB94200E78A31 /* LaunchLogo.png */; };
 		18DBE7662AE110C000E78A31 /* MultiThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBE7642AE110C000E78A31 /* MultiThreadViewController.m */; };
@@ -495,6 +497,10 @@
 		18CD0D6A2C758CEB006DEAFE /* QRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
 		18CD0D6D2C759216006DEAFE /* UITouchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITouchViewController.h; sourceTree = "<group>"; };
 		18CD0D6E2C759216006DEAFE /* UITouchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITouchViewController.m; sourceTree = "<group>"; };
+		18CD0D712C759454006DEAFE /* TagSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagSelectViewController.h; sourceTree = "<group>"; };
+		18CD0D722C759454006DEAFE /* TagSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagSelectViewController.m; sourceTree = "<group>"; };
+		18CD0D742C75AD27006DEAFE /* TagModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagModel.h; sourceTree = "<group>"; };
+		18CD0D752C75AD27006DEAFE /* TagModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagModel.m; sourceTree = "<group>"; };
 		18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchBackground.jpg; sourceTree = "<group>"; };
 		18DBE7602ADFB94200E78A31 /* LaunchLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchLogo.png; sourceTree = "<group>"; };
 		18DBE7632AE110C000E78A31 /* MultiThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadViewController.h; sourceTree = "<group>"; };
@@ -758,6 +764,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				18CD0D702C75944E006DEAFE /* TagSelectViewController */,
 				18CD0D6C2C75920C006DEAFE /* UITouchViewController */,
 				18CD0D682C758CE2006DEAFE /* QRCodeViewController */,
 				18CD0D642C758A82006DEAFE /* LocalpushViewController */,
@@ -802,6 +809,8 @@
 				186555D52AE25C1800E16698 /* HsLcPrivacySetModel.m */,
 				18CD0D612C7582A3006DEAFE /* RequestAPIModel.h */,
 				18CD0D622C7582A3006DEAFE /* RequestAPIModel.m */,
+				18CD0D742C75AD27006DEAFE /* TagModel.h */,
+				18CD0D752C75AD27006DEAFE /* TagModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1567,6 +1576,15 @@
 			path = UITouchViewController;
 			sourceTree = "<group>";
 		};
+		18CD0D702C75944E006DEAFE /* TagSelectViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18CD0D712C759454006DEAFE /* TagSelectViewController.h */,
+				18CD0D722C759454006DEAFE /* TagSelectViewController.m */,
+			);
+			path = TagSelectViewController;
+			sourceTree = "<group>";
+		};
 		18DBE75E2ADFB94200E78A31 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1994,6 +2012,7 @@
 				18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */,
 				18B1ED32290F9CDB00647F15 /* main.m in Sources */,
 				182189FC2990EDA400EFBF5C /* ReactiveObjCViewController.m in Sources */,
+				18CD0D732C759454006DEAFE /* TagSelectViewController.m in Sources */,
 				1887B55D2AF4C97D00EEECAE /* CoreLockConst.m in Sources */,
 				18DBE7702AE2165200E78A31 /* AboutViewController.m in Sources */,
 				18B842A12C73361400886209 /* starView.m in Sources */,
@@ -2002,6 +2021,7 @@
 				1887B5592AF4C97D00EEECAE /* CLLockVC.m in Sources */,
 				18CD0D672C758A91006DEAFE /* LocalpushViewController.m in Sources */,
 				186FD3F52924AB38003A31C0 /* BaseViewController.m in Sources */,
+				18CD0D762C75AD27006DEAFE /* TagModel.m in Sources */,
 				18B842B02C73388C00886209 /* RollingLightViewController.m in Sources */,
 				1868F3312AFA16160020FF1A /* RXJDButton.m in Sources */,
 				1887B5622AF4C97D00EEECAE /* CLLockMainView.m in Sources */,

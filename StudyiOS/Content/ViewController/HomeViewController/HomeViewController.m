@@ -60,6 +60,7 @@
                      @{Tab_Title:@"27、实现本地通知功能",Tab_Url:@"LocalpushViewController"},
                      @{Tab_Title:@"28、原生扫描二维码功能",Tab_Url:@"QRCodeViewController"},
                      @{Tab_Title:@"29、UITouch移动图片位置",Tab_Url:@"UITouchViewController"},
+                     @{Tab_Title:@"30、标签选择功能",Tab_Url:@"TagSelectViewController"},
     ];
     [self.tableView reloadData];
 }
