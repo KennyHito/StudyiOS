@@ -58,6 +58,8 @@
                      @{Tab_Title:@"25、图片保存功能",Tab_Url:@"SavePicViewController"},
                      @{Tab_Title:@"26、网络请求功能",Tab_Url:@"RequestAPIViewController"},
                      @{Tab_Title:@"27、实现本地通知功能",Tab_Url:@"LocalpushViewController"},
+                     @{Tab_Title:@"28、原生扫描二维码功能",Tab_Url:@"QRCodeViewController"},
+                     @{Tab_Title:@"29、UITouch移动图片位置",Tab_Url:@"UITouchViewController"},
     ];
     [self.tableView reloadData];
 }
