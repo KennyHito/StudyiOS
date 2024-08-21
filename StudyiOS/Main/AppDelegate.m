@@ -23,6 +23,9 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
 #pragma mark --> NSLog(@"\n ===> 程序进入前台 !");
+    //清除通知角标
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+    //业务一些操作
     KSendNotification(@"applicationWillEnterForeground",nil);
 }
 
@@ -68,6 +71,9 @@
     if (@available(iOS 15.0, *)) {
         [UITableView appearance].sectionHeaderTopPadding = 0;
     }
+    
+    //本地推送
+    [self requestAuthor];
     
     return YES;
 }
@@ -137,6 +143,24 @@
     }
     if (completionHandler) {
         completionHandler(YES);
+    }
+}
+
+#pragma mark --- 在AppDelegate中写：强制使用系统键盘 >=iOS8
+- (BOOL)application:(UIApplication *)application shouldAllowExtensionPointIdentifier:(NSString *)extensionPointIdentifier{
+    if ([extensionPointIdentifier isEqualToString:@"com.apple.keyboard-service"]) {
+        return NO;
+    }
+    return YES;
+}
+
+#pragma mark --- 创建本地通知
+- (void)requestAuthor{
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) {
+        // 设置通知的类型可以为弹窗提示,声音提示,应用图标数字提示
+        UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert categories:nil];
+        // 授权通知
+        [[UIApplication sharedApplication] registerUserNotificationSettings:setting];
     }
 }
 

@@ -167,6 +167,7 @@
 		18CD0D5B2C757A60006DEAFE /* SavePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D5A2C757A60006DEAFE /* SavePicViewController.m */; };
 		18CD0D5F2C757F14006DEAFE /* RequestAPIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D5E2C757F14006DEAFE /* RequestAPIViewController.m */; };
 		18CD0D632C7582A3006DEAFE /* RequestAPIModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D622C7582A3006DEAFE /* RequestAPIModel.m */; };
+		18CD0D672C758A91006DEAFE /* LocalpushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D662C758A91006DEAFE /* LocalpushViewController.m */; };
 		18DBE7612ADFB94200E78A31 /* LaunchBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */; };
 		18DBE7622ADFB94200E78A31 /* LaunchLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE7602ADFB94200E78A31 /* LaunchLogo.png */; };
 		18DBE7662AE110C000E78A31 /* MultiThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBE7642AE110C000E78A31 /* MultiThreadViewController.m */; };
@@ -486,6 +487,8 @@
 		18CD0D5E2C757F14006DEAFE /* RequestAPIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestAPIViewController.m; sourceTree = "<group>"; };
 		18CD0D612C7582A3006DEAFE /* RequestAPIModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestAPIModel.h; sourceTree = "<group>"; };
 		18CD0D622C7582A3006DEAFE /* RequestAPIModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestAPIModel.m; sourceTree = "<group>"; };
+		18CD0D652C758A91006DEAFE /* LocalpushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocalpushViewController.h; sourceTree = "<group>"; };
+		18CD0D662C758A91006DEAFE /* LocalpushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalpushViewController.m; sourceTree = "<group>"; };
 		18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchBackground.jpg; sourceTree = "<group>"; };
 		18DBE7602ADFB94200E78A31 /* LaunchLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchLogo.png; sourceTree = "<group>"; };
 		18DBE7632AE110C000E78A31 /* MultiThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadViewController.h; sourceTree = "<group>"; };
@@ -749,6 +752,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				18CD0D642C758A82006DEAFE /* LocalpushViewController */,
 				18CD0D5C2C757F0B006DEAFE /* RequestAPIViewController */,
 				18CD0D582C757A54006DEAFE /* SavePicViewController */,
 				18B842AD2C73388200886209 /* RollingLightViewController */,
@@ -1528,6 +1532,15 @@
 			path = RequestAPIViewController;
 			sourceTree = "<group>";
 		};
+		18CD0D642C758A82006DEAFE /* LocalpushViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18CD0D652C758A91006DEAFE /* LocalpushViewController.h */,
+				18CD0D662C758A91006DEAFE /* LocalpushViewController.m */,
+			);
+			path = LocalpushViewController;
+			sourceTree = "<group>";
+		};
 		18DBE75E2ADFB94200E78A31 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1960,6 +1973,7 @@
 				1822762E292490B600242C9A /* TTStudySingle.m in Sources */,
 				1887B5792AF876E300EEECAE /* MovieViewController.m in Sources */,
 				1887B5592AF4C97D00EEECAE /* CLLockVC.m in Sources */,
+				18CD0D672C758A91006DEAFE /* LocalpushViewController.m in Sources */,
 				186FD3F52924AB38003A31C0 /* BaseViewController.m in Sources */,
 				18B842B02C73388C00886209 /* RollingLightViewController.m in Sources */,
 				1868F3312AFA16160020FF1A /* RXJDButton.m in Sources */,

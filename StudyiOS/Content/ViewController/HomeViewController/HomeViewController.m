@@ -57,6 +57,7 @@
                      @{Tab_Title:@"24、UILabel滚动,类似于跑马灯效果",Tab_Url:@"RollingLightViewController"},
                      @{Tab_Title:@"25、图片保存功能",Tab_Url:@"SavePicViewController"},
                      @{Tab_Title:@"26、网络请求功能",Tab_Url:@"RequestAPIViewController"},
+                     @{Tab_Title:@"27、实现本地通知功能",Tab_Url:@"LocalpushViewController"},
     ];
     [self.tableView reloadData];
 }
