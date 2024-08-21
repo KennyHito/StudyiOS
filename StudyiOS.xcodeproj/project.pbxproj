@@ -187,7 +187,9 @@
 		18C832482C75FE2E002AA9DD /* 手表的壁纸.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18C832452C75FE2E002AA9DD /* 手表的壁纸.jpg */; };
 		18C832492C75FE2E002AA9DD /* 电脑的壁纸.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18C832462C75FE2E002AA9DD /* 电脑的壁纸.jpg */; };
 		18C8324A2C75FE2E002AA9DD /* 飞机的壁纸.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18C832472C75FE2E002AA9DD /* 飞机的壁纸.jpg */; };
-		18C8324C2C7600CD002AA9DD /* 本地推送介绍.webp in Resources */ = {isa = PBXBuildFile; fileRef = 18C8324B2C7600CD002AA9DD /* 本地推送介绍.webp */; };
+		18C832502C7601A7002AA9DD /* tuisong_2.webp in Resources */ = {isa = PBXBuildFile; fileRef = 18C8324D2C7601A7002AA9DD /* tuisong_2.webp */; };
+		18C832512C7601A7002AA9DD /* tuisong_1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 18C8324E2C7601A7002AA9DD /* tuisong_1.webp */; };
+		18C832522C7601A7002AA9DD /* tuisong_3.webp in Resources */ = {isa = PBXBuildFile; fileRef = 18C8324F2C7601A7002AA9DD /* tuisong_3.webp */; };
 		18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */; };
 		18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */; };
 		18CD0D5B2C757A60006DEAFE /* SavePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D5A2C757A60006DEAFE /* SavePicViewController.m */; };
@@ -579,7 +581,9 @@
 		18C832452C75FE2E002AA9DD /* 手表的壁纸.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "手表的壁纸.jpg"; sourceTree = "<group>"; };
 		18C832462C75FE2E002AA9DD /* 电脑的壁纸.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "电脑的壁纸.jpg"; sourceTree = "<group>"; };
 		18C832472C75FE2E002AA9DD /* 飞机的壁纸.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "飞机的壁纸.jpg"; sourceTree = "<group>"; };
-		18C8324B2C7600CD002AA9DD /* 本地推送介绍.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "本地推送介绍.webp"; sourceTree = "<group>"; };
+		18C8324D2C7601A7002AA9DD /* tuisong_2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = tuisong_2.webp; sourceTree = "<group>"; };
+		18C8324E2C7601A7002AA9DD /* tuisong_1.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = tuisong_1.webp; sourceTree = "<group>"; };
+		18C8324F2C7601A7002AA9DD /* tuisong_3.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = tuisong_3.webp; sourceTree = "<group>"; };
 		18CCDCFC2C537B1500968855 /* PrisonBreakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrisonBreakViewController.h; sourceTree = "<group>"; };
 		18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrisonBreakViewController.m; sourceTree = "<group>"; };
 		18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrisonBreakViewController.xib; sourceTree = "<group>"; };
@@ -1156,7 +1160,9 @@
 		186FD4A7292611D3003A31C0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				18C8324B2C7600CD002AA9DD /* 本地推送介绍.webp */,
+				18C8324E2C7601A7002AA9DD /* tuisong_1.webp */,
+				18C8324D2C7601A7002AA9DD /* tuisong_2.webp */,
+				18C8324F2C7601A7002AA9DD /* tuisong_3.webp */,
 				18C832462C75FE2E002AA9DD /* 电脑的壁纸.jpg */,
 				18C832472C75FE2E002AA9DD /* 飞机的壁纸.jpg */,
 				18C832452C75FE2E002AA9DD /* 手表的壁纸.jpg */,
@@ -2100,11 +2106,11 @@
 				1868F3182AF9CF100020FF1A /* test.html in Resources */,
 				182189FE29932EF400EFBF5C /* ReactiveObjCViewController.xib in Resources */,
 				183DBC452C7472A5001FFBA4 /* lianchu.png in Resources */,
-				18C8324C2C7600CD002AA9DD /* 本地推送介绍.webp in Resources */,
 				18C0318529AC78DB0098BE0D /* TryCatchViewController.xib in Resources */,
 				18CD0DA92C75F26F006DEAFE /* 美女06.jpg in Resources */,
 				1887B5312AF4C58D00EEECAE /* headIcon-4.jpg in Resources */,
 				18CD0D782C75AF20006DEAFE /* biao.jpg in Resources */,
+				18C832502C7601A7002AA9DD /* tuisong_2.webp in Resources */,
 				18CD0DB02C75F26F006DEAFE /* 美女13.jpg in Resources */,
 				1868F3532AFA28070020FF1A /* cart.png in Resources */,
 				18C832152C75F8F0002AA9DD /* niao_5.png in Resources */,
@@ -2153,6 +2159,7 @@
 				186555D12AE2505F00E16698 /* studyInfo.plist in Resources */,
 				18CD0DA52C75F26F006DEAFE /* 美女02.jpg in Resources */,
 				18CD0DA82C75F26F006DEAFE /* 美女05.jpg in Resources */,
+				18C832512C7601A7002AA9DD /* tuisong_1.webp in Resources */,
 				1887B5292AF4C58D00EEECAE /* headIcon-17.jpg in Resources */,
 				1887B5342AF4C58D00EEECAE /* headIcon-0.jpg in Resources */,
 				18B8429F2C73361400886209 /* star_yellow.png in Resources */,
@@ -2160,6 +2167,7 @@
 				1887B52C2AF4C58D00EEECAE /* headIcon-13.jpg in Resources */,
 				186FD4012924B1C0003A31C0 /* 1.png in Resources */,
 				1887B53B2AF4C58D00EEECAE /* headIcon-19.jpg in Resources */,
+				18C832522C7601A7002AA9DD /* tuisong_3.webp in Resources */,
 				18C832112C75F8F0002AA9DD /* niao_1.png in Resources */,
 				1887B5322AF4C58D00EEECAE /* headIcon-5.jpg in Resources */,
 				18CD0D842C75E70F006DEAFE /* Guidance01.jpg in Resources */,
