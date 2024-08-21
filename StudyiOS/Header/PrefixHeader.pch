@@ -32,6 +32,7 @@
 #import "NSDictionary+JSON.h"
 #import "UIImage+Category.h"
 #import "UIView+Frame.h"
+#import "UIImage+GIF.h"
 
 /* 自定义功能 */
 #import "GetTopVCTool.h"
@@ -56,6 +57,7 @@
 #import "TTReadWhiteSafeDic.h"
 #import "MainTabBarViewController.h"
 #import "MovieViewController.h"
+#import "GuidanceController.h"
 #import "YYKeyChainData.h"
 #import "MainNavViewController.h"
 #import "MainTabBar.h"

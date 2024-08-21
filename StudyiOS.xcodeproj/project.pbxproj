@@ -173,6 +173,11 @@
 		18CD0D732C759454006DEAFE /* TagSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D722C759454006DEAFE /* TagSelectViewController.m */; };
 		18CD0D762C75AD27006DEAFE /* TagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D752C75AD27006DEAFE /* TagModel.m */; };
 		18CD0D782C75AF20006DEAFE /* biao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D772C75AF20006DEAFE /* biao.jpg */; };
+		18CD0D7B2C75E4D1006DEAFE /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D7A2C75E4D1006DEAFE /* UIImage+GIF.m */; };
+		18CD0D7F2C75E5B1006DEAFE /* GuidanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D7E2C75E5B1006DEAFE /* GuidanceController.m */; };
+		18CD0D832C75E70F006DEAFE /* Guidance02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D802C75E70F006DEAFE /* Guidance02.jpg */; };
+		18CD0D842C75E70F006DEAFE /* Guidance01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D812C75E70F006DEAFE /* Guidance01.jpg */; };
+		18CD0D852C75E70F006DEAFE /* Guidance03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D822C75E70F006DEAFE /* Guidance03.jpg */; };
 		18DBE7612ADFB94200E78A31 /* LaunchBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */; };
 		18DBE7622ADFB94200E78A31 /* LaunchLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE7602ADFB94200E78A31 /* LaunchLogo.png */; };
 		18DBE7662AE110C000E78A31 /* MultiThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBE7642AE110C000E78A31 /* MultiThreadViewController.m */; };
@@ -503,6 +508,13 @@
 		18CD0D742C75AD27006DEAFE /* TagModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagModel.h; sourceTree = "<group>"; };
 		18CD0D752C75AD27006DEAFE /* TagModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagModel.m; sourceTree = "<group>"; };
 		18CD0D772C75AF20006DEAFE /* biao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = biao.jpg; sourceTree = "<group>"; };
+		18CD0D792C75E4D1006DEAFE /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		18CD0D7A2C75E4D1006DEAFE /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		18CD0D7D2C75E5B0006DEAFE /* GuidanceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidanceController.h; sourceTree = "<group>"; };
+		18CD0D7E2C75E5B1006DEAFE /* GuidanceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidanceController.m; sourceTree = "<group>"; };
+		18CD0D802C75E70F006DEAFE /* Guidance02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Guidance02.jpg; sourceTree = "<group>"; };
+		18CD0D812C75E70F006DEAFE /* Guidance01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Guidance01.jpg; sourceTree = "<group>"; };
+		18CD0D822C75E70F006DEAFE /* Guidance03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Guidance03.jpg; sourceTree = "<group>"; };
 		18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchBackground.jpg; sourceTree = "<group>"; };
 		18DBE7602ADFB94200E78A31 /* LaunchLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchLogo.png; sourceTree = "<group>"; };
 		18DBE7632AE110C000E78A31 /* MultiThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadViewController.h; sourceTree = "<group>"; };
@@ -582,6 +594,8 @@
 		1821BCC72AC406C800C50D58 /* UIImage+Category */ = {
 			isa = PBXGroup;
 			children = (
+				18CD0D792C75E4D1006DEAFE /* UIImage+GIF.h */,
+				18CD0D7A2C75E4D1006DEAFE /* UIImage+GIF.m */,
 				1821BCCB2AC4071900C50D58 /* UIImage+Category.h */,
 				1821BCCC2AC4071900C50D58 /* UIImage+Category.m */,
 			);
@@ -797,6 +811,7 @@
 				189295072AF4C25A004B4A43 /* ExerciseViewController */,
 				189295062AF4C253004B4A43 /* TimerViewController */,
 				189295052AF4C247004B4A43 /* HomeViewController */,
+				18CD0D7C2C75E5A4006DEAFE /* GuidanceController */,
 				1887B57A2AF876EC00EEECAE /* MovieViewController */,
 				186FD3F32924AB38003A31C0 /* BaseViewController.h */,
 				186FD3F42924AB38003A31C0 /* BaseViewController.m */,
@@ -1016,6 +1031,9 @@
 		186FD4A7292611D3003A31C0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				18CD0D812C75E70F006DEAFE /* Guidance01.jpg */,
+				18CD0D802C75E70F006DEAFE /* Guidance02.jpg */,
+				18CD0D822C75E70F006DEAFE /* Guidance03.jpg */,
 				18CD0D772C75AF20006DEAFE /* biao.jpg */,
 				18349A072C7423C500F83A52 /* changeLogo_1.png */,
 				18349A082C7423C500F83A52 /* changeLogo_2.png */,
@@ -1588,6 +1606,15 @@
 			path = TagSelectViewController;
 			sourceTree = "<group>";
 		};
+		18CD0D7C2C75E5A4006DEAFE /* GuidanceController */ = {
+			isa = PBXGroup;
+			children = (
+				18CD0D7D2C75E5B0006DEAFE /* GuidanceController.h */,
+				18CD0D7E2C75E5B1006DEAFE /* GuidanceController.m */,
+			);
+			path = GuidanceController;
+			sourceTree = "<group>";
+		};
 		18DBE75E2ADFB94200E78A31 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1808,6 +1835,7 @@
 				1868F3422AFA22250020FF1A /* videoPause.png in Resources */,
 				1887B5682AF4C9DD00EEECAE /* SudokuViewController.xib in Resources */,
 				1887B5392AF4C58D00EEECAE /* headIcon-9.jpg in Resources */,
+				18CD0D852C75E70F006DEAFE /* Guidance03.jpg in Resources */,
 				18DBE7622ADFB94200E78A31 /* LaunchLogo.png in Resources */,
 				1868F3442AFA22250020FF1A /* videoback.png in Resources */,
 				186FD3FF2924B1C0003A31C0 /* 2.png in Resources */,
@@ -1855,10 +1883,12 @@
 				186FD4012924B1C0003A31C0 /* 1.png in Resources */,
 				1887B53B2AF4C58D00EEECAE /* headIcon-19.jpg in Resources */,
 				1887B5322AF4C58D00EEECAE /* headIcon-5.jpg in Resources */,
+				18CD0D842C75E70F006DEAFE /* Guidance01.jpg in Resources */,
 				1887B52D2AF4C58D00EEECAE /* headIcon-11.jpg in Resources */,
 				1887B55A2AF4C97D00EEECAE /* CLLockVC.xib in Resources */,
 				1868F3432AFA22250020FF1A /* videoPlay.png in Resources */,
 				1887B5372AF4C58D00EEECAE /* introduce-2.gif in Resources */,
+				18CD0D832C75E70F006DEAFE /* Guidance02.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1979,6 +2009,7 @@
 				1868F31C2AF9CF290020FF1A /* HTML5ViewController.m in Sources */,
 				18227636292490B600242C9A /* DDMBProgressHUD.m in Sources */,
 				18CD0D632C7582A3006DEAFE /* RequestAPIModel.m in Sources */,
+				18CD0D7B2C75E4D1006DEAFE /* UIImage+GIF.m in Sources */,
 				1868F32D2AFA16160020FF1A /* RXHexColor.m in Sources */,
 				1868F33E2AFA21290020FF1A /* VideoView.m in Sources */,
 				188D09E92AD7BEB600FCAD36 /* CrashHandler.m in Sources */,
@@ -2027,6 +2058,7 @@
 				186FD3F52924AB38003A31C0 /* BaseViewController.m in Sources */,
 				18CD0D762C75AD27006DEAFE /* TagModel.m in Sources */,
 				18B842B02C73388C00886209 /* RollingLightViewController.m in Sources */,
+				18CD0D7F2C75E5B1006DEAFE /* GuidanceController.m in Sources */,
 				1868F3312AFA16160020FF1A /* RXJDButton.m in Sources */,
 				1887B5622AF4C97D00EEECAE /* CLLockMainView.m in Sources */,
 				1887B55B2AF4C97D00EEECAE /* CALayer+Anim.m in Sources */,
