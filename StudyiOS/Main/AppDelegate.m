@@ -44,12 +44,15 @@
     NSString *versionCache = [HsConfig readUserDefaultWithKey:VersionCache];//本地缓存的版本号  第一次启动的时候本地是没有缓存版本号的。
     if (![versionCache isEqualToString:APPVERSION]){
         //如果本地缓存的版本号和当前应用版本号不一样，则是第一次启动（更新版本也算第一次启动）
-        //⚠️第一种: 采用视频播放的方式
-//        MovieViewController *wsCtrl = [[MovieViewController alloc]init];
-//        self.window.rootViewController = wsCtrl;
-        //⚠️第二种: 采用引导图的方式
-        GuidanceController *guiCtrl = [[GuidanceController alloc] init];
-        self.window.rootViewController = guiCtrl;
+        if([[HsConfig readUserDefaultWithKey:Begin_Guidance_Type] isEqualToString:@"1"]){
+            //⚠️第二种: 采用引导图的方式
+            GuidanceController *guiCtrl = [[GuidanceController alloc] init];
+            self.window.rootViewController = guiCtrl;
+        }else{
+            //⚠️第一种: 采用视频播放的方式
+            MovieViewController *wsCtrl = [[MovieViewController alloc]init];
+            self.window.rootViewController = wsCtrl;
+        }
     }else{
         //不是首次启动
         MainTabBarViewController *tabBar = [[MainTabBarViewController alloc] init];

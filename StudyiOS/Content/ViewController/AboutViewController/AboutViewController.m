@@ -108,6 +108,7 @@ UITableViewDataSource
         @{Tab_Title:@"清除缓存",Tab_Flag:@998,Tab_Sub_Title:[NSString stringWithFormat:@"清除缓存后启动App会加载启动视频(%@)",cacheNum]},
         @{Tab_Title:@"日志是否为Json串打印",Tab_Flag:@999,Tab_Sub_Title:@"已关闭"},
         @{Tab_Title:@"切换logo",Tab_Flag:@997,Tab_Sub_Title:@"进入页面切换App的Logo"},
+        @{Tab_Title:@"切换启动引导形式(引导图或者视频)",Tab_Flag:@996,Tab_Sub_Title:@"目前采用的是【视频】的形式引导"},
     ]];
     self.row = 7;//支持点击跳转的所在行数
     [self.tableView reloadData];
@@ -201,6 +202,8 @@ UITableViewDataSource
         
         if([dic[Tab_Flag] intValue] == 999){
             cell.detailTextLabel.text = [NSString stringWithFormat:@"【%@】",[[HsConfig readUserDefaultWithKey:kHsPrintLogJson] isEqualToString:@"1"] ? @"已开启" : @"已关闭"];
+        }else if([dic[Tab_Flag] intValue] == 996){
+            cell.detailTextLabel.text = [NSString stringWithFormat:@"目前采用的是【%@】的形式引导",[[HsConfig readUserDefaultWithKey:Begin_Guidance_Type] isEqualToString:@"1"] ? @"引导图" : @"视频"];
         }
         
     }else{
@@ -291,6 +294,16 @@ UITableViewDataSource
             vController.hidesBottomBarWhenPushed = YES;
             vController.title = @"切换Logo";
             [[[GetTopVCTool shareInstance] topViewController].navigationController pushViewController:vController animated:YES];
+        }
+            break;
+            
+        case 8:{
+            if([[HsConfig readUserDefaultWithKey:Begin_Guidance_Type] isEqualToString:@"1"]){
+                [HsConfig writeUserDefaultWithKey:Begin_Guidance_Type WithValue:@"0"];
+            }else{
+                [HsConfig writeUserDefaultWithKey:Begin_Guidance_Type WithValue:@"1"];
+            }
+            [self.tableView reloadData];
         }
             break;
         default:
