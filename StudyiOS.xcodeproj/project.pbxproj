@@ -162,6 +162,14 @@
 		18C2D5792C69E0D1003011DD /* YYKeyChainData_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C2D5772C69E0D1003011DD /* YYKeyChainData_2.png */; };
 		18C2D57D2C69E153003011DD /* YYKeyChainData.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2D57B2C69E153003011DD /* YYKeyChainData.m */; };
 		18C494F32AE21F87002D4C3B /* PrivacyCheckGatherTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C494F22AE21F87002D4C3B /* PrivacyCheckGatherTool.m */; };
+		18C832112C75F8F0002AA9DD /* niao_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C832082C75F8F0002AA9DD /* niao_1.png */; };
+		18C832122C75F8F0002AA9DD /* niao_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C832092C75F8F0002AA9DD /* niao_2.png */; };
+		18C832132C75F8F0002AA9DD /* niao_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C8320A2C75F8F0002AA9DD /* niao_3.png */; };
+		18C832142C75F8F0002AA9DD /* niao_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C8320B2C75F8F0002AA9DD /* niao_4.png */; };
+		18C832152C75F8F0002AA9DD /* niao_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C8320C2C75F8F0002AA9DD /* niao_5.png */; };
+		18C832162C75F8F0002AA9DD /* niao_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C8320D2C75F8F0002AA9DD /* niao_6.png */; };
+		18C832172C75F8F0002AA9DD /* niao_7.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C8320E2C75F8F0002AA9DD /* niao_7.png */; };
+		18C832182C75F8F0002AA9DD /* niao_8.png in Resources */ = {isa = PBXBuildFile; fileRef = 18C8320F2C75F8F0002AA9DD /* niao_8.png */; };
 		18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */; };
 		18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */; };
 		18CD0D5B2C757A60006DEAFE /* SavePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D5A2C757A60006DEAFE /* SavePicViewController.m */; };
@@ -515,6 +523,14 @@
 		18C2D57E2C69E26A003011DD /* StudyiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StudyiOS.entitlements; sourceTree = "<group>"; };
 		18C494F12AE21F87002D4C3B /* PrivacyCheckGatherTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacyCheckGatherTool.h; sourceTree = "<group>"; };
 		18C494F22AE21F87002D4C3B /* PrivacyCheckGatherTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivacyCheckGatherTool.m; sourceTree = "<group>"; };
+		18C832082C75F8F0002AA9DD /* niao_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = niao_1.png; sourceTree = "<group>"; };
+		18C832092C75F8F0002AA9DD /* niao_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = niao_2.png; sourceTree = "<group>"; };
+		18C8320A2C75F8F0002AA9DD /* niao_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = niao_3.png; sourceTree = "<group>"; };
+		18C8320B2C75F8F0002AA9DD /* niao_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = niao_4.png; sourceTree = "<group>"; };
+		18C8320C2C75F8F0002AA9DD /* niao_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = niao_5.png; sourceTree = "<group>"; };
+		18C8320D2C75F8F0002AA9DD /* niao_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = niao_6.png; sourceTree = "<group>"; };
+		18C8320E2C75F8F0002AA9DD /* niao_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = niao_7.png; sourceTree = "<group>"; };
+		18C8320F2C75F8F0002AA9DD /* niao_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = niao_8.png; sourceTree = "<group>"; };
 		18CCDCFC2C537B1500968855 /* PrisonBreakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrisonBreakViewController.h; sourceTree = "<group>"; };
 		18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrisonBreakViewController.m; sourceTree = "<group>"; };
 		18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrisonBreakViewController.xib; sourceTree = "<group>"; };
@@ -1089,6 +1105,7 @@
 		186FD4A7292611D3003A31C0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				18C832102C75F8F0002AA9DD /* niao */,
 				18CD0DA32C75F26F006DEAFE /* 美女 */,
 				18CD0D812C75E70F006DEAFE /* Guidance01.jpg */,
 				18CD0D802C75E70F006DEAFE /* Guidance02.jpg */,
@@ -1601,6 +1618,21 @@
 			path = PrivacyCheckGatherTool;
 			sourceTree = "<group>";
 		};
+		18C832102C75F8F0002AA9DD /* niao */ = {
+			isa = PBXGroup;
+			children = (
+				18C832082C75F8F0002AA9DD /* niao_1.png */,
+				18C832092C75F8F0002AA9DD /* niao_2.png */,
+				18C8320A2C75F8F0002AA9DD /* niao_3.png */,
+				18C8320B2C75F8F0002AA9DD /* niao_4.png */,
+				18C8320C2C75F8F0002AA9DD /* niao_5.png */,
+				18C8320D2C75F8F0002AA9DD /* niao_6.png */,
+				18C8320E2C75F8F0002AA9DD /* niao_7.png */,
+				18C8320F2C75F8F0002AA9DD /* niao_8.png */,
+			);
+			path = niao;
+			sourceTree = "<group>";
+		};
 		18CCDCF62C5379D100968855 /* PrisonBreakViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1931,6 +1963,7 @@
 				18CD0DAC2C75F26F006DEAFE /* 美女09.jpg in Resources */,
 				1887B5282AF4C58D00EEECAE /* headIcon-15.jpg in Resources */,
 				1887B5332AF4C58D00EEECAE /* headIcon-1.jpg in Resources */,
+				18C832142C75F8F0002AA9DD /* niao_4.png in Resources */,
 				1887B52A2AF4C58D00EEECAE /* headIcon-16.jpg in Resources */,
 				1868F35C2AFB19160020FF1A /* MusicViewController.xib in Resources */,
 				18DBE7612ADFB94200E78A31 /* LaunchBackground.jpg in Resources */,
@@ -1946,10 +1979,12 @@
 				18B1ED2C290F9CDB00647F15 /* Assets.xcassets in Resources */,
 				18CD0DBB2C75F26F006DEAFE /* 美女24.jpg in Resources */,
 				1868F3422AFA22250020FF1A /* videoPause.png in Resources */,
+				18C832122C75F8F0002AA9DD /* niao_2.png in Resources */,
 				1887B5682AF4C9DD00EEECAE /* SudokuViewController.xib in Resources */,
 				1887B5392AF4C58D00EEECAE /* headIcon-9.jpg in Resources */,
 				18CD0D852C75E70F006DEAFE /* Guidance03.jpg in Resources */,
 				18DBE7622ADFB94200E78A31 /* LaunchLogo.png in Resources */,
+				18C832172C75F8F0002AA9DD /* niao_7.png in Resources */,
 				1868F3442AFA22250020FF1A /* videoback.png in Resources */,
 				18CD0DB42C75F26F006DEAFE /* 美女17.jpg in Resources */,
 				186FD3FF2924B1C0003A31C0 /* 2.png in Resources */,
@@ -1966,6 +2001,7 @@
 				18CD0D782C75AF20006DEAFE /* biao.jpg in Resources */,
 				18CD0DB02C75F26F006DEAFE /* 美女13.jpg in Resources */,
 				1868F3532AFA28070020FF1A /* cart.png in Resources */,
+				18C832152C75F8F0002AA9DD /* niao_5.png in Resources */,
 				18B8429D2C73361400886209 /* star_gray.png in Resources */,
 				1887B52B2AF4C58D00EEECAE /* headIcon-12.jpg in Resources */,
 				1868F3742AFB67900020FF1A /* chubaobao.png in Resources */,
@@ -1979,6 +2015,7 @@
 				18CD0DAD2C75F26F006DEAFE /* 美女10.jpg in Resources */,
 				18CD0DB62C75F26F006DEAFE /* 美女19.jpg in Resources */,
 				1887B5272AF4C58D00EEECAE /* headIcon-14.jpg in Resources */,
+				18C832162C75F8F0002AA9DD /* niao_6.png in Resources */,
 				1868B54E2AEB4B2C000E8C04 /* Main.storyboard in Resources */,
 				1887B5302AF4C58D00EEECAE /* headIcon-6.jpg in Resources */,
 				18CD0DB52C75F26F006DEAFE /* 美女18.jpg in Resources */,
@@ -1995,10 +2032,12 @@
 				18C2D5792C69E0D1003011DD /* YYKeyChainData_2.png in Resources */,
 				1868F36A2AFB55B80020FF1A /* 123.mp4 in Resources */,
 				1887B5012AF4C2A900EEECAE /* RuntimeViewController.xib in Resources */,
+				18C832132C75F8F0002AA9DD /* niao_3.png in Resources */,
 				18CD0DA62C75F26F006DEAFE /* 美女03.jpg in Resources */,
 				1887B5362AF4C58D00EEECAE /* headIcon-3.jpg in Resources */,
 				1868F3132AF8C4420020FF1A /* WSDatePickerView.xib in Resources */,
 				18CD0DAB2C75F26F006DEAFE /* 美女08.jpg in Resources */,
+				18C832182C75F8F0002AA9DD /* niao_8.png in Resources */,
 				1887B53A2AF4C58D00EEECAE /* headIcon-18.jpg in Resources */,
 				180932E92AFB6C65002F4EBC /* loading-icon.png in Resources */,
 				189C99902C6C41C8008DFEE7 /* CountDownViewcontroller.xib in Resources */,
@@ -2012,6 +2051,7 @@
 				1887B52C2AF4C58D00EEECAE /* headIcon-13.jpg in Resources */,
 				186FD4012924B1C0003A31C0 /* 1.png in Resources */,
 				1887B53B2AF4C58D00EEECAE /* headIcon-19.jpg in Resources */,
+				18C832112C75F8F0002AA9DD /* niao_1.png in Resources */,
 				1887B5322AF4C58D00EEECAE /* headIcon-5.jpg in Resources */,
 				18CD0D842C75E70F006DEAFE /* Guidance01.jpg in Resources */,
 				1887B52D2AF4C58D00EEECAE /* headIcon-11.jpg in Resources */,
