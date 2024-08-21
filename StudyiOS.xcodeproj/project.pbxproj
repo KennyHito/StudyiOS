@@ -861,7 +861,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				18C8321F2C75F9C9002AA9DD /* Location */,
+				18C8321F2C75F9C9002AA9DD /* LocationViewController */,
 				18CD0DBD2C75F63B006DEAFE /* FlashlightViewController */,
 				18CD0D862C75F239006DEAFE /* FallsFlowViewController */,
 				18CD0D702C75944E006DEAFE /* TagSelectViewController */,
@@ -1643,7 +1643,7 @@
 			path = niao;
 			sourceTree = "<group>";
 		};
-		18C8321F2C75F9C9002AA9DD /* Location */ = {
+		18C8321F2C75F9C9002AA9DD /* LocationViewController */ = {
 			isa = PBXGroup;
 			children = (
 				18C832192C75F9C9002AA9DD /* Location.h */,
@@ -1653,7 +1653,7 @@
 				18C8321D2C75F9C9002AA9DD /* LocationViewController.h */,
 				18C8321E2C75F9C9002AA9DD /* LocationViewController.m */,
 			);
-			path = Location;
+			path = LocationViewController;
 			sourceTree = "<group>";
 		};
 		18CCDCF62C5379D100968855 /* PrisonBreakViewController */ = {
