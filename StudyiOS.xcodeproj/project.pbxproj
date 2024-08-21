@@ -204,6 +204,7 @@
 		18CD0DBA2C75F26F006DEAFE /* 美女23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0DA02C75F26F006DEAFE /* 美女23.jpg */; };
 		18CD0DBB2C75F26F006DEAFE /* 美女24.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0DA12C75F26F006DEAFE /* 美女24.jpg */; };
 		18CD0DBC2C75F26F006DEAFE /* 美女25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0DA22C75F26F006DEAFE /* 美女25.jpg */; };
+		18CD0DC02C75F645006DEAFE /* FlashlightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0DBF2C75F645006DEAFE /* FlashlightViewController.m */; };
 		18DBE7612ADFB94200E78A31 /* LaunchBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */; };
 		18DBE7622ADFB94200E78A31 /* LaunchLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE7602ADFB94200E78A31 /* LaunchLogo.png */; };
 		18DBE7662AE110C000E78A31 /* MultiThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBE7642AE110C000E78A31 /* MultiThreadViewController.m */; };
@@ -568,6 +569,8 @@
 		18CD0DA02C75F26F006DEAFE /* 美女23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女23.jpg"; sourceTree = "<group>"; };
 		18CD0DA12C75F26F006DEAFE /* 美女24.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女24.jpg"; sourceTree = "<group>"; };
 		18CD0DA22C75F26F006DEAFE /* 美女25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女25.jpg"; sourceTree = "<group>"; };
+		18CD0DBE2C75F645006DEAFE /* FlashlightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashlightViewController.h; sourceTree = "<group>"; };
+		18CD0DBF2C75F645006DEAFE /* FlashlightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashlightViewController.m; sourceTree = "<group>"; };
 		18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchBackground.jpg; sourceTree = "<group>"; };
 		18DBE7602ADFB94200E78A31 /* LaunchLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchLogo.png; sourceTree = "<group>"; };
 		18DBE7632AE110C000E78A31 /* MultiThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadViewController.h; sourceTree = "<group>"; };
@@ -833,6 +836,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				18CD0DBD2C75F63B006DEAFE /* FlashlightViewController */,
 				18CD0D862C75F239006DEAFE /* FallsFlowViewController */,
 				18CD0D702C75944E006DEAFE /* TagSelectViewController */,
 				18CD0D6C2C75920C006DEAFE /* UITouchViewController */,
@@ -1711,6 +1715,15 @@
 			path = "美女";
 			sourceTree = "<group>";
 		};
+		18CD0DBD2C75F63B006DEAFE /* FlashlightViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18CD0DBE2C75F645006DEAFE /* FlashlightViewController.h */,
+				18CD0DBF2C75F645006DEAFE /* FlashlightViewController.m */,
+			);
+			path = FlashlightViewController;
+			sourceTree = "<group>";
+		};
 		18DBE75E2ADFB94200E78A31 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -2166,6 +2179,7 @@
 				1887B55F2AF4C97D00EEECAE /* CLLockItemView.m in Sources */,
 				18DBE7742AE2189200E78A31 /* NSString+Common.m in Sources */,
 				18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */,
+				18CD0DC02C75F645006DEAFE /* FlashlightViewController.m in Sources */,
 				18B1ED32290F9CDB00647F15 /* main.m in Sources */,
 				182189FC2990EDA400EFBF5C /* ReactiveObjCViewController.m in Sources */,
 				18CD0D732C759454006DEAFE /* TagSelectViewController.m in Sources */,

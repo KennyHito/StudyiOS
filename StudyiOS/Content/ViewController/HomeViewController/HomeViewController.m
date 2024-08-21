@@ -61,7 +61,8 @@
                      @{Tab_Title:@"28、原生扫描二维码功能",Tab_Url:@"QRCodeViewController"},
                      @{Tab_Title:@"29、UITouch移动图片位置",Tab_Url:@"UITouchViewController"},
                      @{Tab_Title:@"30、标签选择功能",Tab_Url:@"TagSelectViewController"},
-                     @{Tab_Title:@"31、实现瀑布流功能",Tab_Url:@"FallsFlowViewController"},    
+                     @{Tab_Title:@"31、实现瀑布流功能",Tab_Url:@"FallsFlowViewController"},
+                     @{Tab_Title:@"32、调用闪光灯功能",Tab_Url:@"FlashlightViewController"},
     ];
     [self.tableView reloadData];
 }
