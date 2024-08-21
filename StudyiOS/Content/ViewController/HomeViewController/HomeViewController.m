@@ -64,6 +64,7 @@
                      @{Tab_Title:@"31、实现瀑布流功能",Tab_Url:@"FallsFlowViewController"},
                      @{Tab_Title:@"32、调用闪光灯功能",Tab_Url:@"FlashlightViewController"},
                      @{Tab_Title:@"33、系统自带定位功能",Tab_Url:@"LocationViewController"},
+                     @{Tab_Title:@"34、轮播新闻类功能",Tab_Url:@"YHTScrollViewController"},
     ];
     [self.tableView reloadData];
 }

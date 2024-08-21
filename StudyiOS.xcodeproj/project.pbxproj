@@ -173,6 +173,20 @@
 		18C832202C75F9C9002AA9DD /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8321A2C75F9C9002AA9DD /* Location.m */; };
 		18C832212C75F9C9002AA9DD /* LocationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8321C2C75F9C9002AA9DD /* LocationModel.m */; };
 		18C832222C75F9C9002AA9DD /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8321E2C75F9C9002AA9DD /* LocationViewController.m */; };
+		18C8323A2C75FC54002AA9DD /* HotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C832242C75FC54002AA9DD /* HotViewController.m */; };
+		18C8323B2C75FC54002AA9DD /* musicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C832262C75FC54002AA9DD /* musicViewController.m */; };
+		18C8323C2C75FC54002AA9DD /* ReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C832282C75FC54002AA9DD /* ReaderViewController.m */; };
+		18C8323D2C75FC54002AA9DD /* ScienceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8322A2C75FC54002AA9DD /* ScienceViewController.m */; };
+		18C8323E2C75FC54002AA9DD /* SocietyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8322C2C75FC54002AA9DD /* SocietyViewController.m */; };
+		18C8323F2C75FC54002AA9DD /* TopLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8322E2C75FC54002AA9DD /* TopLineViewController.m */; };
+		18C832402C75FC54002AA9DD /* MenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C832312C75FC54002AA9DD /* MenuModel.m */; };
+		18C832412C75FC54002AA9DD /* nextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C832332C75FC54002AA9DD /* nextViewController.m */; };
+		18C832422C75FC54002AA9DD /* showViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C832352C75FC54002AA9DD /* showViewController.m */; };
+		18C832432C75FC54002AA9DD /* showViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C832362C75FC54002AA9DD /* showViewController.xib */; };
+		18C832442C75FC54002AA9DD /* YHTScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C832382C75FC54002AA9DD /* YHTScrollViewController.m */; };
+		18C832482C75FE2E002AA9DD /* 手表的壁纸.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18C832452C75FE2E002AA9DD /* 手表的壁纸.jpg */; };
+		18C832492C75FE2E002AA9DD /* 电脑的壁纸.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18C832462C75FE2E002AA9DD /* 电脑的壁纸.jpg */; };
+		18C8324A2C75FE2E002AA9DD /* 飞机的壁纸.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18C832472C75FE2E002AA9DD /* 飞机的壁纸.jpg */; };
 		18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */; };
 		18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */; };
 		18CD0D5B2C757A60006DEAFE /* SavePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D5A2C757A60006DEAFE /* SavePicViewController.m */; };
@@ -540,6 +554,30 @@
 		18C8321C2C75F9C9002AA9DD /* LocationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationModel.m; sourceTree = "<group>"; };
 		18C8321D2C75F9C9002AA9DD /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		18C8321E2C75F9C9002AA9DD /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		18C832232C75FC54002AA9DD /* HotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotViewController.h; sourceTree = "<group>"; };
+		18C832242C75FC54002AA9DD /* HotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotViewController.m; sourceTree = "<group>"; };
+		18C832252C75FC54002AA9DD /* musicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = musicViewController.h; sourceTree = "<group>"; };
+		18C832262C75FC54002AA9DD /* musicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = musicViewController.m; sourceTree = "<group>"; };
+		18C832272C75FC54002AA9DD /* ReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderViewController.h; sourceTree = "<group>"; };
+		18C832282C75FC54002AA9DD /* ReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderViewController.m; sourceTree = "<group>"; };
+		18C832292C75FC54002AA9DD /* ScienceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScienceViewController.h; sourceTree = "<group>"; };
+		18C8322A2C75FC54002AA9DD /* ScienceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScienceViewController.m; sourceTree = "<group>"; };
+		18C8322B2C75FC54002AA9DD /* SocietyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocietyViewController.h; sourceTree = "<group>"; };
+		18C8322C2C75FC54002AA9DD /* SocietyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocietyViewController.m; sourceTree = "<group>"; };
+		18C8322D2C75FC54002AA9DD /* TopLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopLineViewController.h; sourceTree = "<group>"; };
+		18C8322E2C75FC54002AA9DD /* TopLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopLineViewController.m; sourceTree = "<group>"; };
+		18C832302C75FC54002AA9DD /* MenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuModel.h; sourceTree = "<group>"; };
+		18C832312C75FC54002AA9DD /* MenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuModel.m; sourceTree = "<group>"; };
+		18C832322C75FC54002AA9DD /* nextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nextViewController.h; sourceTree = "<group>"; };
+		18C832332C75FC54002AA9DD /* nextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nextViewController.m; sourceTree = "<group>"; };
+		18C832342C75FC54002AA9DD /* showViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showViewController.h; sourceTree = "<group>"; };
+		18C832352C75FC54002AA9DD /* showViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showViewController.m; sourceTree = "<group>"; };
+		18C832362C75FC54002AA9DD /* showViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = showViewController.xib; sourceTree = "<group>"; };
+		18C832372C75FC54002AA9DD /* YHTScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YHTScrollViewController.h; sourceTree = "<group>"; };
+		18C832382C75FC54002AA9DD /* YHTScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YHTScrollViewController.m; sourceTree = "<group>"; };
+		18C832452C75FE2E002AA9DD /* 手表的壁纸.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "手表的壁纸.jpg"; sourceTree = "<group>"; };
+		18C832462C75FE2E002AA9DD /* 电脑的壁纸.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "电脑的壁纸.jpg"; sourceTree = "<group>"; };
+		18C832472C75FE2E002AA9DD /* 飞机的壁纸.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "飞机的壁纸.jpg"; sourceTree = "<group>"; };
 		18CCDCFC2C537B1500968855 /* PrisonBreakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrisonBreakViewController.h; sourceTree = "<group>"; };
 		18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrisonBreakViewController.m; sourceTree = "<group>"; };
 		18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrisonBreakViewController.xib; sourceTree = "<group>"; };
@@ -861,6 +899,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				18C832392C75FC54002AA9DD /* YHTScrollViewController */,
 				18C8321F2C75F9C9002AA9DD /* LocationViewController */,
 				18CD0DBD2C75F63B006DEAFE /* FlashlightViewController */,
 				18CD0D862C75F239006DEAFE /* FallsFlowViewController */,
@@ -1115,6 +1154,9 @@
 		186FD4A7292611D3003A31C0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				18C832462C75FE2E002AA9DD /* 电脑的壁纸.jpg */,
+				18C832472C75FE2E002AA9DD /* 飞机的壁纸.jpg */,
+				18C832452C75FE2E002AA9DD /* 手表的壁纸.jpg */,
 				18C832102C75F8F0002AA9DD /* niao */,
 				18CD0DA32C75F26F006DEAFE /* 美女 */,
 				18CD0D812C75E70F006DEAFE /* Guidance01.jpg */,
@@ -1656,6 +1698,42 @@
 			path = LocationViewController;
 			sourceTree = "<group>";
 		};
+		18C8322F2C75FC54002AA9DD /* ChildViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18C832232C75FC54002AA9DD /* HotViewController.h */,
+				18C832242C75FC54002AA9DD /* HotViewController.m */,
+				18C832252C75FC54002AA9DD /* musicViewController.h */,
+				18C832262C75FC54002AA9DD /* musicViewController.m */,
+				18C832272C75FC54002AA9DD /* ReaderViewController.h */,
+				18C832282C75FC54002AA9DD /* ReaderViewController.m */,
+				18C832292C75FC54002AA9DD /* ScienceViewController.h */,
+				18C8322A2C75FC54002AA9DD /* ScienceViewController.m */,
+				18C8322B2C75FC54002AA9DD /* SocietyViewController.h */,
+				18C8322C2C75FC54002AA9DD /* SocietyViewController.m */,
+				18C8322D2C75FC54002AA9DD /* TopLineViewController.h */,
+				18C8322E2C75FC54002AA9DD /* TopLineViewController.m */,
+			);
+			path = ChildViewController;
+			sourceTree = "<group>";
+		};
+		18C832392C75FC54002AA9DD /* YHTScrollViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18C8322F2C75FC54002AA9DD /* ChildViewController */,
+				18C832302C75FC54002AA9DD /* MenuModel.h */,
+				18C832312C75FC54002AA9DD /* MenuModel.m */,
+				18C832322C75FC54002AA9DD /* nextViewController.h */,
+				18C832332C75FC54002AA9DD /* nextViewController.m */,
+				18C832342C75FC54002AA9DD /* showViewController.h */,
+				18C832352C75FC54002AA9DD /* showViewController.m */,
+				18C832362C75FC54002AA9DD /* showViewController.xib */,
+				18C832372C75FC54002AA9DD /* YHTScrollViewController.h */,
+				18C832382C75FC54002AA9DD /* YHTScrollViewController.m */,
+			);
+			path = YHTScrollViewController;
+			sourceTree = "<group>";
+		};
 		18CCDCF62C5379D100968855 /* PrisonBreakViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1992,6 +2070,7 @@
 				18DBE7612ADFB94200E78A31 /* LaunchBackground.jpg in Resources */,
 				186FD4AC29261506003A31C0 /* dangdang.png in Resources */,
 				18CD0DA72C75F26F006DEAFE /* 美女04.jpg in Resources */,
+				18C832482C75FE2E002AA9DD /* 手表的壁纸.jpg in Resources */,
 				18DBE7672AE110C000E78A31 /* MultiThreadViewController.xib in Resources */,
 				18DBE7712AE2165200E78A31 /* AboutViewController.xib in Resources */,
 				1887B5382AF4C58D00EEECAE /* headIcon-8.jpg in Resources */,
@@ -2054,8 +2133,10 @@
 				18349A0A2C7423C500F83A52 /* changeLogo_2.png in Resources */,
 				18C2D5792C69E0D1003011DD /* YYKeyChainData_2.png in Resources */,
 				1868F36A2AFB55B80020FF1A /* 123.mp4 in Resources */,
+				18C832432C75FC54002AA9DD /* showViewController.xib in Resources */,
 				1887B5012AF4C2A900EEECAE /* RuntimeViewController.xib in Resources */,
 				18C832132C75F8F0002AA9DD /* niao_3.png in Resources */,
+				18C8324A2C75FE2E002AA9DD /* 飞机的壁纸.jpg in Resources */,
 				18CD0DA62C75F26F006DEAFE /* 美女03.jpg in Resources */,
 				1887B5362AF4C58D00EEECAE /* headIcon-3.jpg in Resources */,
 				1868F3132AF8C4420020FF1A /* WSDatePickerView.xib in Resources */,
@@ -2064,6 +2145,7 @@
 				1887B53A2AF4C58D00EEECAE /* headIcon-18.jpg in Resources */,
 				180932E92AFB6C65002F4EBC /* loading-icon.png in Resources */,
 				189C99902C6C41C8008DFEE7 /* CountDownViewcontroller.xib in Resources */,
+				18C832492C75FE2E002AA9DD /* 电脑的壁纸.jpg in Resources */,
 				186555D12AE2505F00E16698 /* studyInfo.plist in Resources */,
 				18CD0DA52C75F26F006DEAFE /* 美女02.jpg in Resources */,
 				18CD0DA82C75F26F006DEAFE /* 美女05.jpg in Resources */,
@@ -2191,6 +2273,7 @@
 				1887B5672AF4C9DD00EEECAE /* SudokuViewController.m in Sources */,
 				18B1ED27290F9CDA00647F15 /* ExerciseViewController.m in Sources */,
 				1868F33A2AFA209D0020FF1A /* AVPlayerViewController.m in Sources */,
+				18C832402C75FC54002AA9DD /* MenuModel.m in Sources */,
 				1887B5612AF4C97D00EEECAE /* CLLockLabel.m in Sources */,
 				18227637292490B600242C9A /* TTCrash.m in Sources */,
 				1822760D2924908F00242C9A /* NSArray+CommonSafe.m in Sources */,
@@ -2200,6 +2283,7 @@
 				1868F30A2AF8C3990020FF1A /* DatePickerVC.m in Sources */,
 				1887B53F2AF4C5E300EEECAE /* PinballProViewController.m in Sources */,
 				1868F3322AFA16160020FF1A /* RXJDTableCell.m in Sources */,
+				18C8323A2C75FC54002AA9DD /* HotViewController.m in Sources */,
 				1868F34E2AFA27650020FF1A /* ShoppingCartTool.m in Sources */,
 				1887B5732AF4CBCE00EEECAE /* NSString+File.m in Sources */,
 				1887B5602AF4C97D00EEECAE /* CLLockInfoView.m in Sources */,
@@ -2223,6 +2307,7 @@
 				18CD0D5F2C757F14006DEAFE /* RequestAPIViewController.m in Sources */,
 				186FD3FA2924AB9A003A31C0 /* TimerViewController.m in Sources */,
 				18929B1E2AD3D48C006D6CE4 /* Person.m in Sources */,
+				18C832412C75FC54002AA9DD /* nextViewController.m in Sources */,
 				1868F3702AFB604B0020FF1A /* ChangeLogoViewController.m in Sources */,
 				18227632292490B600242C9A /* TTMiddleObject.m in Sources */,
 				1868B54C2AEA62ED000E8C04 /* HsConfig.m in Sources */,
@@ -2233,6 +2318,7 @@
 				182276102924908F00242C9A /* NSString+TTMD5.m in Sources */,
 				18227633292490B600242C9A /* TTMiddleProxy.m in Sources */,
 				1887B55C2AF4C97D00EEECAE /* CLLockNavVC.m in Sources */,
+				18C8323E2C75FC54002AA9DD /* SocietyViewController.m in Sources */,
 				18227635292490B600242C9A /* DDToast.m in Sources */,
 				18227634292490B600242C9A /* TTReadWhiteSafeDic.m in Sources */,
 				18B842882C7334B300886209 /* UIView+Frame.m in Sources */,
@@ -2242,21 +2328,26 @@
 				1868F34A2AFA27410020FF1A /* GuoWuCheViewController.m in Sources */,
 				18B842792C73210700886209 /* MainTabBar.m in Sources */,
 				1868F31F2AF9E7050020FF1A /* HsWeakScriptMessageDelegate.m in Sources */,
+				18C8323F2C75FC54002AA9DD /* TopLineViewController.m in Sources */,
 				1887B55F2AF4C97D00EEECAE /* CLLockItemView.m in Sources */,
 				18DBE7742AE2189200E78A31 /* NSString+Common.m in Sources */,
 				18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */,
 				18CD0DC02C75F645006DEAFE /* FlashlightViewController.m in Sources */,
 				18B1ED32290F9CDB00647F15 /* main.m in Sources */,
 				182189FC2990EDA400EFBF5C /* ReactiveObjCViewController.m in Sources */,
+				18C832422C75FC54002AA9DD /* showViewController.m in Sources */,
+				18C8323D2C75FC54002AA9DD /* ScienceViewController.m in Sources */,
 				18CD0D732C759454006DEAFE /* TagSelectViewController.m in Sources */,
 				1887B55D2AF4C97D00EEECAE /* CoreLockConst.m in Sources */,
 				18DBE7702AE2165200E78A31 /* AboutViewController.m in Sources */,
+				18C8323B2C75FC54002AA9DD /* musicViewController.m in Sources */,
 				18B842A12C73361400886209 /* starView.m in Sources */,
 				1822762E292490B600242C9A /* TTStudySingle.m in Sources */,
 				18CD0D892C75F245006DEAFE /* FallsFlowViewController.m in Sources */,
 				1887B5792AF876E300EEECAE /* MovieViewController.m in Sources */,
 				1887B5592AF4C97D00EEECAE /* CLLockVC.m in Sources */,
 				18CD0D672C758A91006DEAFE /* LocalpushViewController.m in Sources */,
+				18C832442C75FC54002AA9DD /* YHTScrollViewController.m in Sources */,
 				186FD3F52924AB38003A31C0 /* BaseViewController.m in Sources */,
 				18CD0D762C75AD27006DEAFE /* TagModel.m in Sources */,
 				18B842B02C73388C00886209 /* RollingLightViewController.m in Sources */,
@@ -2268,6 +2359,7 @@
 				186FD4A629260CA7003A31C0 /* UIViewController+Log.m in Sources */,
 				18CD0D6F2C759216006DEAFE /* UITouchViewController.m in Sources */,
 				18B1ED59290F9D7D00647F15 /* HomeViewController.m in Sources */,
+				18C8323C2C75FC54002AA9DD /* ReaderViewController.m in Sources */,
 				186555D92AE765F100E16698 /* NSString+Base64.m in Sources */,
 				1868F32F2AFA16160020FF1A /* RXGetAddress.m in Sources */,
 				1868F3362AFA16CA0020FF1A /* AddressViewController.m in Sources */,
