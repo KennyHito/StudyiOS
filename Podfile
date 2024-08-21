@@ -16,9 +16,10 @@ target 'StudyiOS' do
   pod 'AFNetworking',:path => LocationPath + 'AFNetworking'
   pod 'HaHaHa',:path => LocationPath + 'HaHaHa'
   pod 'Test01',:path => LocationPath + 'Test01'
-  pod 'SDWebImage'
+  
+  pod 'SDWebImage', '~> 5.19.6'
   pod 'MJExtension'
-  pod 'MJRefresh', '~> 3.7.5'
+  pod 'MJRefresh'
   pod 'FMDB', '~> 2.7.5'
   pod 'ReactiveObjC', '~> 3.1.1'
   pod 'FTPopOverMenu', '~> 2.1.1'

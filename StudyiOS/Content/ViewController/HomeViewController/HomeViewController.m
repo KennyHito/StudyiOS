@@ -55,6 +55,7 @@
                      @{Tab_Title:@"22、倒计时功能",Tab_Url:@"CountDownViewcontroller"},
                      @{Tab_Title:@"23、星级评分功能",Tab_Url:@"StarStarViewController"},
                      @{Tab_Title:@"24、UILabel滚动,类似于跑马灯效果",Tab_Url:@"RollingLightViewController"},
+                     @{Tab_Title:@"25、图片保存功能",Tab_Url:@"SavePicViewController"},
     ];
     [self.tableView reloadData];
 }

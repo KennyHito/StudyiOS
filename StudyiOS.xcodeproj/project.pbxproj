@@ -164,6 +164,7 @@
 		18C494F32AE21F87002D4C3B /* PrivacyCheckGatherTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C494F22AE21F87002D4C3B /* PrivacyCheckGatherTool.m */; };
 		18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */; };
 		18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */; };
+		18CD0D5B2C757A60006DEAFE /* SavePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D5A2C757A60006DEAFE /* SavePicViewController.m */; };
 		18DBE7612ADFB94200E78A31 /* LaunchBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */; };
 		18DBE7622ADFB94200E78A31 /* LaunchLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE7602ADFB94200E78A31 /* LaunchLogo.png */; };
 		18DBE7662AE110C000E78A31 /* MultiThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBE7642AE110C000E78A31 /* MultiThreadViewController.m */; };
@@ -477,6 +478,8 @@
 		18CCDCFC2C537B1500968855 /* PrisonBreakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrisonBreakViewController.h; sourceTree = "<group>"; };
 		18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrisonBreakViewController.m; sourceTree = "<group>"; };
 		18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrisonBreakViewController.xib; sourceTree = "<group>"; };
+		18CD0D592C757A60006DEAFE /* SavePicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SavePicViewController.h; sourceTree = "<group>"; };
+		18CD0D5A2C757A60006DEAFE /* SavePicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SavePicViewController.m; sourceTree = "<group>"; };
 		18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchBackground.jpg; sourceTree = "<group>"; };
 		18DBE7602ADFB94200E78A31 /* LaunchLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchLogo.png; sourceTree = "<group>"; };
 		18DBE7632AE110C000E78A31 /* MultiThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadViewController.h; sourceTree = "<group>"; };
@@ -740,6 +743,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				18CD0D582C757A54006DEAFE /* SavePicViewController */,
 				18B842AD2C73388200886209 /* RollingLightViewController */,
 				18B842A92C73361F00886209 /* StarStarViewController */,
 				189C998B2C6C41BB008DFEE7 /* CountDownViewcontroller */,
@@ -1497,6 +1501,15 @@
 			path = PrisonBreakViewController;
 			sourceTree = "<group>";
 		};
+		18CD0D582C757A54006DEAFE /* SavePicViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18CD0D592C757A60006DEAFE /* SavePicViewController.h */,
+				18CD0D5A2C757A60006DEAFE /* SavePicViewController.m */,
+			);
+			path = SavePicViewController;
+			sourceTree = "<group>";
+		};
 		18DBE75E2ADFB94200E78A31 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1889,6 +1902,7 @@
 				1868F33E2AFA21290020FF1A /* VideoView.m in Sources */,
 				188D09E92AD7BEB600FCAD36 /* CrashHandler.m in Sources */,
 				1887B5102AF4C4C800EEECAE /* ScreenShotViewController.m in Sources */,
+				18CD0D5B2C757A60006DEAFE /* SavePicViewController.m in Sources */,
 				18C494F32AE21F87002D4C3B /* PrivacyCheckGatherTool.m in Sources */,
 				189295042AF4C239004B4A43 /* TableViewController.m in Sources */,
 				1887B50C2AF4C46800EEECAE /* DPScreenshotsPopView.m in Sources */,

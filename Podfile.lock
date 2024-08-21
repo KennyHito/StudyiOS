@@ -15,9 +15,9 @@ PODS:
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
   - ReactiveObjC (3.1.1)
-  - SDWebImage (5.19.4):
-    - SDWebImage/Core (= 5.19.4)
-  - SDWebImage/Core (5.19.4)
+  - SDWebImage (5.19.6):
+    - SDWebImage/Core (= 5.19.6)
+  - SDWebImage/Core (5.19.6)
   - Test01 (1.0.0):
     - AFNetworking
   - YYText (1.0.7)
@@ -31,10 +31,10 @@ DEPENDENCIES:
   - Masonry (~> 1.1.0)
   - MBProgressHUD (~> 1.2.0)
   - MJExtension
-  - MJRefresh (~> 3.7.5)
+  - MJRefresh
   - MLeaksFinder
   - ReactiveObjC (~> 3.1.1)
-  - SDWebImage
+  - SDWebImage (~> 5.19.6)
   - Test01 (from `./Lib/Test01`)
   - YYText (~> 1.0.7)
 
@@ -74,10 +74,10 @@ SPEC CHECKSUMS:
   MJRefresh: 2fe7fb43a5167ceda20bb7e63f130c04fd1814a5
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  SDWebImage: 066c47b573f408f18caa467d71deace7c0f8280d
+  SDWebImage: a79252b60f4678812d94316c91da69ec83089c9f
   Test01: 119ccf64feea50a1e1562a552eb702c6951a0a04
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 9a9adf75521624bf8d22f4ad1b5e58485abfe3df
+PODFILE CHECKSUM: b7fbc1d35b542ca75cd9e6151c847e49c8fe1798
 
 COCOAPODS: 1.15.2
