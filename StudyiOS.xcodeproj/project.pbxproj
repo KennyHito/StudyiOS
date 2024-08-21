@@ -178,6 +178,32 @@
 		18CD0D832C75E70F006DEAFE /* Guidance02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D802C75E70F006DEAFE /* Guidance02.jpg */; };
 		18CD0D842C75E70F006DEAFE /* Guidance01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D812C75E70F006DEAFE /* Guidance01.jpg */; };
 		18CD0D852C75E70F006DEAFE /* Guidance03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D822C75E70F006DEAFE /* Guidance03.jpg */; };
+		18CD0D892C75F245006DEAFE /* FallsFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D882C75F245006DEAFE /* FallsFlowViewController.m */; };
+		18CD0DA42C75F26F006DEAFE /* 美女01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D8A2C75F26F006DEAFE /* 美女01.jpg */; };
+		18CD0DA52C75F26F006DEAFE /* 美女02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D8B2C75F26F006DEAFE /* 美女02.jpg */; };
+		18CD0DA62C75F26F006DEAFE /* 美女03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D8C2C75F26F006DEAFE /* 美女03.jpg */; };
+		18CD0DA72C75F26F006DEAFE /* 美女04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D8D2C75F26F006DEAFE /* 美女04.jpg */; };
+		18CD0DA82C75F26F006DEAFE /* 美女05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D8E2C75F26F006DEAFE /* 美女05.jpg */; };
+		18CD0DA92C75F26F006DEAFE /* 美女06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D8F2C75F26F006DEAFE /* 美女06.jpg */; };
+		18CD0DAA2C75F26F006DEAFE /* 美女07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D902C75F26F006DEAFE /* 美女07.jpg */; };
+		18CD0DAB2C75F26F006DEAFE /* 美女08.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D912C75F26F006DEAFE /* 美女08.jpg */; };
+		18CD0DAC2C75F26F006DEAFE /* 美女09.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D922C75F26F006DEAFE /* 美女09.jpg */; };
+		18CD0DAD2C75F26F006DEAFE /* 美女10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D932C75F26F006DEAFE /* 美女10.jpg */; };
+		18CD0DAE2C75F26F006DEAFE /* 美女11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D942C75F26F006DEAFE /* 美女11.jpg */; };
+		18CD0DAF2C75F26F006DEAFE /* 美女12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D952C75F26F006DEAFE /* 美女12.jpg */; };
+		18CD0DB02C75F26F006DEAFE /* 美女13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D962C75F26F006DEAFE /* 美女13.jpg */; };
+		18CD0DB12C75F26F006DEAFE /* 美女14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D972C75F26F006DEAFE /* 美女14.jpg */; };
+		18CD0DB22C75F26F006DEAFE /* 美女15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D982C75F26F006DEAFE /* 美女15.jpg */; };
+		18CD0DB32C75F26F006DEAFE /* 美女16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D992C75F26F006DEAFE /* 美女16.jpg */; };
+		18CD0DB42C75F26F006DEAFE /* 美女17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D9A2C75F26F006DEAFE /* 美女17.jpg */; };
+		18CD0DB52C75F26F006DEAFE /* 美女18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D9B2C75F26F006DEAFE /* 美女18.jpg */; };
+		18CD0DB62C75F26F006DEAFE /* 美女19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D9C2C75F26F006DEAFE /* 美女19.jpg */; };
+		18CD0DB72C75F26F006DEAFE /* 美女20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D9D2C75F26F006DEAFE /* 美女20.jpg */; };
+		18CD0DB82C75F26F006DEAFE /* 美女21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D9E2C75F26F006DEAFE /* 美女21.jpg */; };
+		18CD0DB92C75F26F006DEAFE /* 美女22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D9F2C75F26F006DEAFE /* 美女22.jpg */; };
+		18CD0DBA2C75F26F006DEAFE /* 美女23.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0DA02C75F26F006DEAFE /* 美女23.jpg */; };
+		18CD0DBB2C75F26F006DEAFE /* 美女24.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0DA12C75F26F006DEAFE /* 美女24.jpg */; };
+		18CD0DBC2C75F26F006DEAFE /* 美女25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0DA22C75F26F006DEAFE /* 美女25.jpg */; };
 		18DBE7612ADFB94200E78A31 /* LaunchBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */; };
 		18DBE7622ADFB94200E78A31 /* LaunchLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE7602ADFB94200E78A31 /* LaunchLogo.png */; };
 		18DBE7662AE110C000E78A31 /* MultiThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBE7642AE110C000E78A31 /* MultiThreadViewController.m */; };
@@ -515,6 +541,33 @@
 		18CD0D802C75E70F006DEAFE /* Guidance02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Guidance02.jpg; sourceTree = "<group>"; };
 		18CD0D812C75E70F006DEAFE /* Guidance01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Guidance01.jpg; sourceTree = "<group>"; };
 		18CD0D822C75E70F006DEAFE /* Guidance03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Guidance03.jpg; sourceTree = "<group>"; };
+		18CD0D872C75F245006DEAFE /* FallsFlowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FallsFlowViewController.h; sourceTree = "<group>"; };
+		18CD0D882C75F245006DEAFE /* FallsFlowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FallsFlowViewController.m; sourceTree = "<group>"; };
+		18CD0D8A2C75F26F006DEAFE /* 美女01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女01.jpg"; sourceTree = "<group>"; };
+		18CD0D8B2C75F26F006DEAFE /* 美女02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女02.jpg"; sourceTree = "<group>"; };
+		18CD0D8C2C75F26F006DEAFE /* 美女03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女03.jpg"; sourceTree = "<group>"; };
+		18CD0D8D2C75F26F006DEAFE /* 美女04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女04.jpg"; sourceTree = "<group>"; };
+		18CD0D8E2C75F26F006DEAFE /* 美女05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女05.jpg"; sourceTree = "<group>"; };
+		18CD0D8F2C75F26F006DEAFE /* 美女06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女06.jpg"; sourceTree = "<group>"; };
+		18CD0D902C75F26F006DEAFE /* 美女07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女07.jpg"; sourceTree = "<group>"; };
+		18CD0D912C75F26F006DEAFE /* 美女08.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女08.jpg"; sourceTree = "<group>"; };
+		18CD0D922C75F26F006DEAFE /* 美女09.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女09.jpg"; sourceTree = "<group>"; };
+		18CD0D932C75F26F006DEAFE /* 美女10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女10.jpg"; sourceTree = "<group>"; };
+		18CD0D942C75F26F006DEAFE /* 美女11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女11.jpg"; sourceTree = "<group>"; };
+		18CD0D952C75F26F006DEAFE /* 美女12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女12.jpg"; sourceTree = "<group>"; };
+		18CD0D962C75F26F006DEAFE /* 美女13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女13.jpg"; sourceTree = "<group>"; };
+		18CD0D972C75F26F006DEAFE /* 美女14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女14.jpg"; sourceTree = "<group>"; };
+		18CD0D982C75F26F006DEAFE /* 美女15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女15.jpg"; sourceTree = "<group>"; };
+		18CD0D992C75F26F006DEAFE /* 美女16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女16.jpg"; sourceTree = "<group>"; };
+		18CD0D9A2C75F26F006DEAFE /* 美女17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女17.jpg"; sourceTree = "<group>"; };
+		18CD0D9B2C75F26F006DEAFE /* 美女18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女18.jpg"; sourceTree = "<group>"; };
+		18CD0D9C2C75F26F006DEAFE /* 美女19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女19.jpg"; sourceTree = "<group>"; };
+		18CD0D9D2C75F26F006DEAFE /* 美女20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女20.jpg"; sourceTree = "<group>"; };
+		18CD0D9E2C75F26F006DEAFE /* 美女21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女21.jpg"; sourceTree = "<group>"; };
+		18CD0D9F2C75F26F006DEAFE /* 美女22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女22.jpg"; sourceTree = "<group>"; };
+		18CD0DA02C75F26F006DEAFE /* 美女23.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女23.jpg"; sourceTree = "<group>"; };
+		18CD0DA12C75F26F006DEAFE /* 美女24.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女24.jpg"; sourceTree = "<group>"; };
+		18CD0DA22C75F26F006DEAFE /* 美女25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "美女25.jpg"; sourceTree = "<group>"; };
 		18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchBackground.jpg; sourceTree = "<group>"; };
 		18DBE7602ADFB94200E78A31 /* LaunchLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchLogo.png; sourceTree = "<group>"; };
 		18DBE7632AE110C000E78A31 /* MultiThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadViewController.h; sourceTree = "<group>"; };
@@ -780,6 +833,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				18CD0D862C75F239006DEAFE /* FallsFlowViewController */,
 				18CD0D702C75944E006DEAFE /* TagSelectViewController */,
 				18CD0D6C2C75920C006DEAFE /* UITouchViewController */,
 				18CD0D682C758CE2006DEAFE /* QRCodeViewController */,
@@ -1031,6 +1085,7 @@
 		186FD4A7292611D3003A31C0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				18CD0DA32C75F26F006DEAFE /* 美女 */,
 				18CD0D812C75E70F006DEAFE /* Guidance01.jpg */,
 				18CD0D802C75E70F006DEAFE /* Guidance02.jpg */,
 				18CD0D822C75E70F006DEAFE /* Guidance03.jpg */,
@@ -1615,6 +1670,47 @@
 			path = GuidanceController;
 			sourceTree = "<group>";
 		};
+		18CD0D862C75F239006DEAFE /* FallsFlowViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18CD0D872C75F245006DEAFE /* FallsFlowViewController.h */,
+				18CD0D882C75F245006DEAFE /* FallsFlowViewController.m */,
+			);
+			path = FallsFlowViewController;
+			sourceTree = "<group>";
+		};
+		18CD0DA32C75F26F006DEAFE /* 美女 */ = {
+			isa = PBXGroup;
+			children = (
+				18CD0D8A2C75F26F006DEAFE /* 美女01.jpg */,
+				18CD0D8B2C75F26F006DEAFE /* 美女02.jpg */,
+				18CD0D8C2C75F26F006DEAFE /* 美女03.jpg */,
+				18CD0D8D2C75F26F006DEAFE /* 美女04.jpg */,
+				18CD0D8E2C75F26F006DEAFE /* 美女05.jpg */,
+				18CD0D8F2C75F26F006DEAFE /* 美女06.jpg */,
+				18CD0D902C75F26F006DEAFE /* 美女07.jpg */,
+				18CD0D912C75F26F006DEAFE /* 美女08.jpg */,
+				18CD0D922C75F26F006DEAFE /* 美女09.jpg */,
+				18CD0D932C75F26F006DEAFE /* 美女10.jpg */,
+				18CD0D942C75F26F006DEAFE /* 美女11.jpg */,
+				18CD0D952C75F26F006DEAFE /* 美女12.jpg */,
+				18CD0D962C75F26F006DEAFE /* 美女13.jpg */,
+				18CD0D972C75F26F006DEAFE /* 美女14.jpg */,
+				18CD0D982C75F26F006DEAFE /* 美女15.jpg */,
+				18CD0D992C75F26F006DEAFE /* 美女16.jpg */,
+				18CD0D9A2C75F26F006DEAFE /* 美女17.jpg */,
+				18CD0D9B2C75F26F006DEAFE /* 美女18.jpg */,
+				18CD0D9C2C75F26F006DEAFE /* 美女19.jpg */,
+				18CD0D9D2C75F26F006DEAFE /* 美女20.jpg */,
+				18CD0D9E2C75F26F006DEAFE /* 美女21.jpg */,
+				18CD0D9F2C75F26F006DEAFE /* 美女22.jpg */,
+				18CD0DA02C75F26F006DEAFE /* 美女23.jpg */,
+				18CD0DA12C75F26F006DEAFE /* 美女24.jpg */,
+				18CD0DA22C75F26F006DEAFE /* 美女25.jpg */,
+			);
+			path = "美女";
+			sourceTree = "<group>";
+		};
 		18DBE75E2ADFB94200E78A31 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1819,33 +1915,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18CD0DAC2C75F26F006DEAFE /* 美女09.jpg in Resources */,
 				1887B5282AF4C58D00EEECAE /* headIcon-15.jpg in Resources */,
 				1887B5332AF4C58D00EEECAE /* headIcon-1.jpg in Resources */,
 				1887B52A2AF4C58D00EEECAE /* headIcon-16.jpg in Resources */,
 				1868F35C2AFB19160020FF1A /* MusicViewController.xib in Resources */,
 				18DBE7612ADFB94200E78A31 /* LaunchBackground.jpg in Resources */,
 				186FD4AC29261506003A31C0 /* dangdang.png in Resources */,
+				18CD0DA72C75F26F006DEAFE /* 美女04.jpg in Resources */,
 				18DBE7672AE110C000E78A31 /* MultiThreadViewController.xib in Resources */,
 				18DBE7712AE2165200E78A31 /* AboutViewController.xib in Resources */,
 				1887B5382AF4C58D00EEECAE /* headIcon-8.jpg in Resources */,
 				18B1ED2F290F9CDB00647F15 /* LaunchScreen.storyboard in Resources */,
 				18349A092C7423C500F83A52 /* changeLogo_1.png in Resources */,
+				18CD0DB12C75F26F006DEAFE /* 美女14.jpg in Resources */,
 				1868F3522AFA28070020FF1A /* xin.png in Resources */,
 				18B1ED2C290F9CDB00647F15 /* Assets.xcassets in Resources */,
+				18CD0DBB2C75F26F006DEAFE /* 美女24.jpg in Resources */,
 				1868F3422AFA22250020FF1A /* videoPause.png in Resources */,
 				1887B5682AF4C9DD00EEECAE /* SudokuViewController.xib in Resources */,
 				1887B5392AF4C58D00EEECAE /* headIcon-9.jpg in Resources */,
 				18CD0D852C75E70F006DEAFE /* Guidance03.jpg in Resources */,
 				18DBE7622ADFB94200E78A31 /* LaunchLogo.png in Resources */,
 				1868F3442AFA22250020FF1A /* videoback.png in Resources */,
+				18CD0DB42C75F26F006DEAFE /* 美女17.jpg in Resources */,
 				186FD3FF2924B1C0003A31C0 /* 2.png in Resources */,
+				18CD0DB92C75F26F006DEAFE /* 美女22.jpg in Resources */,
+				18CD0DBC2C75F26F006DEAFE /* 美女25.jpg in Resources */,
+				18CD0DAE2C75F26F006DEAFE /* 美女11.jpg in Resources */,
 				1868F3552AFB18AC0020FF1A /* 你还要我怎样.mp3 in Resources */,
 				1868F3182AF9CF100020FF1A /* test.html in Resources */,
 				182189FE29932EF400EFBF5C /* ReactiveObjCViewController.xib in Resources */,
 				183DBC452C7472A5001FFBA4 /* lianchu.png in Resources */,
 				18C0318529AC78DB0098BE0D /* TryCatchViewController.xib in Resources */,
+				18CD0DA92C75F26F006DEAFE /* 美女06.jpg in Resources */,
 				1887B5312AF4C58D00EEECAE /* headIcon-4.jpg in Resources */,
 				18CD0D782C75AF20006DEAFE /* biao.jpg in Resources */,
+				18CD0DB02C75F26F006DEAFE /* 美女13.jpg in Resources */,
 				1868F3532AFA28070020FF1A /* cart.png in Resources */,
 				18B8429D2C73361400886209 /* star_gray.png in Resources */,
 				1887B52B2AF4C58D00EEECAE /* headIcon-12.jpg in Resources */,
@@ -1856,13 +1962,19 @@
 				18B842A02C73361400886209 /* star_yellow@2x.png in Resources */,
 				18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */,
 				18C2D5782C69E0D1003011DD /* YYKeyChainData_1.png in Resources */,
+				18CD0DA42C75F26F006DEAFE /* 美女01.jpg in Resources */,
+				18CD0DAD2C75F26F006DEAFE /* 美女10.jpg in Resources */,
+				18CD0DB62C75F26F006DEAFE /* 美女19.jpg in Resources */,
 				1887B5272AF4C58D00EEECAE /* headIcon-14.jpg in Resources */,
 				1868B54E2AEB4B2C000E8C04 /* Main.storyboard in Resources */,
 				1887B5302AF4C58D00EEECAE /* headIcon-6.jpg in Resources */,
+				18CD0DB52C75F26F006DEAFE /* 美女18.jpg in Resources */,
 				1887B52F2AF4C58D00EEECAE /* headIcon-7.jpg in Resources */,
 				1887B52E2AF4C58D00EEECAE /* headIcon-10.jpg in Resources */,
 				186FD4002924B1C0003A31C0 /* 3.png in Resources */,
+				18CD0DBA2C75F26F006DEAFE /* 美女23.jpg in Resources */,
 				1868F3462AFA22E30020FF1A /* fangda.png in Resources */,
+				18CD0DAA2C75F26F006DEAFE /* 美女07.jpg in Resources */,
 				18B8429E2C73361400886209 /* star_gray@2x.png in Resources */,
 				186FD3F92924AB9A003A31C0 /* TimerViewController.xib in Resources */,
 				1868F3722AFB61B20020FF1A /* moren.jpg in Resources */,
@@ -1870,15 +1982,20 @@
 				18C2D5792C69E0D1003011DD /* YYKeyChainData_2.png in Resources */,
 				1868F36A2AFB55B80020FF1A /* 123.mp4 in Resources */,
 				1887B5012AF4C2A900EEECAE /* RuntimeViewController.xib in Resources */,
+				18CD0DA62C75F26F006DEAFE /* 美女03.jpg in Resources */,
 				1887B5362AF4C58D00EEECAE /* headIcon-3.jpg in Resources */,
 				1868F3132AF8C4420020FF1A /* WSDatePickerView.xib in Resources */,
+				18CD0DAB2C75F26F006DEAFE /* 美女08.jpg in Resources */,
 				1887B53A2AF4C58D00EEECAE /* headIcon-18.jpg in Resources */,
 				180932E92AFB6C65002F4EBC /* loading-icon.png in Resources */,
 				189C99902C6C41C8008DFEE7 /* CountDownViewcontroller.xib in Resources */,
 				186555D12AE2505F00E16698 /* studyInfo.plist in Resources */,
+				18CD0DA52C75F26F006DEAFE /* 美女02.jpg in Resources */,
+				18CD0DA82C75F26F006DEAFE /* 美女05.jpg in Resources */,
 				1887B5292AF4C58D00EEECAE /* headIcon-17.jpg in Resources */,
 				1887B5342AF4C58D00EEECAE /* headIcon-0.jpg in Resources */,
 				18B8429F2C73361400886209 /* star_yellow.png in Resources */,
+				18CD0DB72C75F26F006DEAFE /* 美女20.jpg in Resources */,
 				1887B52C2AF4C58D00EEECAE /* headIcon-13.jpg in Resources */,
 				186FD4012924B1C0003A31C0 /* 1.png in Resources */,
 				1887B53B2AF4C58D00EEECAE /* headIcon-19.jpg in Resources */,
@@ -1886,9 +2003,13 @@
 				18CD0D842C75E70F006DEAFE /* Guidance01.jpg in Resources */,
 				1887B52D2AF4C58D00EEECAE /* headIcon-11.jpg in Resources */,
 				1887B55A2AF4C97D00EEECAE /* CLLockVC.xib in Resources */,
+				18CD0DB82C75F26F006DEAFE /* 美女21.jpg in Resources */,
 				1868F3432AFA22250020FF1A /* videoPlay.png in Resources */,
+				18CD0DB32C75F26F006DEAFE /* 美女16.jpg in Resources */,
+				18CD0DB22C75F26F006DEAFE /* 美女15.jpg in Resources */,
 				1887B5372AF4C58D00EEECAE /* introduce-2.gif in Resources */,
 				18CD0D832C75E70F006DEAFE /* Guidance02.jpg in Resources */,
+				18CD0DAF2C75F26F006DEAFE /* 美女12.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2052,6 +2173,7 @@
 				18DBE7702AE2165200E78A31 /* AboutViewController.m in Sources */,
 				18B842A12C73361400886209 /* starView.m in Sources */,
 				1822762E292490B600242C9A /* TTStudySingle.m in Sources */,
+				18CD0D892C75F245006DEAFE /* FallsFlowViewController.m in Sources */,
 				1887B5792AF876E300EEECAE /* MovieViewController.m in Sources */,
 				1887B5592AF4C97D00EEECAE /* CLLockVC.m in Sources */,
 				18CD0D672C758A91006DEAFE /* LocalpushViewController.m in Sources */,
