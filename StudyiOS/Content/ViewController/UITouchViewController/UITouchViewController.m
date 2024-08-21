@@ -7,6 +7,9 @@
 
 #import "UITouchViewController.h"
 
+#define IM_W   72*2
+#define IM_H   108*2
+
 @interface UITouchViewController ()
 
 @property (nonatomic,strong) UIImageView * imageV;
@@ -19,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _imageV = [[UIImageView alloc]initWithFrame:CGRectMake(50, 100, 72*2, 108*2)];
+    _imageV = [[UIImageView alloc]initWithFrame:CGRectMake(50, 100,IM_W, IM_H)];
     [_imageV sd_setImageWithURL:[NSURL URLWithString:@"https://img1.baidu.com/it/u=999079260,408304605&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=750"]];
     [self.bgView addSubview:_imageV];
 }
@@ -56,7 +59,7 @@
         //必须将最后的位置赋给 _mPtLast
         _mPtLast = pt;
         
-        _imageV.frame = CGRectMake(_imageV.frame.origin.x+xOffset, _imageV.frame.origin.y+yOffset, 260, 300);
+        _imageV.frame = CGRectMake(_imageV.frame.origin.x+xOffset, _imageV.frame.origin.y+yOffset, IM_W, IM_H);
     }
     
 }
