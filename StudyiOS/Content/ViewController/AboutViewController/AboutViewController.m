@@ -105,10 +105,12 @@ UITableViewDataSource
         @{Tab_Title:@"允许访问相机权限",Tab_Flag:@(cameraAuth),Tab_Sub_Title:[NSString stringWithFormat:@"用于拍照、扫描、录制视频等(%@)",cameraAuth == ECAuthorizationStatusAuthorized ?  @"已开启" : @"去设置"]},
         @{Tab_Title:@"允许访问相册权限",Tab_Flag:@(photosAuth),Tab_Sub_Title:[NSString stringWithFormat:@"用于图片、照片上传等(%@)",photosAuth == ECAuthorizationStatusAuthorized ?  @"已开启" : @"去设置"]},
         @{Tab_Title:@"允许访问网络权限",Tab_Flag:@(self.networkType),Tab_Sub_Title:[NSString stringWithFormat:@"用于数据请求、图片加载等(%@)",typeString]},
-        @{Tab_Title:@"清除缓存",Tab_Flag:@998,Tab_Sub_Title:[NSString stringWithFormat:@"清除缓存后启动App会加载启动视频(%@)",cacheNum]},
-        @{Tab_Title:@"日志是否为Json串打印",Tab_Flag:@999,Tab_Sub_Title:@"已关闭"},
+        @{Tab_Title:@"清除缓存",Tab_Flag:@999,Tab_Sub_Title:[NSString stringWithFormat:@"清除缓存后启动App会加载启动视频(%@)",cacheNum]},
+        @{Tab_Title:@"日志是否为Json串打印",Tab_Flag:@998,Tab_Sub_Title:@"已关闭"},
         @{Tab_Title:@"切换logo",Tab_Flag:@997,Tab_Sub_Title:@"进入页面切换App的Logo"},
         @{Tab_Title:@"切换启动引导形式(引导图或者视频)",Tab_Flag:@996,Tab_Sub_Title:@"目前采用的是【视频】的形式引导"},
+        @{Tab_Title:@"我的GitHub",Tab_Flag:@995,Tab_Sub_Title:@"点击跳转到我的GitHub"},
+        @{Tab_Title:@"电话联系我们",Tab_Flag:@994,Tab_Sub_Title:@"点击拨打电话"},
     ]];
     self.row = 7;//支持点击跳转的所在行数
     [self.tableView reloadData];
@@ -200,7 +202,7 @@ UITableViewDataSource
     if(indexPath.row >= self.row){
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
-        if([dic[Tab_Flag] intValue] == 999){
+        if([dic[Tab_Flag] intValue] == 998){
             cell.detailTextLabel.text = [NSString stringWithFormat:@"【%@】",[[HsConfig readUserDefaultWithKey:kHsPrintLogJson] isEqualToString:@"1"] ? @"已开启" : @"已关闭"];
         }else if([dic[Tab_Flag] intValue] == 996){
             cell.detailTextLabel.text = [NSString stringWithFormat:@"目前采用的是【%@】的形式引导",[[HsConfig readUserDefaultWithKey:Begin_Guidance_Type] isEqualToString:@"1"] ? @"引导图" : @"视频"];
@@ -306,6 +308,17 @@ UITableViewDataSource
             [self.tableView reloadData];
         }
             break;
+            
+        case 9:{
+            [self openFuncCommd:@"https://github.com/KennyHito"];
+        }
+            break;
+            
+        case 10:{
+            [self openFuncCommd:@"telprompt://10086"];//自带弹出提示框
+            //[self openFuncCommd:@"tel://10086"];//不存在提示框
+        }
+            break;
         default:
             break;
     }
@@ -361,9 +374,23 @@ UITableViewDataSource
     NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
     dispatch_async(dispatch_get_main_queue(), ^{
         if ([[UIApplication sharedApplication] canOpenURL:url]) {
-            [[UIApplication sharedApplication] openURL:url];
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
         }
     });
+}
+
+/* 跳转的打开方法 */
+- (void)openFuncCommd:(NSString *)str{
+    //NSString转NSURL
+    NSURL* url = [NSURL URLWithString:str];
+    //当前程序
+    UIApplication* app = [UIApplication sharedApplication];
+    //判断
+    if([app canOpenURL:url]) {
+        [app openURL:url options:@{} completionHandler:nil];
+    }else{
+        [DDToast showToast:@"没有此功能或者该功能不可用!"];
+    }
 }
 
 - (void)lGREvent:(UIGestureRecognizer *)tapGR{
