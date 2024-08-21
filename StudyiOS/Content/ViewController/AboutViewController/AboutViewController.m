@@ -292,6 +292,7 @@ UITableViewDataSource
             break;
             
         case 7:{
+            //切换logo
             UIViewController *vController = [[NSClassFromString(@"ChangeLogoViewController") alloc] init];
             vController.hidesBottomBarWhenPushed = YES;
             vController.title = @"切换Logo";
@@ -300,6 +301,7 @@ UITableViewDataSource
             break;
             
         case 8:{
+            //切换启动引导形式(引导图或者视频)
             if([[HsConfig readUserDefaultWithKey:Begin_Guidance_Type] isEqualToString:@"1"]){
                 [HsConfig writeUserDefaultWithKey:Begin_Guidance_Type WithValue:@"0"];
             }else{
@@ -310,11 +312,13 @@ UITableViewDataSource
             break;
             
         case 9:{
+            //跳转到GitHub
             [self openFuncCommd:@"https://github.com/KennyHito"];
         }
             break;
             
         case 10:{
+            //拨打电话
             [self openFuncCommd:@"telprompt://10086"];//自带弹出提示框
             //[self openFuncCommd:@"tel://10086"];//不存在提示框
         }
