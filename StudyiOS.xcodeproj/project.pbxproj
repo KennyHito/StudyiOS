@@ -172,6 +172,7 @@
 		18CD0D6F2C759216006DEAFE /* UITouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D6E2C759216006DEAFE /* UITouchViewController.m */; };
 		18CD0D732C759454006DEAFE /* TagSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D722C759454006DEAFE /* TagSelectViewController.m */; };
 		18CD0D762C75AD27006DEAFE /* TagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D752C75AD27006DEAFE /* TagModel.m */; };
+		18CD0D782C75AF20006DEAFE /* biao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18CD0D772C75AF20006DEAFE /* biao.jpg */; };
 		18DBE7612ADFB94200E78A31 /* LaunchBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */; };
 		18DBE7622ADFB94200E78A31 /* LaunchLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE7602ADFB94200E78A31 /* LaunchLogo.png */; };
 		18DBE7662AE110C000E78A31 /* MultiThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBE7642AE110C000E78A31 /* MultiThreadViewController.m */; };
@@ -501,6 +502,7 @@
 		18CD0D722C759454006DEAFE /* TagSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagSelectViewController.m; sourceTree = "<group>"; };
 		18CD0D742C75AD27006DEAFE /* TagModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TagModel.h; sourceTree = "<group>"; };
 		18CD0D752C75AD27006DEAFE /* TagModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TagModel.m; sourceTree = "<group>"; };
+		18CD0D772C75AF20006DEAFE /* biao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = biao.jpg; sourceTree = "<group>"; };
 		18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchBackground.jpg; sourceTree = "<group>"; };
 		18DBE7602ADFB94200E78A31 /* LaunchLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchLogo.png; sourceTree = "<group>"; };
 		18DBE7632AE110C000E78A31 /* MultiThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadViewController.h; sourceTree = "<group>"; };
@@ -1014,6 +1016,7 @@
 		186FD4A7292611D3003A31C0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				18CD0D772C75AF20006DEAFE /* biao.jpg */,
 				18349A072C7423C500F83A52 /* changeLogo_1.png */,
 				18349A082C7423C500F83A52 /* changeLogo_2.png */,
 				18C2D5762C69E0D1003011DD /* YYKeyChainData_1.png */,
@@ -1814,6 +1817,7 @@
 				183DBC452C7472A5001FFBA4 /* lianchu.png in Resources */,
 				18C0318529AC78DB0098BE0D /* TryCatchViewController.xib in Resources */,
 				1887B5312AF4C58D00EEECAE /* headIcon-4.jpg in Resources */,
+				18CD0D782C75AF20006DEAFE /* biao.jpg in Resources */,
 				1868F3532AFA28070020FF1A /* cart.png in Resources */,
 				18B8429D2C73361400886209 /* star_gray.png in Resources */,
 				1887B52B2AF4C58D00EEECAE /* headIcon-12.jpg in Resources */,

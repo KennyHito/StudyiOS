@@ -19,8 +19,13 @@
 #define kHsPrintLogJson         @"isPrintLogJson"
 
 @interface AboutViewController ()
-<UITableViewDelegate,UITableViewDataSource>
+<
+UIScrollViewDelegate,
+UITableViewDelegate,
+UITableViewDataSource
+>
 
+@property (nonatomic,strong) UIImageView * topImageView;
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSMutableArray *dataArr;
 @property (nonatomic,strong) PrivacyCheckGatherTool *privacyTool;
@@ -51,12 +56,22 @@
             KLog(@"%@",obj);
         }
     }];
+    
+    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0];
+
+}
+
+#pragma mark -- 将导航栏归还原样
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:1];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initData];
     [self setUI];
+    [self createTopImageView];
     [self requestNetwork];
 }
 
@@ -97,20 +112,79 @@
 }
 
 - (void)setUI{
-    self.iconImage = [[UIImage alloc]init];
-    self.iconImage = [UIImage imageNamed:@"moren.jpg"];
-    
+    [self.bgView setHidden:YES];
     [self.view addSubview:self.tableView];
-    self.tableView.tableHeaderView = [self setUpTableHeaderView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.bottom.mas_equalTo(self.view);
     }];
+    
+    self.iconImage = [[UIImage alloc]init];
+    self.iconImage = [UIImage imageNamed:@"moren.jpg"];
+    self.tableView.tableFooterView = [self setUpTableFooterView];
+    self.tableView.contentOffset = CGPointMake(0, -200);
 }
 
+#pragma mark -- createTopImageView
+- (void)createTopImageView{
+    //顶部试图
+    _topImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, -200, [UIScreen mainScreen].bounds.size.width, 200)];
+    _topImageView.image = [UIImage imageNamed:@"biao.jpg"];
+    //[_topImageView sd_setImageWithURL:[NSURL URLWithString:@"https://image.yiwencaifu.com/upload/20161202/1480654937932.jpg"] placeholderImage:nil options:SDWebImageAllowInvalidSSLCertificates];
+    _topImageView.clipsToBounds = YES;
+    _topImageView.contentMode = UIViewContentModeScaleAspectFill;
+    //始终保持原有宽高比例
+    //添加到tableView上
+    [self.tableView addSubview:_topImageView];
+    //contentInset 额外滑动区域
+    self.tableView.contentInset = UIEdgeInsetsMake(200, 0, 0, 0);
+    //现在tableView的偏移量的y变成了-200
+}
+
+#pragma mark -- scrollViewDelegate
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    float offSet = scrollView.contentOffset.y;
+    NSLog(@"======= %f",offSet);
+
+    CGFloat alll = offSet<-30 ? 0/200 : (fabsf(offSet)+200)/200;
+    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:alll];
+    NSLog(@">>>>>>> %f",alll);
+    
+    UIColor *color = [UIColor whiteColor];
+    if (alll > 1) {
+        color = [UIColor blackColor];
+    }
+    if (@available(iOS 13.0, *)) {
+        UINavigationBarAppearance *appearance = [[UINavigationBarAppearance alloc] init];
+        [appearance configureWithOpaqueBackground];
+        appearance.titleTextAttributes = @{NSForegroundColorAttributeName:color};
+        self.navigationController.navigationBar.standardAppearance = appearance;
+        self.navigationController.navigationBar.scrollEdgeAppearance = appearance;
+    }else{
+        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:color};
+    }
+    
+    if (offSet < -200) {
+        //正在下拉
+        //更新顶部试图的效果
+        //1.图片始终顶在最上方
+        //2.图片高度随下拉而增加
+        CGRect rect = _topImageView.frame;  // (0, -200, SCREEN_W, 200)]
+        rect.origin.y = offSet;
+        rect.size.height = -offSet;
+        //重置
+        _topImageView.frame = rect;
+    }
+}
+
+/* 组数 */
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+/* 行数 */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.dataArr.count;
 }
-
+/* cell内容 */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellID];
     if(!cell){
@@ -132,7 +206,15 @@
     }
     return cell;
 }
-
+/* 组头高度*/
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0.1;
+}
+/* 组尾高度 */
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.1;
+}
+/* cell点击事件 */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSDictionary *dic = self.dataArr[indexPath.row];
     if ([dic[Tab_Flag] intValue] == 3 && indexPath.row >= self.row) {
@@ -217,7 +299,7 @@
     [self.tableView setLayoutMargins:UIEdgeInsetsZero];
 }
 
-- (UIView *)setUpTableHeaderView{
+- (UIView *)setUpTableFooterView{
     UIView *headerView = [[UIView alloc]init];
     headerView.frame = CGRectMake(0, 0, KScreenW, 200);
     
