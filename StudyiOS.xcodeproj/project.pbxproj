@@ -187,6 +187,7 @@
 		18C832482C75FE2E002AA9DD /* 手表的壁纸.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18C832452C75FE2E002AA9DD /* 手表的壁纸.jpg */; };
 		18C832492C75FE2E002AA9DD /* 电脑的壁纸.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18C832462C75FE2E002AA9DD /* 电脑的壁纸.jpg */; };
 		18C8324A2C75FE2E002AA9DD /* 飞机的壁纸.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18C832472C75FE2E002AA9DD /* 飞机的壁纸.jpg */; };
+		18C8324C2C7600CD002AA9DD /* 本地推送介绍.webp in Resources */ = {isa = PBXBuildFile; fileRef = 18C8324B2C7600CD002AA9DD /* 本地推送介绍.webp */; };
 		18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */; };
 		18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */; };
 		18CD0D5B2C757A60006DEAFE /* SavePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D5A2C757A60006DEAFE /* SavePicViewController.m */; };
@@ -578,6 +579,7 @@
 		18C832452C75FE2E002AA9DD /* 手表的壁纸.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "手表的壁纸.jpg"; sourceTree = "<group>"; };
 		18C832462C75FE2E002AA9DD /* 电脑的壁纸.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "电脑的壁纸.jpg"; sourceTree = "<group>"; };
 		18C832472C75FE2E002AA9DD /* 飞机的壁纸.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "飞机的壁纸.jpg"; sourceTree = "<group>"; };
+		18C8324B2C7600CD002AA9DD /* 本地推送介绍.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = "本地推送介绍.webp"; sourceTree = "<group>"; };
 		18CCDCFC2C537B1500968855 /* PrisonBreakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrisonBreakViewController.h; sourceTree = "<group>"; };
 		18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrisonBreakViewController.m; sourceTree = "<group>"; };
 		18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrisonBreakViewController.xib; sourceTree = "<group>"; };
@@ -1154,6 +1156,7 @@
 		186FD4A7292611D3003A31C0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				18C8324B2C7600CD002AA9DD /* 本地推送介绍.webp */,
 				18C832462C75FE2E002AA9DD /* 电脑的壁纸.jpg */,
 				18C832472C75FE2E002AA9DD /* 飞机的壁纸.jpg */,
 				18C832452C75FE2E002AA9DD /* 手表的壁纸.jpg */,
@@ -2097,6 +2100,7 @@
 				1868F3182AF9CF100020FF1A /* test.html in Resources */,
 				182189FE29932EF400EFBF5C /* ReactiveObjCViewController.xib in Resources */,
 				183DBC452C7472A5001FFBA4 /* lianchu.png in Resources */,
+				18C8324C2C7600CD002AA9DD /* 本地推送介绍.webp in Resources */,
 				18C0318529AC78DB0098BE0D /* TryCatchViewController.xib in Resources */,
 				18CD0DA92C75F26F006DEAFE /* 美女06.jpg in Resources */,
 				1887B5312AF4C58D00EEECAE /* headIcon-4.jpg in Resources */,
