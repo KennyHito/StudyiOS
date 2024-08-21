@@ -194,3 +194,94 @@ weakSelf.gravity.angle = rotation;
 
 }
 ~~~
+
+
+### 四、实现本地推送
+
+1、功能部分:</br>
+![本地推送分析图](https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/tuisong_1.webp)
+
+2、iOS8本地推送注册
+~~~
+//创建本地通知
+- (void)requestAuthor
+{
+    if ([UIDevice currentDevice].systemVersion.floatValue >= 8.0) {
+    // 设置通知的类型可以为弹窗提示,声音提示,应用图标数字提示
+        UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert categories:nil];
+        // 授权通知
+        [[UIApplication sharedApplication] registerUserNotificationSettings:setting];
+    }
+}
+~~~
+
+~~~
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //本地推送
+    [self requestAuthor];
+    return YES;
+}
+~~~
+
+3、假设在ViewController中添加touchesBegan方法,具体UILocalNotification的基本属性请往下看!
+~~~
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    // 1.创建通知
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    // 2.设置通知的必选参数
+    // 设置通知显示的内容
+    localNotification.alertBody = @"本地通知测试";
+    // 设置通知的发送时间,单位秒
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:10];
+    //解锁滑动时的事件
+    localNotification.alertAction = @"别磨蹭了!";
+    //收到通知时App icon的角标
+    localNotification.applicationIconBadgeNumber = 1;
+    //推送是带的声音提醒，设置默认的字段为UILocalNotificationDefaultSoundName
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    // 3.发送通知(🐽 : 根据项目需要使用)
+    // 方式一: 根据通知的发送时间(fireDate)发送通知
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    
+    // 方式二: 立即发送通知
+    // [[UIApplication sharedApplication] presentLocalNotificationNow:localNotification];
+}
+~~~
+
+#### 注意:UILocalNotification的基本属性
+~~~
+fireDate：启动时间
+timeZone：启动时间参考的时区
+repeatInterval：重复推送时间（NSCalendarUnit类型），0代表不重复
+repeatCalendar：重复推送时间（NSCalendar类型）
+alertBody：通知内容
+alertAction：解锁滑动时的事件
+alertLaunchImage：启动图片，设置此字段点击通知时会显示该图片
+alertTitle：通知标题，适用iOS8.2之后
+applicationIconBadgeNumber：收到通知时App icon的角标
+soundName：推送是带的声音提醒，设置默认的字段为UILocalNotificationDefaultSoundName
+userInfo：发送通知时附加的内容
+category：此属性和注册通知类型时有关联，（有兴趣的同学自己了解，不详细叙述）适用iOS8.0之后
+
+region：带有定位的推送相关属性，具体使用见下面【带有定位的本地推送】适用iOS8.0之后
+regionTriggersOnce：带有定位的推送相关属性，具体使用见下面【带有定位的本地推送】适用iOS8.0之后
+~~~
+
+4、注意一点. 当再次进入app中,通知栏的通知需要不显示,并且app的角标也要没有,所以需要在appDelegate设置一个属性.
+~~~
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    //设置应用程序图片右上角的数字(如果想要取消右上角的数字, 直接把这个参数值为0)
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+}
+~~~
+
+
+5、运行效果图   
+ - 注意: 运行程序后,点击ViewController空白区域之后,必须推到后台才能看到通知的运行效果.
+- 首次运行会弹出让用户选择授权!!!
+
+![首次运行会弹出让用户选择授权](https://raw.githubusercontent.com/KennyHito/StudyiOS/main/StudyiOS/Resource/Images/tuisong_2.webp)
+
+
+![在桌面顶部弹出效果](https://raw.githubusercontent.com/KennyHito/StudyiOS/main/StudyiOS/Resource/Images/tuisong_3.webp)
