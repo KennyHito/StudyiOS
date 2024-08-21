@@ -18,6 +18,7 @@
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <IQKeyboardManager/IQKeyboardManager.h>
 #import <ReactiveObjC/ReactiveObjC.h>
+#import <MJExtension/MJExtension.h>
 
 /* 类别扩展 */
 #import "UIViewController+AddProperty.h"

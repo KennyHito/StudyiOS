@@ -26,7 +26,8 @@
     btn.backgroundColor = [UIColor yellowColor];
     [btn setTitle:@"保存相册" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-    btn.center = CGPointMake(self.view.center.x, 100);
+    btn.layer.cornerRadius = 5;
+    btn.layer.masksToBounds = YES;
     [self.bgView addSubview:btn];
     [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {

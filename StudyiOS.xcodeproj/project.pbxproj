@@ -165,6 +165,8 @@
 		18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */; };
 		18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */; };
 		18CD0D5B2C757A60006DEAFE /* SavePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D5A2C757A60006DEAFE /* SavePicViewController.m */; };
+		18CD0D5F2C757F14006DEAFE /* RequestAPIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D5E2C757F14006DEAFE /* RequestAPIViewController.m */; };
+		18CD0D632C7582A3006DEAFE /* RequestAPIModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D622C7582A3006DEAFE /* RequestAPIModel.m */; };
 		18DBE7612ADFB94200E78A31 /* LaunchBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */; };
 		18DBE7622ADFB94200E78A31 /* LaunchLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18DBE7602ADFB94200E78A31 /* LaunchLogo.png */; };
 		18DBE7662AE110C000E78A31 /* MultiThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBE7642AE110C000E78A31 /* MultiThreadViewController.m */; };
@@ -480,6 +482,10 @@
 		18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrisonBreakViewController.xib; sourceTree = "<group>"; };
 		18CD0D592C757A60006DEAFE /* SavePicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SavePicViewController.h; sourceTree = "<group>"; };
 		18CD0D5A2C757A60006DEAFE /* SavePicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SavePicViewController.m; sourceTree = "<group>"; };
+		18CD0D5D2C757F14006DEAFE /* RequestAPIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestAPIViewController.h; sourceTree = "<group>"; };
+		18CD0D5E2C757F14006DEAFE /* RequestAPIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestAPIViewController.m; sourceTree = "<group>"; };
+		18CD0D612C7582A3006DEAFE /* RequestAPIModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestAPIModel.h; sourceTree = "<group>"; };
+		18CD0D622C7582A3006DEAFE /* RequestAPIModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RequestAPIModel.m; sourceTree = "<group>"; };
 		18DBE75F2ADFB94200E78A31 /* LaunchBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LaunchBackground.jpg; sourceTree = "<group>"; };
 		18DBE7602ADFB94200E78A31 /* LaunchLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchLogo.png; sourceTree = "<group>"; };
 		18DBE7632AE110C000E78A31 /* MultiThreadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadViewController.h; sourceTree = "<group>"; };
@@ -743,6 +749,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				18CD0D5C2C757F0B006DEAFE /* RequestAPIViewController */,
 				18CD0D582C757A54006DEAFE /* SavePicViewController */,
 				18B842AD2C73388200886209 /* RollingLightViewController */,
 				18B842A92C73361F00886209 /* StarStarViewController */,
@@ -781,6 +788,8 @@
 			children = (
 				186555D42AE25C1800E16698 /* HsLcPrivacySetModel.h */,
 				186555D52AE25C1800E16698 /* HsLcPrivacySetModel.m */,
+				18CD0D612C7582A3006DEAFE /* RequestAPIModel.h */,
+				18CD0D622C7582A3006DEAFE /* RequestAPIModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1510,6 +1519,15 @@
 			path = SavePicViewController;
 			sourceTree = "<group>";
 		};
+		18CD0D5C2C757F0B006DEAFE /* RequestAPIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18CD0D5D2C757F14006DEAFE /* RequestAPIViewController.h */,
+				18CD0D5E2C757F14006DEAFE /* RequestAPIViewController.m */,
+			);
+			path = RequestAPIViewController;
+			sourceTree = "<group>";
+		};
 		18DBE75E2ADFB94200E78A31 /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1898,6 +1916,7 @@
 				1821BCCD2AC4071900C50D58 /* UIImage+Category.m in Sources */,
 				1868F31C2AF9CF290020FF1A /* HTML5ViewController.m in Sources */,
 				18227636292490B600242C9A /* DDMBProgressHUD.m in Sources */,
+				18CD0D632C7582A3006DEAFE /* RequestAPIModel.m in Sources */,
 				1868F32D2AFA16160020FF1A /* RXHexColor.m in Sources */,
 				1868F33E2AFA21290020FF1A /* VideoView.m in Sources */,
 				188D09E92AD7BEB600FCAD36 /* CrashHandler.m in Sources */,
@@ -1908,6 +1927,7 @@
 				1887B50C2AF4C46800EEECAE /* DPScreenshotsPopView.m in Sources */,
 				1887B50B2AF4C46800EEECAE /* YLButton.m in Sources */,
 				181174A42AEFA55C0051CCB4 /* CustomFlowLayout.m in Sources */,
+				18CD0D5F2C757F14006DEAFE /* RequestAPIViewController.m in Sources */,
 				186FD3FA2924AB9A003A31C0 /* TimerViewController.m in Sources */,
 				18929B1E2AD3D48C006D6CE4 /* Person.m in Sources */,
 				1868F3702AFB604B0020FF1A /* ChangeLogoViewController.m in Sources */,
