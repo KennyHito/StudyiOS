@@ -56,9 +56,6 @@ UITableViewDataSource
             KLog(@"%@",obj);
         }
     }];
-    
-    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0];
-
 }
 
 #pragma mark -- 将导航栏归还原样
@@ -69,6 +66,10 @@ UITableViewDataSource
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //进入页面导航栏设置为隐藏
+    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0];
+
     [self initData];
     [self setUI];
     [self createTopImageView];
@@ -106,6 +107,7 @@ UITableViewDataSource
         @{Tab_Title:@"允许访问网络权限",Tab_Flag:@(self.networkType),Tab_Sub_Title:[NSString stringWithFormat:@"用于数据请求、图片加载等(%@)",typeString]},
         @{Tab_Title:@"清除缓存",Tab_Flag:@998,Tab_Sub_Title:[NSString stringWithFormat:@"清除缓存后启动App会加载启动视频(%@)",cacheNum]},
         @{Tab_Title:@"日志是否为Json串打印",Tab_Flag:@999,Tab_Sub_Title:@"已关闭"},
+        @{Tab_Title:@"切换logo",Tab_Flag:@997,Tab_Sub_Title:@"进入页面切换App的Logo"},
     ]];
     self.row = 7;//支持点击跳转的所在行数
     [self.tableView reloadData];
@@ -281,6 +283,14 @@ UITableViewDataSource
                 [HsConfig writeUserDefaultWithKey:kHsPrintLogJson WithValue:@"1"];
             }
             [self.tableView reloadData];
+        }
+            break;
+            
+        case 7:{
+            UIViewController *vController = [[NSClassFromString(@"ChangeLogoViewController") alloc] init];
+            vController.hidesBottomBarWhenPushed = YES;
+            vController.title = @"切换Logo";
+            [[[GetTopVCTool shareInstance] topViewController].navigationController pushViewController:vController animated:YES];
         }
             break;
         default:

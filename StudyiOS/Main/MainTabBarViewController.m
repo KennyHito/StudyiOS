@@ -8,11 +8,11 @@
 #import "MainTabBarViewController.h"
 #import "HomeViewController.h"
 #import "TableViewController.h"
-#import "ChangeLogoViewController.h"
 #import "CollectionViewController.h"
 #import "AboutViewController.h"
 
-@interface MainTabBarViewController ()<MainTabBarDelegate>
+@interface MainTabBarViewController ()
+<MainTabBarDelegate>
 
 @end
 
@@ -57,9 +57,9 @@
 #pragma mark -- MainTabBarDelegate
 - (void)tabBarDidClickAddItem:(MainTabBar *)tabBar{
     NSLog(@"中间的按钮被点击了!");
-    ChangeLogoViewController *vController = [[ChangeLogoViewController alloc] init];
+    UIViewController *vController = [[NSClassFromString(@"QRCodeViewController") alloc] init];
     vController.hidesBottomBarWhenPushed = YES;
-    vController.title = @"切换Logo";
+    vController.title = @"中间按钮页面";
     [[[GetTopVCTool shareInstance] topViewController].navigationController pushViewController:vController animated:YES];
 }
 
