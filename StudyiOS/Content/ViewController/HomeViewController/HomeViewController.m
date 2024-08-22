@@ -66,6 +66,7 @@
                      @{Tab_Title:@"33、系统自带定位功能",Tab_Url:@"LocationViewController"},
                      @{Tab_Title:@"34、轮播新闻类功能",Tab_Url:@"YHTScrollViewController"},
                      @{Tab_Title:@"35、实现FMDB库功能",Tab_Url:@"FMDBViewController"},
+                     @{Tab_Title:@"36、Masonry库的使用",Tab_Url:@"MasonryViewController"},
     ];
     [self.tableView reloadData];
 }
