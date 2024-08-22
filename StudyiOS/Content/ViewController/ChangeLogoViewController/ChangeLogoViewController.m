@@ -33,6 +33,7 @@ static int imageWidth = 100;
     [self.dataArr addObject:@{@"iconName":@"dangdang",@"imageName":@"dangdang.png"}];
     [self.dataArr addObject:@{@"iconName":@"chubaobao",@"imageName":@"chubaobao.png"}];
     [self.dataArr addObject:@{@"iconName":@"lianchu",@"imageName":@"lianchu.png"}];
+    [self.dataArr addObject:@{@"iconName":@"ziranchuanqi",@"imageName":@"ziranchuanqi.png"}];
 }
 
 - (void)setUpCollectionView{

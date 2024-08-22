@@ -135,6 +135,7 @@
 		18929B212AD3D496006D6CE4 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 18929B202AD3D496006D6CE4 /* Car.m */; };
 		189C998F2C6C41C8008DFEE7 /* CountDownViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 189C998D2C6C41C8008DFEE7 /* CountDownViewcontroller.m */; };
 		189C99902C6C41C8008DFEE7 /* CountDownViewcontroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189C998E2C6C41C8008DFEE7 /* CountDownViewcontroller.xib */; };
+		18A05B032C76D27300F79BDB /* ziranchuanqi.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A05B022C76D27300F79BDB /* ziranchuanqi.png */; };
 		18B1ED21290F9CDA00647F15 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B1ED20290F9CDA00647F15 /* AppDelegate.m */; };
 		18B1ED27290F9CDA00647F15 /* ExerciseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B1ED26290F9CDA00647F15 /* ExerciseViewController.m */; };
 		18B1ED2C290F9CDB00647F15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18B1ED2B290F9CDB00647F15 /* Assets.xcassets */; };
@@ -499,6 +500,7 @@
 		189C998C2C6C41C8008DFEE7 /* CountDownViewcontroller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountDownViewcontroller.h; sourceTree = "<group>"; };
 		189C998D2C6C41C8008DFEE7 /* CountDownViewcontroller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownViewcontroller.m; sourceTree = "<group>"; };
 		189C998E2C6C41C8008DFEE7 /* CountDownViewcontroller.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountDownViewcontroller.xib; sourceTree = "<group>"; };
+		18A05B022C76D27300F79BDB /* ziranchuanqi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ziranchuanqi.png; sourceTree = "<group>"; };
 		18B1ED1C290F9CDA00647F15 /* StudyiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B1ED1F290F9CDA00647F15 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18B1ED20290F9CDA00647F15 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1198,6 +1200,7 @@
 		186FD4A8292611DE003A31C0 /* Logo */ = {
 			isa = PBXGroup;
 			children = (
+				18A05B022C76D27300F79BDB /* ziranchuanqi.png */,
 				183DBC442C7472A5001FFBA4 /* lianchu.png */,
 				1868F3732AFB67900020FF1A /* chubaobao.png */,
 				1868F3712AFB61B20020FF1A /* moren.jpg */,
@@ -2167,6 +2170,7 @@
 				18CD0DB62C75F26F006DEAFE /* 美女19.jpg in Resources */,
 				1887B5272AF4C58D00EEECAE /* headIcon-14.jpg in Resources */,
 				18C832162C75F8F0002AA9DD /* niao_6.png in Resources */,
+				18A05B032C76D27300F79BDB /* ziranchuanqi.png in Resources */,
 				1868B54E2AEB4B2C000E8C04 /* Main.storyboard in Resources */,
 				1887B5302AF4C58D00EEECAE /* headIcon-6.jpg in Resources */,
 				18CD0DB52C75F26F006DEAFE /* 美女18.jpg in Resources */,

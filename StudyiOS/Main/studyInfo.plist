@@ -24,13 +24,20 @@
 					<string>dangdang</string>
 				</array>
 			</dict>
-            <key>lianchu</key>
-            <dict>
-                <key>CFBundleIconFiles</key>
-                <array>
-                    <string>lianchu</string>
-                </array>
-            </dict>
+			<key>lianchu</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>lianchu</string>
+				</array>
+			</dict>
+			<key>ziranchuanqi</key>
+			<dict>
+				<key>CFBundleIconFiles</key>
+				<array>
+					<string>ziranchuanqi</string>
+				</array>
+			</dict>
 		</dict>
 		<key>Primary Icon</key>
 		<dict>
