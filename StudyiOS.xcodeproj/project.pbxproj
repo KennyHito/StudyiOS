@@ -34,7 +34,6 @@
 		183DBC452C7472A5001FFBA4 /* lianchu.png in Resources */ = {isa = PBXBuildFile; fileRef = 183DBC442C7472A5001FFBA4 /* lianchu.png */; };
 		183FDBAE2ADD168E00009D2B /* NSMutableDictionary+CommonSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FDBAD2ADD168E00009D2B /* NSMutableDictionary+CommonSafe.m */; };
 		186555D12AE2505F00E16698 /* studyInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 186555D02AE2505F00E16698 /* studyInfo.plist */; };
-		186555D62AE25C1800E16698 /* HsLcPrivacySetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 186555D52AE25C1800E16698 /* HsLcPrivacySetModel.m */; };
 		186555D92AE765F100E16698 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 186555D82AE765F000E16698 /* NSString+Base64.m */; };
 		1868B5482AEA614D000E8C04 /* NSDictionary+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868B5472AEA614D000E8C04 /* NSDictionary+JSON.m */; };
 		1868B54C2AEA62ED000E8C04 /* HsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868B54B2AEA62ED000E8C04 /* HsConfig.m */; };
@@ -190,6 +189,9 @@
 		18C832502C7601A7002AA9DD /* tuisong_2.webp in Resources */ = {isa = PBXBuildFile; fileRef = 18C8324D2C7601A7002AA9DD /* tuisong_2.webp */; };
 		18C832512C7601A7002AA9DD /* tuisong_1.webp in Resources */ = {isa = PBXBuildFile; fileRef = 18C8324E2C7601A7002AA9DD /* tuisong_1.webp */; };
 		18C832522C7601A7002AA9DD /* tuisong_3.webp in Resources */ = {isa = PBXBuildFile; fileRef = 18C8324F2C7601A7002AA9DD /* tuisong_3.webp */; };
+		18C832562C76C7A4002AA9DD /* SQliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C832552C76C7A4002AA9DD /* SQliteManager.m */; };
+		18C8325A2C76C823002AA9DD /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C832592C76C823002AA9DD /* FMDBViewController.m */; };
+		18C8325D2C76C8EB002AA9DD /* FMDBModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C8325C2C76C8EB002AA9DD /* FMDBModel.m */; };
 		18CCDCFF2C537B1500968855 /* PrisonBreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */; };
 		18CCDD002C537B1500968855 /* PrisonBreakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */; };
 		18CD0D5B2C757A60006DEAFE /* SavePicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD0D5A2C757A60006DEAFE /* SavePicViewController.m */; };
@@ -339,8 +341,6 @@
 		183FDBAD2ADD168E00009D2B /* NSMutableDictionary+CommonSafe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+CommonSafe.m"; sourceTree = "<group>"; };
 		184D1E642AF249BE00657072 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		186555D02AE2505F00E16698 /* studyInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = studyInfo.plist; sourceTree = "<group>"; };
-		186555D42AE25C1800E16698 /* HsLcPrivacySetModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HsLcPrivacySetModel.h; sourceTree = "<group>"; };
-		186555D52AE25C1800E16698 /* HsLcPrivacySetModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HsLcPrivacySetModel.m; sourceTree = "<group>"; };
 		186555D72AE765F000E16698 /* NSString+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
 		186555D82AE765F000E16698 /* NSString+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
 		1868B5462AEA614D000E8C04 /* NSDictionary+JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSON.h"; sourceTree = "<group>"; };
@@ -584,6 +584,12 @@
 		18C8324D2C7601A7002AA9DD /* tuisong_2.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = tuisong_2.webp; sourceTree = "<group>"; };
 		18C8324E2C7601A7002AA9DD /* tuisong_1.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = tuisong_1.webp; sourceTree = "<group>"; };
 		18C8324F2C7601A7002AA9DD /* tuisong_3.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = tuisong_3.webp; sourceTree = "<group>"; };
+		18C832542C76C7A3002AA9DD /* SQliteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQliteManager.h; sourceTree = "<group>"; };
+		18C832552C76C7A4002AA9DD /* SQliteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQliteManager.m; sourceTree = "<group>"; };
+		18C832582C76C823002AA9DD /* FMDBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBViewController.h; sourceTree = "<group>"; };
+		18C832592C76C823002AA9DD /* FMDBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBViewController.m; sourceTree = "<group>"; };
+		18C8325B2C76C8EB002AA9DD /* FMDBModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBModel.h; sourceTree = "<group>"; };
+		18C8325C2C76C8EB002AA9DD /* FMDBModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBModel.m; sourceTree = "<group>"; };
 		18CCDCFC2C537B1500968855 /* PrisonBreakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrisonBreakViewController.h; sourceTree = "<group>"; };
 		18CCDCFD2C537B1500968855 /* PrisonBreakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrisonBreakViewController.m; sourceTree = "<group>"; };
 		18CCDCFE2C537B1500968855 /* PrisonBreakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrisonBreakViewController.xib; sourceTree = "<group>"; };
@@ -781,6 +787,7 @@
 		18227611292490B600242C9A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				18C832532C76C79C002AA9DD /* SQliteManager */,
 				183DBC402C74712F001FFBA4 /* GetTopViewController */,
 				18B842B12C7338AF00886209 /* CBAutoScrollLabel */,
 				18B842902C73361400886209 /* Star */,
@@ -905,6 +912,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				18C832572C76C819002AA9DD /* FMDBViewController */,
 				18C832392C75FC54002AA9DD /* YHTScrollViewController */,
 				18C8321F2C75F9C9002AA9DD /* LocationViewController */,
 				18CD0DBD2C75F63B006DEAFE /* FlashlightViewController */,
@@ -951,12 +959,12 @@
 		186555D32AE25BF700E16698 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				186555D42AE25C1800E16698 /* HsLcPrivacySetModel.h */,
-				186555D52AE25C1800E16698 /* HsLcPrivacySetModel.m */,
 				18CD0D612C7582A3006DEAFE /* RequestAPIModel.h */,
 				18CD0D622C7582A3006DEAFE /* RequestAPIModel.m */,
 				18CD0D742C75AD27006DEAFE /* TagModel.h */,
 				18CD0D752C75AD27006DEAFE /* TagModel.m */,
+				18C8325B2C76C8EB002AA9DD /* FMDBModel.h */,
+				18C8325C2C76C8EB002AA9DD /* FMDBModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1743,6 +1751,24 @@
 			path = YHTScrollViewController;
 			sourceTree = "<group>";
 		};
+		18C832532C76C79C002AA9DD /* SQliteManager */ = {
+			isa = PBXGroup;
+			children = (
+				18C832542C76C7A3002AA9DD /* SQliteManager.h */,
+				18C832552C76C7A4002AA9DD /* SQliteManager.m */,
+			);
+			path = SQliteManager;
+			sourceTree = "<group>";
+		};
+		18C832572C76C819002AA9DD /* FMDBViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18C832582C76C823002AA9DD /* FMDBViewController.h */,
+				18C832592C76C823002AA9DD /* FMDBViewController.m */,
+			);
+			path = FMDBViewController;
+			sourceTree = "<group>";
+		};
 		18CCDCF62C5379D100968855 /* PrisonBreakViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2262,6 +2288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C832562C76C7A4002AA9DD /* SQliteManager.m in Sources */,
 				187A93F62AF0DFAD000EAB05 /* MainTabBarViewController.m in Sources */,
 				18C832212C75F9C9002AA9DD /* LocationModel.m in Sources */,
 				18C2D57D2C69E153003011DD /* YYKeyChainData.m in Sources */,
@@ -2271,7 +2298,6 @@
 				1868F3642AFB2EBD0020FF1A /* AlertControTool.m in Sources */,
 				1887B55E2AF4C97D00EEECAE /* CLLockView.m in Sources */,
 				183FDBAE2ADD168E00009D2B /* NSMutableDictionary+CommonSafe.m in Sources */,
-				186555D62AE25C1800E16698 /* HsLcPrivacySetModel.m in Sources */,
 				18B842B42C7338B600886209 /* CBAutoScrollLabel.m in Sources */,
 				18C0318429AC78DB0098BE0D /* TryCatchViewController.m in Sources */,
 				18227631292490B600242C9A /* DDUIFunction.m in Sources */,
@@ -2290,6 +2316,7 @@
 				18227637292490B600242C9A /* TTCrash.m in Sources */,
 				1822760D2924908F00242C9A /* NSArray+CommonSafe.m in Sources */,
 				1868F3142AF8C4420020FF1A /* WSDatePickerView.m in Sources */,
+				18C8325A2C76C823002AA9DD /* FMDBViewController.m in Sources */,
 				18B1ED21290F9CDA00647F15 /* AppDelegate.m in Sources */,
 				18DBE7662AE110C000E78A31 /* MultiThreadViewController.m in Sources */,
 				1868F30A2AF8C3990020FF1A /* DatePickerVC.m in Sources */,
@@ -2299,6 +2326,7 @@
 				1868F34E2AFA27650020FF1A /* ShoppingCartTool.m in Sources */,
 				1887B5732AF4CBCE00EEECAE /* NSString+File.m in Sources */,
 				1887B5602AF4C97D00EEECAE /* CLLockInfoView.m in Sources */,
+				18C8325D2C76C8EB002AA9DD /* FMDBModel.m in Sources */,
 				1821BCCD2AC4071900C50D58 /* UIImage+Category.m in Sources */,
 				1868F31C2AF9CF290020FF1A /* HTML5ViewController.m in Sources */,
 				18C832222C75F9C9002AA9DD /* LocationViewController.m in Sources */,

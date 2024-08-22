@@ -65,6 +65,7 @@
                      @{Tab_Title:@"32、调用闪光灯功能",Tab_Url:@"FlashlightViewController"},
                      @{Tab_Title:@"33、系统自带定位功能",Tab_Url:@"LocationViewController"},
                      @{Tab_Title:@"34、轮播新闻类功能",Tab_Url:@"YHTScrollViewController"},
+                     @{Tab_Title:@"35、实现FMDB库功能",Tab_Url:@"FMDBViewController"},
     ];
     [self.tableView reloadData];
 }

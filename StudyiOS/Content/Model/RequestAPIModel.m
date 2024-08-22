@@ -9,10 +9,6 @@
 
 @implementation RequestAPIModel
 
-- (void)setValue:(id)value forUndefinedKey:(NSString *)key{
-    
-}
-
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{@"ID":@"id"};
 }

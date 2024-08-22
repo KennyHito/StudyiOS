@@ -65,7 +65,7 @@
         if ([dic[@"code"] intValue] == 200) {
             self.model = [RequestAPIModel mj_objectWithKeyValues:dic[@"data"]];
             NSLog(@"%@",self.model.content);
-            self.desLab.text = KStringWithFormat(@"👇🏻接口请求的结果内容如下:👇🏻\n\n%@",self.model.content);
+            self.desLab.text = KStringWithFormat(@"👇🏻接口请求的结果内容如下:👇🏻\n\nID:%@\ncontent:%@\n",self.model.ID,self.model.content);
         }else{
             [DDToast showToast:responseObject[@"msg"]];
         }

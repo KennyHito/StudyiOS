@@ -19,6 +19,7 @@
 #import <IQKeyboardManager/IQKeyboardManager.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <MJExtension/MJExtension.h>
+#import <FMDB/FMDB.h>
 
 /* 类别扩展 */
 #import "UIViewController+AddProperty.h"
@@ -63,7 +64,7 @@
 #import "MainTabBar.h"
 #import "starView.h"
 #import "CBAutoScrollLabel.h"
-
+#import "SQliteManager.h"
 
 
 #endif /* PrefixHeader_pch */
