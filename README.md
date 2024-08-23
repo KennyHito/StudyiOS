@@ -1,6 +1,4 @@
-# StudyiOS
-oc综合项目,ios综合项目,拖拽播放,打印ios日志,省市区三级联动,YYText使用,列表的展开和收起,Masonry案例,倒计时,H5和原生交互,自定义各种弹框…
-
+Objective-C综合项目，iOS综合项目、拖拽播放、打印iOS日志、省市区三级联动、YYText使用、列表的展开和收起、Masonry案例、倒计时、H5和原生交互、自定义各种弹框等等。
 
 ### 一、YYKeyChainData
 
