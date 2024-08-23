@@ -74,7 +74,11 @@
 
 第一步,打开应用的钥匙串权限
 Target - Capabilities - KeychainSharing - ON
-![图一](https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/YYKeyChainData_1.png)
+
+<p align = "center"> 
+<img src="https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/YYKeyChainData_1.png" alt="图一">
+</p>
+
 
 第二步,集成YYKeyChainData
 
@@ -89,8 +93,10 @@ Target - Capabilities - KeychainSharing - ON
 
 注意:
 上架App Store需要按图二配置
-![图二](https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/YYKeyChainData_2.png)
 
+<p align = "center"> 
+<img src="https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/YYKeyChainData_2.png" alt="图二">
+</p>
 
 无论你怎么折腾都会保证同一设备每次获取到的UUID都是一致的，卸载应用，开启广告限制跟踪，系统升级都不会有影响。越狱刷机这种骚操作我没有测过，即使有问题，感觉这些调皮的用户也可以忽略了，因为这个已经是目前最好的解决办法了，如果大家有什么更好的解决方案，还请issues区指正。
 
@@ -101,14 +107,19 @@ iOS 10.3 加入了了更换应用图标的新功能，开发者可以为应用�
 
 2.1、先把你需要的所有图片都导入项目中（比例为1:1）
 
-![图一](https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/changeLogo_1.png)
+<p align = "center"> 
+<img src="https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/changeLogo_1.png" alt="图二">
+</p>
 
 2.2、plist文件配置，添加Icon files (ios 5)类型为Dictionary
 点开Icon files (iOS 5)，里面有Primary Icon，Newsstand Icon两个key,Primary Icon 里面的图片为AppIcon默认图片。
 Icon files (iOS 5)里面创建一个CFBundleAlternateIcons，类型为Dictionary
 点击开CFBundleAlternateIcons，添加CFBundleIconFiles,按照如图所示的添加，我添加了三个分别是 Icon1，Icon2（这个名字是自己写的），它们对应的本地图片名字是Icon1,Icon2,添加时数据类型对应一致就OK.
 
-![图二](https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/changeLogo_2.png)
+<p align = "center"> 
+<img src="https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/changeLogo_2.png" alt="图二">
+</p>
+
 
 2.3、执行代码
 
@@ -239,7 +250,10 @@ weakSelf.gravity.angle = rotation;
 #### 4、实现本地推送
 
 4.1、功能部分:</br>
-![本地推送分析图](https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/tuisong_1.webp)
+
+<p align = "center"> 
+<img src="https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/tuisong_1.webp" alt="本地推送分析图">
+</p>
 
 4.2、iOS8本地推送注册
 ~~~
