@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		180932E92AFB6C65002F4EBC /* loading-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 180932E82AFB6C65002F4EBC /* loading-icon.png */; };
+		180A32E62C781EDE00F01B36 /* VipCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180A32E52C781EDE00F01B36 /* VipCardViewController.m */; };
 		181174A02AEFA4D30051CCB4 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811749F2AEFA4D30051CCB4 /* CollectionViewController.m */; };
 		181174A42AEFA55C0051CCB4 /* CustomFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 181174A32AEFA55C0051CCB4 /* CustomFlowLayout.m */; };
 		181174A82AF084EF0051CCB4 /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 181174A72AF084EF0051CCB4 /* CustomCollectionViewCell.m */; };
@@ -295,6 +296,8 @@
 
 /* Begin PBXFileReference section */
 		180932E82AFB6C65002F4EBC /* loading-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading-icon.png"; sourceTree = "<group>"; };
+		180A32E42C781EDE00F01B36 /* VipCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VipCardViewController.h; sourceTree = "<group>"; };
+		180A32E52C781EDE00F01B36 /* VipCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VipCardViewController.m; sourceTree = "<group>"; };
 		1811749E2AEFA4D30051CCB4 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		1811749F2AEFA4D30051CCB4 /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		181174A22AEFA55C0051CCB4 /* CustomFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomFlowLayout.h; sourceTree = "<group>"; };
@@ -709,6 +712,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		180A32E32C781ED300F01B36 /* VipCardViewController */ = {
+			isa = PBXGroup;
+			children = (
+				180A32E42C781EDE00F01B36 /* VipCardViewController.h */,
+				180A32E52C781EDE00F01B36 /* VipCardViewController.m */,
+			);
+			path = VipCardViewController;
+			sourceTree = "<group>";
+		};
 		181174A12AEFA51E0051CCB4 /* ViewLayout */ = {
 			isa = PBXGroup;
 			children = (
@@ -917,6 +929,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				180A32E32C781ED300F01B36 /* VipCardViewController */,
 				18C8325E2C76CC77002AA9DD /* MasonryViewController */,
 				18C832572C76C819002AA9DD /* FMDBViewController */,
 				18C832392C75FC54002AA9DD /* YHTScrollViewController */,
@@ -2339,6 +2352,7 @@
 				1868F30A2AF8C3990020FF1A /* DatePickerVC.m in Sources */,
 				1887B53F2AF4C5E300EEECAE /* PinballProViewController.m in Sources */,
 				1868F3322AFA16160020FF1A /* RXJDTableCell.m in Sources */,
+				180A32E62C781EDE00F01B36 /* VipCardViewController.m in Sources */,
 				18C8323A2C75FC54002AA9DD /* HotViewController.m in Sources */,
 				1868F34E2AFA27650020FF1A /* ShoppingCartTool.m in Sources */,
 				1887B5732AF4CBCE00EEECAE /* NSString+File.m in Sources */,

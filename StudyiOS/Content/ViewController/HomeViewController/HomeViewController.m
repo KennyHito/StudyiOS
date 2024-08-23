@@ -67,6 +67,7 @@
                      @{Tab_Title:@"34、轮播新闻类功能",Tab_Url:@"YHTScrollViewController"},
                      @{Tab_Title:@"35、实现FMDB库功能",Tab_Url:@"FMDBViewController"},
                      @{Tab_Title:@"36、Masonry库的使用",Tab_Url:@"MasonryViewController"},
+                     @{Tab_Title:@"37、类似vip会员样式",Tab_Url:@"VipCardViewController"},
     ];
     [self.tableView reloadData];
 }
