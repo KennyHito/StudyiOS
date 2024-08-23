@@ -321,8 +321,6 @@ regionTriggersOnce：带有定位的推送相关属性，具体使用见下面�
  - 注意: 运行程序后,点击ViewController空白区域之后,必须推到后台才能看到通知的运行效果.
 - 首次运行会弹出让用户选择授权!!!
 
-![首次运行会弹出让用户选择授权](https://raw.githubusercontent.com/KennyHito/StudyiOS/main/StudyiOS/Resource/Images/tuisong_2.webp?width=365&height=278)
-
 <img src="https://raw.githubusercontent.com/KennyHito/StudyiOS/main/StudyiOS/Resource/Images/tuisong_2.webp" alt="首次运行会弹出让用户选择授权" width="365" height="278">
 
-![在桌面顶部弹出效果](https://raw.githubusercontent.com/KennyHito/StudyiOS/main/StudyiOS/Resource/Images/tuisong_3.webp)
+<img src="https://raw.githubusercontent.com/KennyHito/StudyiOS/main/StudyiOS/Resource/Images/tuisong_3.webp" alt="在桌面顶部弹出效果" width="375" height="667">
