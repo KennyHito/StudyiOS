@@ -1,4 +1,5 @@
-### 一、采用Objective-C开发语言,此Demo包含以下功能,欢迎大家使用。有问题可以在提到[issue](https://github.com/KennyHito/StudyiOS/issues)。
+### 一、采用Objective-C开发语言,此Demo包含以下功能,欢迎大家使用。
+#### 若在使用过程中有问题可以在提到[issues](https://github.com/KennyHito/StudyiOS/issues) ,我将尽量为你解答。
 
 ~~~
 1、使用定时器注意事项; 
