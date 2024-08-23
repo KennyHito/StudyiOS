@@ -323,4 +323,6 @@ regionTriggersOnce：带有定位的推送相关属性，具体使用见下面�
 
 ![首次运行会弹出让用户选择授权](https://raw.githubusercontent.com/KennyHito/StudyiOS/main/StudyiOS/Resource/Images/tuisong_2.webp?width=365&height=278)
 
+<img src="https://raw.githubusercontent.com/KennyHito/StudyiOS/main/StudyiOS/Resource/Images/tuisong_2.webp" alt="首次运行会弹出让用户选择授权" width="365" height="278">
+
 ![在桌面顶部弹出效果](https://raw.githubusercontent.com/KennyHito/StudyiOS/main/StudyiOS/Resource/Images/tuisong_3.webp)
