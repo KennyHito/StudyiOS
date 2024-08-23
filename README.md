@@ -1,4 +1,4 @@
-采用Objective-C开发语言,此Demo包含以下功能,欢迎大家使用!
+### 一、采用Objective-C开发语言,此Demo包含以下功能,欢迎大家使用!
 
 ~~~
 1、使用定时器注意事项; 
@@ -37,11 +37,11 @@
 34、轮播新闻类功能; 
 35、实现FMDB库功能; 
 36、Masonry库的使用; 
-37、类似vip会员样式;】
+37、类似vip会员样式;
 ~~~
 
-
-### 一、YYKeyChainData
+### 二、列举一下几个功能使用
+#### 1、YYKeyChainData
 
 获取UUID的方法有很多，但是都会因为各种原因改变
 ```
@@ -93,23 +93,23 @@ Target - Capabilities - KeychainSharing - ON
 
 无论你怎么折腾都会保证同一设备每次获取到的UUID都是一致的，卸载应用，开启广告限制跟踪，系统升级都不会有影响。越狱刷机这种骚操作我没有测过，即使有问题，感觉这些调皮的用户也可以忽略了，因为这个已经是目前最好的解决办法了，如果大家有什么更好的解决方案，还请issues区指正。
 
-### 二、动态更改APP图标
+#### 2、动态更改APP图标
 
 iOS 10.3 加入了了更换应用图标的新功能，开发者可以为应用提供多个应用图标选择。用户可以自由的在这些图标之间切换，下面具体查看切换步骤。
 实现方法:
 
-1.先把你需要的所有图片都导入项目中（比例为1:1）
+2.1、先把你需要的所有图片都导入项目中（比例为1:1）
 
 ![图一](https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/changeLogo_1.png)
 
-2.plist文件配置，添加Icon files (ios 5)类型为Dictionary
+2.2、plist文件配置，添加Icon files (ios 5)类型为Dictionary
 点开Icon files (iOS 5)，里面有Primary Icon，Newsstand Icon两个key,Primary Icon 里面的图片为AppIcon默认图片。
 Icon files (iOS 5)里面创建一个CFBundleAlternateIcons，类型为Dictionary
 点击开CFBundleAlternateIcons，添加CFBundleIconFiles,按照如图所示的添加，我添加了三个分别是 Icon1，Icon2（这个名字是自己写的），它们对应的本地图片名字是Icon1,Icon2,添加时数据类型对应一致就OK.
 
 ![图二](https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/changeLogo_2.png)
 
-3.执行代码
+2.3、执行代码
 
 ~~~
 - (IBAction)setIconClick:(UIButton *)sender {
@@ -140,22 +140,22 @@ if ([application supportsAlternateIcons]) {
 }
 ~~~
 
-### 三、小球碰撞球功能
+#### 3、小球碰撞球功能
 
-1.首先,需要学习一些知识点
+3.1、首先,需要学习一些知识点
 
-1.1.CoreMotion框架(加速计和陀螺仪)
+a.CoreMotion框架(加速计和陀螺仪)
 * [http://blog.csdn.net/sifenkesi1/article/details/52621873](http://blog.csdn.net/sifenkesi1/article/details/52621873);
 * [http://justsee.iteye.com/blog/1933099](http://justsee.iteye.com/blog/1933099);
 
-1.2.UIDynamicAnimator - 仿真物理学
+b.UIDynamicAnimator - 仿真物理学
 * [http://www.jianshu.com/p/8aa3525f8d48](http://www.jianshu.com/p/8aa3525f8d48);
 * [http://www.cnblogs.com/pengsi/p/5798312.html](http://www.cnblogs.com/pengsi/p/5798312.html);
 * [http://blog.csdn.net/lengshengren/article/details/12000649](http://blog.csdn.net/lengshengren/article/details/12000649);
 * [http://blog.csdn.net/sharktoping/article/details/52277158](http://blog.csdn.net/sharktoping/article/details/52277158);
 
 
-2.代码如下
+3.2、代码如下
 
 ~~~
 - (void)setupBalls{
@@ -235,12 +235,12 @@ weakSelf.gravity.angle = rotation;
 ~~~
 
 
-### 四、实现本地推送
+#### 4、实现本地推送
 
-1、功能部分:</br>
+4.1、功能部分:</br>
 ![本地推送分析图](https://github.com/KennyHito/StudyiOS/blob/main/StudyiOS/Resource/Images/tuisong_1.webp)
 
-2、iOS8本地推送注册
+4.2、iOS8本地推送注册
 ~~~
 //创建本地通知
 - (void)requestAuthor
@@ -262,7 +262,7 @@ weakSelf.gravity.angle = rotation;
 }
 ~~~
 
-3、假设在ViewController中添加touchesBegan方法,具体UILocalNotification的基本属性请往下看!
+4.3、假设在ViewController中添加touchesBegan方法,具体UILocalNotification的基本属性请往下看!
 ~~~
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
@@ -288,7 +288,7 @@ weakSelf.gravity.angle = rotation;
 }
 ~~~
 
-#### 注意:UILocalNotification的基本属性
+##### 注意:UILocalNotification的基本属性
 ~~~
 fireDate：启动时间
 timeZone：启动时间参考的时区
@@ -307,7 +307,7 @@ region：带有定位的推送相关属性，具体使用见下面【带有定�
 regionTriggersOnce：带有定位的推送相关属性，具体使用见下面【带有定位的本地推送】适用iOS8.0之后
 ~~~
 
-4、注意一点. 当再次进入app中,通知栏的通知需要不显示,并且app的角标也要没有,所以需要在appDelegate设置一个属性.
+4.4、注意一点. 当再次进入app中,通知栏的通知需要不显示,并且app的角标也要没有,所以需要在appDelegate设置一个属性.
 ~~~
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     //设置应用程序图片右上角的数字(如果想要取消右上角的数字, 直接把这个参数值为0)
@@ -316,7 +316,7 @@ regionTriggersOnce：带有定位的推送相关属性，具体使用见下面�
 ~~~
 
 
-5、运行效果图   
+4.5、运行效果图   
  - 注意: 运行程序后,点击ViewController空白区域之后,必须推到后台才能看到通知的运行效果.
 - 首次运行会弹出让用户选择授权!!!
 
