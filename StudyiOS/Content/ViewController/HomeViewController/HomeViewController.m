@@ -9,11 +9,13 @@
 
 #define Tab_Title       @"title"
 #define Tab_Url         @"url"
-
 #define CellID          @"cellid"
 
 @interface HomeViewController ()
-<UITableViewDelegate,UITableViewDataSource>
+<
+UITableViewDelegate,
+UITableViewDataSource
+>
 
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSArray *dataArr;
