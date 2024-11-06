@@ -74,6 +74,7 @@ UITableViewDataSource
     [self.tableView reloadData];
 }
 
+#pragma mark -- 增加UI
 - (void)setUI{
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
