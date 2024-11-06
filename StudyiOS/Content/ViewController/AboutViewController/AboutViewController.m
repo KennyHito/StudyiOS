@@ -32,6 +32,7 @@ UITableViewDataSource
 @property (nonatomic,assign) NSInteger networkType;//0无网络,1蜂窝,2WiFi
 @property (nonatomic,assign) NSInteger row;//支持点击跳转的所在行数
 @property (nonatomic,strong) UIImage *iconImage;
+@property (nonatomic,assign) CGFloat alll;
 
 @end
 
@@ -44,6 +45,8 @@ UITableViewDataSource
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    //进入页面导航栏设置为隐藏
+    [self updateNavStyle];
     /// 组件工程
     [TestInject requestApiBlock:^(id  _Nonnull obj) {
         if([[HsConfig readUserDefaultWithKey:kHsPrintLogJson] isEqualToString:@"1"]){
@@ -149,25 +152,6 @@ UITableViewDataSource
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     float offSet = scrollView.contentOffset.y;
     NSLog(@"======= %f",offSet);
-
-    CGFloat alll = offSet<-30 ? 0/200 : (fabsf(offSet)+200)/200;
-    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:alll];
-    NSLog(@">>>>>>> %f",alll);
-    
-    UIColor *color = [UIColor whiteColor];
-    if (alll > 1) {
-        color = [UIColor blackColor];
-    }
-    if (@available(iOS 13.0, *)) {
-        UINavigationBarAppearance *appearance = [[UINavigationBarAppearance alloc] init];
-        [appearance configureWithOpaqueBackground];
-        appearance.titleTextAttributes = @{NSForegroundColorAttributeName:color};
-        self.navigationController.navigationBar.standardAppearance = appearance;
-        self.navigationController.navigationBar.scrollEdgeAppearance = appearance;
-    }else{
-        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:color};
-    }
-    
     if (offSet < -200) {
         //正在下拉
         //更新顶部试图的效果
@@ -178,6 +162,28 @@ UITableViewDataSource
         rect.size.height = -offSet;
         //重置
         _topImageView.frame = rect;
+    }
+    
+    self.alll = offSet<-30 ? 0/200 : (fabsf(offSet)+200)/200;
+    NSLog(@">>>>>>> %f",self.alll);
+    [self updateNavStyle];
+}
+
+- (void)updateNavStyle{
+    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:self.alll];
+    
+    UIColor *color = [UIColor whiteColor];
+    if (self.alll > 1) {
+        color = [UIColor blackColor];
+    }
+    if (@available(iOS 13.0, *)) {
+        UINavigationBarAppearance *appearance = [[UINavigationBarAppearance alloc] init];
+        [appearance configureWithOpaqueBackground];
+        appearance.titleTextAttributes = @{NSForegroundColorAttributeName:color};
+        self.navigationController.navigationBar.standardAppearance = appearance;
+        self.navigationController.navigationBar.scrollEdgeAppearance = appearance;
+    }else{
+        self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:color};
     }
 }
 
