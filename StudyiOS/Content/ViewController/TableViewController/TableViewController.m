@@ -80,7 +80,7 @@ UITableViewDataSource>
 
 /** 创建tableview */
 - (void)setUpTableView{
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,0, KScreenW, KScreenH) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -90,6 +90,13 @@ UITableViewDataSource>
     self.tableView.tableHeaderView = [UIView new];
     self.tableView.tableFooterView = [UIView new];
     [self.view addSubview:self.tableView];
+    int bottom_H = self.name ? -KSafeAreaHeight : -KBottomHeight;
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view.mas_top).offset(KTopHeight);
+        make.left.mas_equalTo(self.view.mas_left);
+        make.right.mas_equalTo(self.view.mas_right);
+        make.bottom.mas_equalTo(self.view.mas_bottom).offset(bottom_H);
+    }];
 }
 
 /* 组数 */
