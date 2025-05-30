@@ -11,11 +11,11 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface MovieViewController ()
+@property (nonatomic, assign) BOOL isLocalVideo;//0本地视频,1网络视频
 @property (nonatomic, strong) AVPlayer * player;
-@property (strong, nonatomic) AVPlayerLayer * layer;
-@property (strong, nonatomic) AVPlayerItem *playerItem;
-@property (strong, nonatomic) id playerItemObserver;
-
+@property (nonatomic, strong) AVPlayerLayer * layer;
+@property (nonatomic, strong) AVPlayerItem *playerItem;
+@property (nonatomic, strong) id playerItemObserver;
 @property (nonatomic, strong) UILabel *errorLabel;
 @property (nonatomic, strong) UIActivityIndicatorView *loadingIndicator;
 @end
@@ -168,7 +168,9 @@
         if (isDone) {
             des = @"缓存完成";
         }
-        [self showError:des withDone:isDone];
+        if (self.isLocalVideo == 1) {
+            [self showError:des withDone:isDone];
+        }
         
     } else if ([keyPath isEqualToString:@"playbackBufferEmpty"]) {
         if (playerItem.playbackBufferEmpty) {
@@ -207,11 +209,12 @@
     if(!_playerItem){
         //通过随机来播放本地视频还是网络视频
         int x = arc4random()%2;
-        //网络视频url
-        NSURL *movieURL = [NSURL URLWithString:MP4_URL];
+        self.isLocalVideo = x;
+        //选择本地的视频
+        NSURL *movieURL = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"qidong" ofType:@"mp4"]];
         if (x == 1) {
-            //选择本地的视频
-            movieURL = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"qidong" ofType:@"mp4"]];
+            //网络视频url
+            movieURL = [NSURL URLWithString:MP4_URL];
         }
         _playerItem = [AVPlayerItem playerItemWithURL:movieURL];
     }
