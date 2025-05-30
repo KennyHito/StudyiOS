@@ -90,9 +90,8 @@
     [self.view addSubview:self.loadingIndicator];
     
     // 添加错误提示标签
-    self.errorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 50)];
-    self.errorLabel.center = self.view.center;
-    self.errorLabel.textAlignment = NSTextAlignmentCenter;
+    self.errorLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, KNavBarHeight, 200, 35)];
+    self.errorLabel.textAlignment = NSTextAlignmentLeft;
     self.errorLabel.textColor = [UIColor redColor];
     self.errorLabel.numberOfLines = 0;
     self.errorLabel.hidden = YES;
