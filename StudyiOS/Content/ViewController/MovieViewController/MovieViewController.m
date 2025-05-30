@@ -15,10 +15,23 @@
 @property (nonatomic, strong) AVPlayer * player;
 @property (strong, nonatomic) AVPlayerLayer * layer;
 @property (strong, nonatomic) AVPlayerItem *playerItem;
-
+@property (strong, nonatomic) id playerItemObserver;
 @end
 
 @implementation MovieViewController
+
+- (void)dealloc{
+    KLog(@"移除观察者 --- 停止播放");
+    // 移除观察者
+    if (self.playerItemObserver) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self.playerItemObserver];
+    }
+    // 停止播放
+    if(self.player){
+        [self.player pause];
+        self.player = nil;
+    }
+}
 
 - (void)pageActivityStart{
     [self.player play];
@@ -81,17 +94,11 @@
 
 #pragma mark -- 监听播放进度
 - (void)monitorPlaybackProgress{
-    WS(weakSelf);
-    [self.player addPeriodicTimeObserverForInterval:CMTimeMake(1.0, 1.0) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
-        float current = CMTimeGetSeconds(time);
-        float total = CMTimeGetSeconds(weakSelf.playerItem.duration);
-        if (current == total) {
-            //监听播放进度 进行循环播放
-            [weakSelf.playerItem seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
-                KLog(@"播放完成");
-            }];
-            [weakSelf.player play];
-        }
+    self.playerItemObserver = [[NSNotificationCenter defaultCenter] addObserverForName:AVPlayerItemDidPlayToEndTimeNotification object:self.playerItem queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        // 当视频播放结束时，将播放位置重置到开始处
+        [self.player seekToTime:kCMTimeZero];
+        // 重新开始播放
+        [self.player play];
     }];
 }
 
@@ -101,7 +108,7 @@
         _layer = [AVPlayerLayer playerLayerWithPlayer:_player];
         _layer.frame = CGRectMake(0, 0, KScreenW, KScreenH);
         _layer.videoGravity = AVLayerVideoGravityResizeAspectFill;//视频拉伸显示
-//        _layer.backgroundColor = [UIColor blackColor].CGColor;
+        //        _layer.backgroundColor = [UIColor blackColor].CGColor;
         [self.view.layer addSublayer:_layer];
     }
     return _player;
