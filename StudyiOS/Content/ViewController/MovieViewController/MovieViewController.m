@@ -190,7 +190,7 @@
         _layer = [AVPlayerLayer playerLayerWithPlayer:_player];
         _layer.frame = CGRectMake(0, 0, KScreenW, KScreenH);
         _layer.videoGravity = AVLayerVideoGravityResizeAspectFill;//视频拉伸显示
-        //        _layer.backgroundColor = [UIColor blackColor].CGColor;
+        //_layer.backgroundColor = [UIColor blackColor].CGColor;
         [self.view.layer addSublayer:_layer];
     }
     return _player;
