@@ -87,7 +87,9 @@
         float total = CMTimeGetSeconds(weakSelf.playerItem.duration);
         if (current == total) {
             //监听播放进度 进行循环播放
-            [weakSelf.playerItem seekToTime:kCMTimeZero];
+            [weakSelf.playerItem seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
+                KLog(@"播放完成");
+            }];
             [weakSelf.player play];
         }
     }];
