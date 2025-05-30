@@ -15,7 +15,6 @@
 @property (nonatomic, strong) AVPlayer * player;
 @property (nonatomic, strong) AVPlayerLayer * layer;
 @property (nonatomic, strong) AVPlayerItem *playerItem;
-@property (nonatomic, strong) id playerItemObserver;
 @property (nonatomic, strong) UILabel *errorLabel;
 @property (nonatomic, strong) UIActivityIndicatorView *loadingIndicator;
 @end
@@ -24,21 +23,13 @@
 
 - (void)dealloc{
     KLog(@"移除观察者 --- 停止播放");
-    // 移除观察者
-    if (self.playerItemObserver) {
-        [[NSNotificationCenter defaultCenter] removeObserver:self.playerItemObserver];
-    }
-    // 停止播放
+    [self closePage];
+}
+
+- (void)closePage{
     if(self.player){
         [self.player pause];
         self.player = nil;
-    }
-    
-    if(self.playerItem){
-        [self.playerItem removeObserver:self forKeyPath:@"status"];
-        [self.playerItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
-        [self.playerItem removeObserver:self forKeyPath:@"playbackBufferEmpty"];
-        [self.playerItem removeObserver:self forKeyPath:@"playbackLikelyToKeepUp"];
     }
 }
 
@@ -111,6 +102,7 @@
 
 /// 进入App
 - (void)enterMainViewcontroller{
+    [self closePage];
     MainTabBarViewController *tabBar = [[MainTabBarViewController alloc] init];
     self.view.window.rootViewController = tabBar;
 }
@@ -122,7 +114,7 @@
     [self.playerItem addObserver:self forKeyPath:@"playbackBufferEmpty" options:NSKeyValueObservingOptionNew context:nil];
     [self.playerItem addObserver:self forKeyPath:@"playbackLikelyToKeepUp" options:NSKeyValueObservingOptionNew context:nil];
     
-    self.playerItemObserver = [[NSNotificationCenter defaultCenter] addObserverForName:AVPlayerItemDidPlayToEndTimeNotification object:self.playerItem queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+    [[NSNotificationCenter defaultCenter] addObserverForName:AVPlayerItemDidPlayToEndTimeNotification object:self.playerItem queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
         // 当视频播放结束时，将播放位置重置到开始处
         [self.player seekToTime:kCMTimeZero];
         // 重新开始播放
