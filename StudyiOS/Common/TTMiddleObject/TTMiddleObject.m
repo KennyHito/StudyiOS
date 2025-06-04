@@ -31,4 +31,8 @@
 //    [invocation invokeWithTarget:self.target];
 //}
 
+- (void)doesNotRecognizeSelector:(SEL)aSelector{
+    KLog(@"doesNotRecognizeSelector");
+}
+
 @end
