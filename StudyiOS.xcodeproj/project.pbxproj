@@ -88,6 +88,7 @@
 		186FD4A629260CA7003A31C0 /* UIViewController+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 186FD4A529260CA7003A31C0 /* UIViewController+Log.m */; };
 		186FD4AC29261506003A31C0 /* dangdang.png in Resources */ = {isa = PBXBuildFile; fileRef = 186FD4AB29261506003A31C0 /* dangdang.png */; };
 		187A93F62AF0DFAD000EAB05 /* MainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 187A93F52AF0DFAD000EAB05 /* MainTabBarViewController.m */; };
+		187E05632DF6643F006E22F4 /* UIViewController+Nav.m in Sources */ = {isa = PBXBuildFile; fileRef = 187E05622DF6643E006E22F4 /* UIViewController+Nav.m */; };
 		1887B5012AF4C2A900EEECAE /* RuntimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1887B5002AF4C2A900EEECAE /* RuntimeViewController.xib */; };
 		1887B50B2AF4C46800EEECAE /* YLButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887B5082AF4C46800EEECAE /* YLButton.m */; };
 		1887B50C2AF4C46800EEECAE /* DPScreenshotsPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1887B5092AF4C46800EEECAE /* DPScreenshotsPopView.m */; };
@@ -431,6 +432,8 @@
 		186FD4AB29261506003A31C0 /* dangdang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dangdang.png; sourceTree = "<group>"; };
 		187A93F42AF0DFAD000EAB05 /* MainTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTabBarViewController.h; sourceTree = "<group>"; };
 		187A93F52AF0DFAD000EAB05 /* MainTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTabBarViewController.m; sourceTree = "<group>"; };
+		187E05612DF6643E006E22F4 /* UIViewController+Nav.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Nav.h"; sourceTree = "<group>"; };
+		187E05622DF6643E006E22F4 /* UIViewController+Nav.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Nav.m"; sourceTree = "<group>"; };
 		1887B5002AF4C2A900EEECAE /* RuntimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RuntimeViewController.xib; sourceTree = "<group>"; };
 		1887B5072AF4C46800EEECAE /* YLButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLButton.h; sourceTree = "<group>"; };
 		1887B5082AF4C46800EEECAE /* YLButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLButton.m; sourceTree = "<group>"; };
@@ -771,6 +774,8 @@
 				186FD4A529260CA7003A31C0 /* UIViewController+Log.m */,
 				182276012924908F00242C9A /* UIViewController+AddProperty.h */,
 				182276002924908F00242C9A /* UIViewController+AddProperty.m */,
+				187E05612DF6643E006E22F4 /* UIViewController+Nav.h */,
+				187E05622DF6643E006E22F4 /* UIViewController+Nav.m */,
 			);
 			path = "UIViewController+Category";
 			sourceTree = "<group>";
@@ -2428,6 +2433,7 @@
 				1887B5622AF4C97D00EEECAE /* CLLockMainView.m in Sources */,
 				1887B55B2AF4C97D00EEECAE /* CALayer+Anim.m in Sources */,
 				181174A02AEFA4D30051CCB4 /* CollectionViewController.m in Sources */,
+				187E05632DF6643F006E22F4 /* UIViewController+Nav.m in Sources */,
 				186FD4A629260CA7003A31C0 /* UIViewController+Log.m in Sources */,
 				18CD0D6F2C759216006DEAFE /* UITouchViewController.m in Sources */,
 				18B1ED59290F9D7D00647F15 /* HomeViewController.m in Sources */,
