@@ -31,6 +31,7 @@
 //    [invocation invokeWithTarget:self.target];
 //}
 
+/// 未实现快速转发或慢速转发,则报方法找不到
 - (void)doesNotRecognizeSelector:(SEL)aSelector{
     KLog(@"doesNotRecognizeSelector");
 }
