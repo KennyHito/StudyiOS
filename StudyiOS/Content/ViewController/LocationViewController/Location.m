@@ -59,7 +59,6 @@
             location.subThoroughfare = placemark.subThoroughfare;//详细街道
             //设置代理方法
             if ([self.delegate respondsToSelector:@selector(locationDidEndUpdatingLocation:)]){
-                
                 [self.delegate locationDidEndUpdatingLocation:location];
             }
         }
