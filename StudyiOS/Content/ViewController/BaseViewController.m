@@ -29,8 +29,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self setupCustomBackButton];
-    
     //让手机震动一下
 //    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     
