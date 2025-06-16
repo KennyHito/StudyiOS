@@ -1,5 +1,5 @@
 //
-//  UIImage+GIF.h
+//  UIImage+GIF_ONE.h
 //  iOSReview
 //
 //  Created by Apple on 2017/8/1.
@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+
 typedef void (^GIFimageBlock)(UIImage *GIFImage);
 
-@interface UIImage (GIF)
+@interface UIImage (GIF_ONE)
 
 /** 根据本地GIF图片名 获得GIF image对象 */
 + (UIImage *)imageWithGIFNamed:(NSString *)name;

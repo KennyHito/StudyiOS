@@ -1,16 +1,16 @@
 //
-//  UIImage+GIF.m
+//  UIImage+GIF_ONE.m
 //  iOSReview
 //
 //  Created by Apple on 2017/8/1.
 //  Copyright © 2017年 KennyHito. All rights reserved.
 //
 
-#import "UIImage+GIF.h"
+#import "UIImage+GIF_ONE.h"
 #import <ImageIO/ImageIO.h>
 
 
-@implementation UIImage (GIF)
+@implementation UIImage (GIF_ONE)
 
 + (UIImage *)imageWithGIFData:(NSData *)data
 {
