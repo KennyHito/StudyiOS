@@ -18,6 +18,7 @@
 #define Height_Space    20.0f// 竖间距
 #define Button_Height   122.0f// 高
 #define Button_Width    75.0f// 宽
+#define btnHeight  50
 
 @interface ExerciseViewController (){
     NSArray*arr;
@@ -31,9 +32,10 @@
 @property (nonatomic, strong)UIImageView *animationImageView;
 @property (nonatomic, strong)NSLock *lock;
 @property (nonatomic, assign)int count;
-@property (nonatomic, strong) WKWebView *webView;
-
-
+@property (nonatomic, strong)WKWebView *webView;
+@property (nonatomic, strong)NSArray *dataArr1;
+@property (nonatomic, strong)NSMutableArray *dataArr2;
+@property (nonatomic, strong)UIButton *lastBtn;
 @end
 
 @implementation ExerciseViewController
@@ -68,13 +70,15 @@
     [self demo20];
     [self demo21];
     [self demo22];
+    [self demo23];
 }
 
 - (void)initData{
     self.count = 10;
     self.lock = [[NSLock alloc] init];
     [self addObserver:self forKeyPath:@"isOk" options:0 context:nil];
-    
+    self.dataArr1 = [[NSArray alloc] initWithArray:@[@12,@54]];
+    self.dataArr2 = [NSMutableArray arrayWithArray:@[@"zhangsan",@"lisi",@"wangwu"]];
     //禁止被LLDB调试!也就是说这样连接Xcode运行app就会闪退
     //🌰方法一:
     //    ptrace(PT_DENY_ATTACH, 0, 0, 0);
@@ -308,7 +312,6 @@
 
 #pragma mark -- demo8
 - (void)demo8{
-    CGFloat btnHeight = 50;
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.backgroundColor = [UIColor redColor];
     [btn setTitle:@"跳转page" forState:UIControlStateNormal];
@@ -361,6 +364,7 @@
         make.width.mas_equalTo(200);
         make.height.mas_equalTo(btnHeight);
     }];
+    self.lastBtn = autoBtn;
 }
 
 - (void)btnClick:(UIButton *)btn{
@@ -664,4 +668,42 @@
     KLog(@"YYKeyChainData : %@",[YYKeyChainData getUUIDByKeyChain]);
 }
 
+#pragma mark -- demo23
+- (void)demo23{
+    UIButton *testBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    testBtn.backgroundColor = [UIColor redColor];
+    [testBtn setTitle:@"测试深拷贝&浅拷贝" forState:UIControlStateNormal];
+    [testBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    testBtn.titleLabel.font = DDFont_PF_M(22);
+    testBtn.layer.cornerRadius = btnHeight/2.0;
+    testBtn.layer.masksToBounds = YES;
+    [testBtn addTarget:self action:@selector(testBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.contentView addSubview:testBtn];
+    [testBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.lastBtn.mas_bottom).offset(5);
+        make.centerX.mas_equalTo(self.scrollView.mas_centerX);
+        make.width.mas_equalTo(300);
+        make.height.mas_equalTo(btnHeight);
+    }];
+}
+
+- (void)testBtnClick:(UIButton *)btn{
+    /********************************浅拷贝(copy&mutableCopy)*****************************/
+    NSArray *a1 = self.dataArr1;
+    NSArray *a2 = [self.dataArr1 copy];
+    NSArray *a3 = [self.dataArr1 mutableCopy];
+    KLog(@"操作前----> %@,%@,%@,%@",self.dataArr1,a1,a2,a3);
+
+    self.dataArr1 = @[@123];
+    KLog(@"操作后----> %@,%@,%@,%@",self.dataArr1,a1,a2,a3);
+    
+    /********************************深拷贝(copy&mutableCopy)*****************************/
+    NSMutableArray *b1 = self.dataArr2;
+    NSMutableArray *b2 = [self.dataArr2 copy];
+    NSMutableArray *b3 = [self.dataArr2 mutableCopy];
+    KLog(@"操作前====> %@\n%@\n%@",b1,b2,b3);
+
+    [self.dataArr2 addObject:@"maliu"];
+    KLog(@"操作后====> %@\n%@\n%@",b1,b2,b3);
+}
 @end
