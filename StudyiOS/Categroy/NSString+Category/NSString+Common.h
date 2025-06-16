@@ -12,12 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSString (Common)
 /// 获取手机型号
 +(NSString *)getCurrentDeviceModel;
-
-/*手机号码验证 MODIFIED BY HELENSONG*/
-+(BOOL) isValidateMobile:(NSString *)mobile;
-/*身份证 MODIFIED BY HELENSONG*/
-+(BOOL) isValidateIndCard:(NSString *)mobile;
-/*邮箱验证 MODIFIED BY HELENSONG*/
+/// 手机号码验证
++(BOOL)isValidateMobile:(NSString *)mobile;
+/// 身份证
++(BOOL)isValidateIndCard:(NSString *)mobile;
+/// 邮箱验证
 +(BOOL)isEmailAddress:(NSString *)nickname;
 @end
 

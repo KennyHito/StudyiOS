@@ -10,7 +10,7 @@
 
 @interface NSArray (ObjectAtIndex)
 
--(id) safeObjectAtIndex:(NSUInteger)index;
+-(id)safeObjectAtIndex:(NSUInteger)index;
 
 -(NSString *) getJsonDescription;
 
