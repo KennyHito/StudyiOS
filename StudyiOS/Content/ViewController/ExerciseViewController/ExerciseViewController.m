@@ -265,13 +265,6 @@
 #pragma mark -- demo4
 - (void)demo4{
     NSString *strrr = @"abcdefg";
-    // 原始数据
-    NSData *originalData = [strrr dataUsingEncoding:NSUTF8StringEncoding];
-    // 将数据进行Base64编码
-    NSString *base64String = [originalData base64EncodedStringWithOptions:0];
-    // 打印编码后的字符串
-    KLog(@"NSData   --- Base64编码后的字符串：%@", base64String);
-    
     strrr = [strrr encodeBase64String];
     KLog(@"NSString --- Base64加密后的字符串：%@",strrr);
     strrr = [strrr decodeBase64String];
