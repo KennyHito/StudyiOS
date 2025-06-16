@@ -33,8 +33,8 @@ UITableViewDataSource
 }
 
 - (void)initData{
-    self.dataArr = @[@{Tab_Title:@"1、使用定时器注意事项",Tab_Url:@"TimerViewController"},
-                     @{Tab_Title:@"2、实时学习",Tab_Url:@"ExerciseViewController"},
+    self.dataArr = @[@{Tab_Title:@"1、实时学习",Tab_Url:@"ExerciseViewController"},
+                     @{Tab_Title:@"2、使用定时器注意事项",Tab_Url:@"TimerViewController"},
                      @{Tab_Title:@"3、ReactiveObjC",Tab_Url:@"ReactiveObjCViewController"},
                      @{Tab_Title:@"4、切换App Logo",Tab_Url:@"ChangeLogoViewController"},
                      @{Tab_Title:@"5、测试崩溃一下",Tab_Url:@"TryCatchViewController"},
