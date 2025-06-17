@@ -30,6 +30,7 @@
 		18227636292490B600242C9A /* DDMBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822762A292490B600242C9A /* DDMBProgressHUD.m */; };
 		18227637292490B600242C9A /* TTCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822762D292490B600242C9A /* TTCrash.m */; };
 		182C4B6E2E000DF40006521F /* LockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182C4B6D2E000DF30006521F /* LockViewController.m */; };
+		182C4B732E014E540006521F /* HttpCommonRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 182C4B722E014E540006521F /* HttpCommonRequest.m */; };
 		18349A092C7423C500F83A52 /* changeLogo_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18349A072C7423C500F83A52 /* changeLogo_1.png */; };
 		18349A0A2C7423C500F83A52 /* changeLogo_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18349A082C7423C500F83A52 /* changeLogo_2.png */; };
 		183DBC432C747164001FFBA4 /* GetTopVCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DBC422C747164001FFBA4 /* GetTopVCTool.m */; };
@@ -340,6 +341,9 @@
 		1822762D292490B600242C9A /* TTCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCrash.m; sourceTree = "<group>"; };
 		182C4B6C2E000DF30006521F /* LockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockViewController.h; sourceTree = "<group>"; };
 		182C4B6D2E000DF30006521F /* LockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockViewController.m; sourceTree = "<group>"; };
+		182C4B6F2E014B3A0006521F /* ApiHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiHeader.h; sourceTree = "<group>"; };
+		182C4B712E014E540006521F /* HttpCommonRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpCommonRequest.h; sourceTree = "<group>"; };
+		182C4B722E014E540006521F /* HttpCommonRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpCommonRequest.m; sourceTree = "<group>"; };
 		18349A072C7423C500F83A52 /* changeLogo_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeLogo_1.png; sourceTree = "<group>"; };
 		18349A082C7423C500F83A52 /* changeLogo_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeLogo_2.png; sourceTree = "<group>"; };
 		183DBC412C747164001FFBA4 /* GetTopVCTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetTopVCTool.h; sourceTree = "<group>"; };
@@ -807,6 +811,7 @@
 		18227611292490B600242C9A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				182C4B702E014E130006521F /* Http */,
 				18C832532C76C79C002AA9DD /* SQliteManager */,
 				183DBC402C74712F001FFBA4 /* GetTopViewController */,
 				18B842B12C7338AF00886209 /* CBAutoScrollLabel */,
@@ -918,6 +923,15 @@
 				182C4B6D2E000DF30006521F /* LockViewController.m */,
 			);
 			path = LockViewController;
+			sourceTree = "<group>";
+		};
+		182C4B702E014E130006521F /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				182C4B712E014E540006521F /* HttpCommonRequest.h */,
+				182C4B722E014E540006521F /* HttpCommonRequest.m */,
+			);
+			path = Http;
 			sourceTree = "<group>";
 		};
 		183DBC402C74712F001FFBA4 /* GetTopViewController */ = {
@@ -1621,6 +1635,7 @@
 				18B1ED61290F9DAA00647F15 /* Contast.h */,
 				186FD4A22924C47C003A31C0 /* MyPtraceHeader.h */,
 				1887B57B2AF87A2A00EEECAE /* DefineHeader.h */,
+				182C4B6F2E014B3A0006521F /* ApiHeader.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -2343,6 +2358,7 @@
 				183FDBAE2ADD168E00009D2B /* NSMutableDictionary+CommonSafe.m in Sources */,
 				18B842B42C7338B600886209 /* CBAutoScrollLabel.m in Sources */,
 				18C0318429AC78DB0098BE0D /* TryCatchViewController.m in Sources */,
+				182C4B732E014E540006521F /* HttpCommonRequest.m in Sources */,
 				18227631292490B600242C9A /* DDUIFunction.m in Sources */,
 				1868F35B2AFB19160020FF1A /* MusicViewController.m in Sources */,
 				18929B212AD3D496006D6CE4 /* Car.m in Sources */,

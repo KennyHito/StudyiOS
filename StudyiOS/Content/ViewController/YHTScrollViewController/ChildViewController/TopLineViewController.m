@@ -9,7 +9,6 @@
 #import "MenuModel.h"
 #import "showViewController.h"
 
-#define MENU_NAME @"http://mapi.damai.cn/proj/HotProj.aspx?CityId=0&source=10099&version=30602"
 
 @interface TopLineViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -37,60 +36,49 @@
     [self.view addSubview:_tableView];
     
     [self createRequest];
-    
 }
 
 - (void)createRequest{
-    
-    AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    manager.responseSerializer.acceptableContentTypes = [[NSSet alloc]initWithObjects:@"text/html",@"application/json", nil];
-    [manager GET:MENU_NAME parameters:nil headers:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (responseObject!= nil) {
-            NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-            //            NSLog(@"%@",dic);
-            
-            NSArray * listArr = dic[@"list"];
-            //            NSLog(@"%@",listArr);
-            
-            for (NSDictionary * listDic in listArr) {
-                MenuModel * model = [[MenuModel alloc]init];
-                [model setValuesForKeysWithDictionary:listDic];
-                [_dataArr addObject:model];
-            }
-            [_tableView reloadData];
-            
-#pragma mark -- 最后一条文本放到最后
-            //            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:_dataArr.count - 1 inSection:0];
-            //            [_tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    [self.dataArr removeAllObjects];
+    [HttpCommonRequest requestByGetWithUrl:Request_Api_1 param:nil success:^(id _Nonnull responseObject) {
+        NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        if ([dic[@"code"] intValue] == 200) {
+            [self.dataArr addObject:[MenuModel mj_objectWithKeyValues:dic[@"data"]]];
+            [self.tableView reloadData];
+        }else{
+            [DDToast showToast:responseObject[@"msg"]];
         }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error.localizedDescription);
+    } failure:^(NSError * _Nonnull error) {
+        [DDToast showToast:error.localizedDescription];
     }];
 }
 
 #pragma mark -- tableview delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _dataArr.count;
+    return self.dataArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"CellID" forIndexPath:indexPath];
     
-    MenuModel * model = _dataArr[indexPath.row];
+    MenuModel * model = self.dataArr[indexPath.row];
     
-    cell.textLabel.text = model.Name;
+    cell.textLabel.text = model.content;
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     showViewController * showVC = [[showViewController alloc]init];
-    [showVC sendDataArr:_dataArr[indexPath.row]];
+    [showVC sendDataArr:self.dataArr[indexPath.row]];
     [self.navigationController pushViewController:showVC animated:YES];
 }
 
+- (NSMutableArray *)dataArr{
+    if (!_dataArr) {
+        _dataArr = [[NSMutableArray alloc] init];
+    }
+    return _dataArr;
+}
 @end

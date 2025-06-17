@@ -54,12 +54,7 @@
 //按钮点击事件的实现
 - (void)btnClick:(UIButton *)btn{
     kWeakify(self);
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"application/json",@"text/javascript", @"text/json", nil];
-    [manager GET:@"https://api.xygeng.cn/one" parameters:nil headers:nil progress:^(NSProgress * _Nonnull uploadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [HttpCommonRequest requestByGetWithUrl:Request_Api_1 param:nil success:^(id _Nonnull responseObject) {
         KStrongify(self);
         NSDictionary * dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         if ([dic[@"code"] intValue] == 200) {
@@ -69,7 +64,7 @@
         }else{
             [DDToast showToast:responseObject[@"msg"]];
         }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } failure:^(NSError * _Nonnull error) {
         [DDToast showToast:error.localizedDescription];
     }];
 }

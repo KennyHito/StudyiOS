@@ -9,14 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface MenuModel : NSObject
-#define PROPERTY(key) @property (nonatomic,strong) NSString * key
+@property (nonatomic,strong) NSString *content;
+@property (nonatomic,strong) NSString *created_at;
+@property (nonatomic,strong) NSString *name;
+@property (nonatomic,strong) NSString *origin;
+@property (nonatomic,strong) NSString *tag;
+@property (nonatomic,strong) NSString *updated_at;
+@property (nonatomic,strong) NSString *ID;
 
-PROPERTY(Name);//名称
-PROPERTY(PriceStr);//价位
-PROPERTY(priceName);//价位区间
-PROPERTY(ShowTime);//表演时间
-PROPERTY(VenName);//表演地点
-PROPERTY(cityname);//表演城市
-
-- (void)setValue:(id)value forUndefinedKey:(NSString *)key;
 @end

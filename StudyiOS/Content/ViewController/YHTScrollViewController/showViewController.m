@@ -31,12 +31,12 @@
     [super viewDidLoad];
     self.navigationItem.title = @"详情";
     
-    self.NameLabel.text = _mod.Name;
-    self.WhereLabel.text = _mod.cityname;
-    self.VenNameLabel.text = _mod.VenName;
-    self.priceNameLabel.text = _mod.priceName;
-    self.PriceStrLabel.text = _mod.PriceStr;
-    self.ShowTimeLabel.text = _mod.ShowTime;
+    self.NameLabel.text = _mod.ID;
+    self.WhereLabel.text = _mod.name;
+    self.VenNameLabel.text = _mod.created_at;
+    self.priceNameLabel.text = _mod.content;
+    self.PriceStrLabel.text = _mod.origin;
+    self.ShowTimeLabel.text = _mod.tag;
     
 }
 
