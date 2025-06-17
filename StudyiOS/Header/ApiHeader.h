@@ -15,10 +15,4 @@
 //获取一句诗词
 #define Request_Api_1   @"https://api.xygeng.cn/one"
 
-//获取一张猫猫的图片
-#define Request_Api_2   @"https://api.thecatapi.com/v1/images/search"
-
-//github用户模糊搜索,字段名q
-#define Request_Api_3   @"https://api.github.com/search/users?q=Test"
-
 #endif /* ApiHeader_h */
