@@ -7,9 +7,13 @@
 
 #import "BaseViewController.h"
 
+typedef void(^MyBlock)(NSString * _Nonnull name);
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface VipCardViewController : BaseViewController
+
+@property (nonatomic,copy) MyBlock block1;
 
 @end
 

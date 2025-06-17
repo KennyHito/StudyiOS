@@ -19,6 +19,7 @@
     
     //UIView背景颜色渐变
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(10, 0, KScreenW-20, 200)];
+    view.userInteractionEnabled = YES;
     [self.bgView addSubview:view];
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = view.bounds;
@@ -48,6 +49,9 @@
     border.path = [UIBezierPath bezierPathWithRect:view.bounds].CGPath;
     border.frame = view.bounds;
     [view.layer addSublayer:border];
+    
+    UITapGestureRecognizer * tapGR = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapGRClick:)];
+    [view addGestureRecognizer:tapGR];
 }
 
 /* UILabel封装 */
@@ -64,6 +68,15 @@
     label.tag = tag;
     label.textAlignment = align;
     return label;
+}
+
+- (void)tapGRClick:(UITapGestureRecognizer *)tapGes{
+    if (self.block1) {
+        self.block1(@"我叫李四,今年快66岁了!");
+    }
+    if (self.MyBBLock) {
+        self.MyBBLock(@"我现在用的是父类block回调函数!");
+    }
 }
 
 @end

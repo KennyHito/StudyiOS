@@ -29,6 +29,7 @@
 		18227635292490B600242C9A /* DDToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 18227627292490B600242C9A /* DDToast.m */; };
 		18227636292490B600242C9A /* DDMBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822762A292490B600242C9A /* DDMBProgressHUD.m */; };
 		18227637292490B600242C9A /* TTCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822762D292490B600242C9A /* TTCrash.m */; };
+		182C4B6E2E000DF40006521F /* LockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182C4B6D2E000DF30006521F /* LockViewController.m */; };
 		18349A092C7423C500F83A52 /* changeLogo_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18349A072C7423C500F83A52 /* changeLogo_1.png */; };
 		18349A0A2C7423C500F83A52 /* changeLogo_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18349A082C7423C500F83A52 /* changeLogo_2.png */; };
 		183DBC432C747164001FFBA4 /* GetTopVCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DBC422C747164001FFBA4 /* GetTopVCTool.m */; };
@@ -337,6 +338,8 @@
 		1822762A292490B600242C9A /* DDMBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMBProgressHUD.m; sourceTree = "<group>"; };
 		1822762C292490B600242C9A /* TTCrash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCrash.h; sourceTree = "<group>"; };
 		1822762D292490B600242C9A /* TTCrash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCrash.m; sourceTree = "<group>"; };
+		182C4B6C2E000DF30006521F /* LockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockViewController.h; sourceTree = "<group>"; };
+		182C4B6D2E000DF30006521F /* LockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockViewController.m; sourceTree = "<group>"; };
 		18349A072C7423C500F83A52 /* changeLogo_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeLogo_1.png; sourceTree = "<group>"; };
 		18349A082C7423C500F83A52 /* changeLogo_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeLogo_2.png; sourceTree = "<group>"; };
 		183DBC412C747164001FFBA4 /* GetTopVCTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetTopVCTool.h; sourceTree = "<group>"; };
@@ -908,6 +911,15 @@
 			path = TTCrash;
 			sourceTree = "<group>";
 		};
+		182C4B6B2E000DDD0006521F /* LockViewController */ = {
+			isa = PBXGroup;
+			children = (
+				182C4B6C2E000DF30006521F /* LockViewController.h */,
+				182C4B6D2E000DF30006521F /* LockViewController.m */,
+			);
+			path = LockViewController;
+			sourceTree = "<group>";
+		};
 		183DBC402C74712F001FFBA4 /* GetTopViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -929,6 +941,7 @@
 		186555D22AE25BE500E16698 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				182C4B6B2E000DDD0006521F /* LockViewController */,
 				180A32E32C781ED300F01B36 /* VipCardViewController */,
 				18C8325E2C76CC77002AA9DD /* MasonryViewController */,
 				18C832572C76C819002AA9DD /* FMDBViewController */,
@@ -2370,6 +2383,7 @@
 				1868F33E2AFA21290020FF1A /* VideoView.m in Sources */,
 				188D09E92AD7BEB600FCAD36 /* CrashHandler.m in Sources */,
 				1887B5102AF4C4C800EEECAE /* ScreenShotViewController.m in Sources */,
+				182C4B6E2E000DF40006521F /* LockViewController.m in Sources */,
 				18CD0D5B2C757A60006DEAFE /* SavePicViewController.m in Sources */,
 				18C494F32AE21F87002D4C3B /* PrivacyCheckGatherTool.m in Sources */,
 				189295042AF4C239004B4A43 /* TableViewController.m in Sources */,

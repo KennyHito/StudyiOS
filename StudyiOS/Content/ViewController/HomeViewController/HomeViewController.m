@@ -70,6 +70,7 @@ UITableViewDataSource
                      @{Tab_Title:@"35、实现FMDB库功能",Tab_Url:@"FMDBViewController"},
                      @{Tab_Title:@"36、Masonry库的使用",Tab_Url:@"MasonryViewController"},
                      @{Tab_Title:@"37、类似vip会员样式",Tab_Url:@"VipCardViewController"},
+                     @{Tab_Title:@"38、学习各种锁",Tab_Url:@"LockViewController"},
     ];
     [self.tableView reloadData];
 }

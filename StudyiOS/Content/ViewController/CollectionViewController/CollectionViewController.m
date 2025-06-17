@@ -8,7 +8,7 @@
 #import "CollectionViewController.h"
 #import "CustomFlowLayout.h"
 #import "CustomCollectionViewCell.h"
-
+#import "VipCardViewController.h"
 
 #define ZiHao       16
 #define CELLID      @"CustomCollectionViewCell"
@@ -58,6 +58,15 @@ UICollectionViewDataSource
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [DDToast showToast:self.dataArr[indexPath.row]];
+    VipCardViewController *vc = [[VipCardViewController alloc] init];
+    vc.title = @"哈哈哈";
+    vc.block1 = ^(NSString * _Nonnull name) {
+        KLog(@"1---->%@",name);
+    };
+    vc.MyBBLock = ^(NSString * _Nonnull des) {
+        KLog(@"2---->%@",des);
+    };
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (UICollectionView *)collectionV{
