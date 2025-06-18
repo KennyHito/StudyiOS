@@ -26,12 +26,12 @@
 - (void)setupUI{
     UILabel *lab = [[UILabel alloc]init];
     lab.text = @"通过touchesBegan方式触发";
-    lab.font = [UIFont systemFontOfSize:18];
+    lab.font = [UIFont systemFontOfSize:20];
     lab.textAlignment = NSTextAlignmentCenter;
+    lab.numberOfLines = 0;
     [self.bgView addSubview:lab];
     [lab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.right.mas_equalTo(self.bgView);
-        make.height.mas_equalTo(50);
     }];
 }
 
@@ -42,11 +42,11 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    //    for (int i = 0; i < 10; i++) {
-    //        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-    //            [self synchronized_test];
-    //        });
-    //    }
+//    for (int i = 0; i < 10; i++) {
+//        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//            [self synchronized_test];
+//        });
+//    }
     [self deadlock];
 }
 
@@ -76,7 +76,7 @@
 
 #pragma mark -- 死锁deadlock
 - (void)deadlock{
-    //    死锁三要素：同一队列、同步提交、当前队列正在执行任务。
+    //⚠️死锁三要素：同一队列、同步提交、当前队列正在执行任务。
     
     // 在主线程同步提交任务到主队列（必死锁）
     //    dispatch_sync(dispatch_get_main_queue(), ^{
@@ -110,21 +110,21 @@
     
     /***********************************华丽的分割线**************************************/
     
-    dispatch_queue_t concurrentQueue = dispatch_queue_create("bj", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t concurrentQueue = dispatch_queue_create("bj", DISPATCH_QUEUE_CONCURRENT);
     // 当前线程（假设为主线程）
     NSLog(@"主线程执行中，线程ID: %@", [NSThread currentThread]);
     // 同步提交任务1
-    dispatch_sync(concurrentQueue, ^{
+    dispatch_async(concurrentQueue, ^{
         NSLog(@"任务1执行，线程ID: %@", [NSThread currentThread]);
         sleep(1); // 模拟耗时操作
     });
     // 同步提交任务2
-    dispatch_sync(concurrentQueue, ^{
+    dispatch_async(concurrentQueue, ^{
         NSLog(@"任务2执行，线程ID: %@", [NSThread currentThread]);
         sleep(1);
     });
     // 同步提交任务3
-    dispatch_sync(concurrentQueue, ^{
+    dispatch_async(concurrentQueue, ^{
         NSLog(@"任务3执行，线程ID: %@", [NSThread currentThread]);
         sleep(1);
     });

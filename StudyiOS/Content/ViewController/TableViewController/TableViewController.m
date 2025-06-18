@@ -97,6 +97,13 @@ UITableViewDataSource>
         make.right.mas_equalTo(self.view.mas_right);
         make.bottom.mas_equalTo(self.view.mas_bottom).offset(bottom_H);
     }];
+    
+    // 改变uitableview中右侧索引的文字颜色、背景颜色
+    if (@available(iOS 13.0, *)) {
+        self.tableView.sectionIndexColor = [UIColor blackColor];
+        self.tableView.sectionIndexBackgroundColor = [UIColor clearColor];
+        self.tableView.sectionIndexTrackingBackgroundColor = [UIColor clearColor];
+    }
 }
 
 /* 组数 */
@@ -156,7 +163,7 @@ UITableViewDataSource>
     label.backgroundColor = [UIColor clearColor];
     [headView addSubview:label];
     
-    UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(KScreenW-30, 5, 20, 20)];
+    UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(KScreenW-35, 7, 16, 16)];
     if ([_flagArray[section] isEqualToString:@"0"]) {
         [imageV setImage:[UIImage imageNamed:@"xia"]];
     }else{
