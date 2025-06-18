@@ -19,6 +19,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupUI];
+    [self initData];
+}
+
+- (void)setupUI{
+    UILabel *lab = [[UILabel alloc]init];
+    lab.text = @"通过touchesBegan方式触发";
+    lab.font = [UIFont systemFontOfSize:18];
+    lab.textAlignment = NSTextAlignmentCenter;
+    [self.bgView addSubview:lab];
+    [lab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.mas_equalTo(self.bgView);
+        make.height.mas_equalTo(50);
+    }];
+}
+
+- (void)initData{
     self.count = 101;
     self.unfairLock = OS_UNFAIR_LOCK_INIT;
     self.nsLock = [[NSLock alloc] init];
@@ -62,9 +79,9 @@
     //    死锁三要素：同一队列、同步提交、当前队列正在执行任务。
     
     // 在主线程同步提交任务到主队列（必死锁）
-//    dispatch_sync(dispatch_get_main_queue(), ^{
-//        NSLog(@"永远不会执行");
-//    });
+    //    dispatch_sync(dispatch_get_main_queue(), ^{
+    //        NSLog(@"永远不会执行");
+    //    });
     /*
      死锁原因：
      1.主线程正在执行当前代码块。
@@ -75,15 +92,15 @@
     /***********************************华丽的分割线**************************************/
     
     // 在串行队列的任务中同步提交任务到自身
-//    dispatch_queue_t serialQueue = dispatch_queue_create("com.example.serial", DISPATCH_QUEUE_SERIAL);
-//    dispatch_async(serialQueue, ^{
-//        NSLog(@"任务1开始");
-//        // 错误！同步提交任务到当前正在执行的队列
-//        dispatch_sync(serialQueue, ^{
-//            NSLog(@"任务2（永远不会执行）");
-//        });
-//        NSLog(@"任务1结束（永远不会执行）");
-//    });
+    //    dispatch_queue_t serialQueue = dispatch_queue_create("com.example.serial", DISPATCH_QUEUE_SERIAL);
+    //    dispatch_async(serialQueue, ^{
+    //        NSLog(@"任务1开始");
+    //        // 错误！同步提交任务到当前正在执行的队列
+    //        dispatch_sync(serialQueue, ^{
+    //            NSLog(@"任务2（永远不会执行）");
+    //        });
+    //        NSLog(@"任务1结束（永远不会执行）");
+    //    });
     /*
      死锁原因：
      1.任务 1 正在占用serialQueue执行。
@@ -94,23 +111,24 @@
     /***********************************华丽的分割线**************************************/
     
     dispatch_queue_t concurrentQueue = dispatch_queue_create("bj", DISPATCH_QUEUE_SERIAL);
-        // 当前线程（假设为主线程）
-        NSLog(@"主线程执行中，线程ID: %@", [NSThread currentThread]);
-        // 同步提交任务1
-        dispatch_async(concurrentQueue, ^{
-            NSLog(@"任务1执行，线程ID: %@", [NSThread currentThread]);
-            sleep(1); // 模拟耗时操作
-        });
-        // 同步提交任务2
-        dispatch_async(concurrentQueue, ^{
-            NSLog(@"任务2执行，线程ID: %@", [NSThread currentThread]);
-            sleep(1);
-        });
-        // 同步提交任务3
-        dispatch_async(concurrentQueue, ^{
-            NSLog(@"任务3执行，线程ID: %@", [NSThread currentThread]);
-            sleep(1);
-        });
-        NSLog(@"主线程继续执行");
+    // 当前线程（假设为主线程）
+    NSLog(@"主线程执行中，线程ID: %@", [NSThread currentThread]);
+    // 同步提交任务1
+    dispatch_sync(concurrentQueue, ^{
+        NSLog(@"任务1执行，线程ID: %@", [NSThread currentThread]);
+        sleep(1); // 模拟耗时操作
+    });
+    // 同步提交任务2
+    dispatch_sync(concurrentQueue, ^{
+        NSLog(@"任务2执行，线程ID: %@", [NSThread currentThread]);
+        sleep(1);
+    });
+    // 同步提交任务3
+    dispatch_sync(concurrentQueue, ^{
+        NSLog(@"任务3执行，线程ID: %@", [NSThread currentThread]);
+        sleep(1);
+    });
+    NSLog(@"主线程继续执行");
 }
+
 @end
