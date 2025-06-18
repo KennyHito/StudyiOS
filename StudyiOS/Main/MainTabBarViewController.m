@@ -56,11 +56,13 @@
 
 #pragma mark -- MainTabBarDelegate
 - (void)tabBarDidClickAddItem:(MainTabBar *)tabBar{
-    NSLog(@"中间的按钮被点击了!");
-    UIViewController *vController = [[NSClassFromString(@"QRCodeViewController") alloc] init];
-    vController.hidesBottomBarWhenPushed = YES;
-    vController.title = @"中间按钮页面";
-    [[[GetTopVCTool shareInstance] topViewController].navigationController pushViewController:vController animated:YES];
+    NSArray *vcs = [VCControllers getVCController];
+    NSDictionary *dic = [vcs lastObject];//使用最后一个
+    
+    BaseViewController *vc = [[NSClassFromString(dic[Tab_Url]) alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    vc.navTitle = dic[Tab_Title];
+    [[[GetTopVCTool shareInstance] topViewController].navigationController pushViewController:vc animated:YES];
 }
 
 @end

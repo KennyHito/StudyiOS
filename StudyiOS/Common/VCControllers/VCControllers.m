@@ -1,0 +1,55 @@
+//
+//  VCControllers.m
+//  StudyiOS
+//
+//  Created by Apple on 2025/6/18.
+//
+
+#import "VCControllers.h"
+
+@implementation VCControllers
+
++ (NSArray *)getVCController{
+    return @[
+        @{Tab_Title:@"1、实时学习",Tab_Url:@"ExerciseViewController"},
+        @{Tab_Title:@"2、使用定时器注意事项",Tab_Url:@"TimerViewController"},
+        @{Tab_Title:@"3、ReactiveObjC",Tab_Url:@"ReactiveObjCViewController"},
+        @{Tab_Title:@"4、切换App Logo",Tab_Url:@"ChangeLogoViewController"},
+        @{Tab_Title:@"5、测试崩溃一下",Tab_Url:@"TryCatchViewController"},
+        @{Tab_Title:@"6、多线程NSThread、GCD和NSOperation",Tab_Url:@"MultiThreadViewController"},
+        @{Tab_Title:@"7、Runtime",Tab_Url:@"RuntimeViewController"},
+        @{Tab_Title:@"8、CollectionView自定义标签",Tab_Url:@"CollectionViewController"},
+        @{Tab_Title:@"9、关于我们",Tab_Url:@"AboutViewController"},
+        @{Tab_Title:@"10、TableView展开收起",Tab_Url:@"TableViewController"},
+        @{Tab_Title:@"11、截图分享功能",Tab_Url:@"ScreenShotViewController"},
+        @{Tab_Title:@"12、弹球碰撞功能",Tab_Url:@"PinballProViewController"},
+        @{Tab_Title:@"13、设置九宫格密码",Tab_Url:@"SudokuViewController"},
+        @{Tab_Title:@"14、日期选择器",Tab_Url:@"DatePickerVC"},
+        @{Tab_Title:@"15、HTML5交互",Tab_Url:@"HTML5ViewController"},
+        @{Tab_Title:@"16、仿京东地址选择器",Tab_Url:@"AddressViewController"},
+        @{Tab_Title:@"17、AVPlayer播放视频",Tab_Url:@"AVPlayerViewController"},
+        @{Tab_Title:@"18、AVPlayer播放音频",Tab_Url:@"MusicViewController"},
+        @{Tab_Title:@"19、电商类软件加购动画效果",Tab_Url:@"GuoWuCheViewController"},
+        @{Tab_Title:@"20、苹果系统自带分享功能",Tab_Url:@"AppleShareViewController"},
+        @{Tab_Title:@"21、判断手机是否越狱",Tab_Url:@"PrisonBreakViewController"},
+        @{Tab_Title:@"22、倒计时功能",Tab_Url:@"CountDownViewcontroller"},
+        @{Tab_Title:@"23、星级评分功能",Tab_Url:@"StarStarViewController"},
+        @{Tab_Title:@"24、UILabel滚动,类似于跑马灯效果",Tab_Url:@"RollingLightViewController"},
+        @{Tab_Title:@"25、图片保存功能",Tab_Url:@"SavePicViewController"},
+        @{Tab_Title:@"26、网络请求功能",Tab_Url:@"RequestAPIViewController"},
+        @{Tab_Title:@"27、实现本地通知功能",Tab_Url:@"LocalpushViewController"},
+        @{Tab_Title:@"28、原生扫描二维码功能",Tab_Url:@"QRCodeViewController"},
+        @{Tab_Title:@"29、UITouch移动图片位置",Tab_Url:@"UITouchViewController"},
+        @{Tab_Title:@"30、标签选择功能",Tab_Url:@"TagSelectViewController"},
+        @{Tab_Title:@"31、实现瀑布流功能",Tab_Url:@"FallsFlowViewController"},
+        @{Tab_Title:@"32、调用闪光灯功能",Tab_Url:@"FlashlightViewController"},
+        @{Tab_Title:@"33、系统自带定位功能",Tab_Url:@"LocationViewController"},
+        @{Tab_Title:@"34、轮播新闻类功能",Tab_Url:@"YHTScrollViewController"},
+        @{Tab_Title:@"35、实现FMDB库功能",Tab_Url:@"FMDBViewController"},
+        @{Tab_Title:@"36、Masonry库的使用",Tab_Url:@"MasonryViewController"},
+        @{Tab_Title:@"37、类似vip会员样式",Tab_Url:@"VipCardViewController"},
+        @{Tab_Title:@"38、学习各种锁",Tab_Url:@"LockViewController"},
+    ];
+}
+
+@end

@@ -31,6 +31,7 @@
 		18227637292490B600242C9A /* TTCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 1822762D292490B600242C9A /* TTCrash.m */; };
 		182C4B6E2E000DF40006521F /* LockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182C4B6D2E000DF30006521F /* LockViewController.m */; };
 		182C4B732E014E540006521F /* HttpCommonRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 182C4B722E014E540006521F /* HttpCommonRequest.m */; };
+		182C4B782E0255CB0006521F /* VCControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = 182C4B772E0255CB0006521F /* VCControllers.m */; };
 		18349A092C7423C500F83A52 /* changeLogo_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18349A072C7423C500F83A52 /* changeLogo_1.png */; };
 		18349A0A2C7423C500F83A52 /* changeLogo_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18349A082C7423C500F83A52 /* changeLogo_2.png */; };
 		183DBC432C747164001FFBA4 /* GetTopVCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 183DBC422C747164001FFBA4 /* GetTopVCTool.m */; };
@@ -344,6 +345,8 @@
 		182C4B6F2E014B3A0006521F /* ApiHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiHeader.h; sourceTree = "<group>"; };
 		182C4B712E014E540006521F /* HttpCommonRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpCommonRequest.h; sourceTree = "<group>"; };
 		182C4B722E014E540006521F /* HttpCommonRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpCommonRequest.m; sourceTree = "<group>"; };
+		182C4B762E0255CB0006521F /* VCControllers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCControllers.h; sourceTree = "<group>"; };
+		182C4B772E0255CB0006521F /* VCControllers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCControllers.m; sourceTree = "<group>"; };
 		18349A072C7423C500F83A52 /* changeLogo_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeLogo_1.png; sourceTree = "<group>"; };
 		18349A082C7423C500F83A52 /* changeLogo_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeLogo_2.png; sourceTree = "<group>"; };
 		183DBC412C747164001FFBA4 /* GetTopVCTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetTopVCTool.h; sourceTree = "<group>"; };
@@ -811,6 +814,7 @@
 		18227611292490B600242C9A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				182C4B752E0255B60006521F /* VCControllers */,
 				182C4B702E014E130006521F /* Http */,
 				18C832532C76C79C002AA9DD /* SQliteManager */,
 				183DBC402C74712F001FFBA4 /* GetTopViewController */,
@@ -932,6 +936,15 @@
 				182C4B722E014E540006521F /* HttpCommonRequest.m */,
 			);
 			path = Http;
+			sourceTree = "<group>";
+		};
+		182C4B752E0255B60006521F /* VCControllers */ = {
+			isa = PBXGroup;
+			children = (
+				182C4B762E0255CB0006521F /* VCControllers.h */,
+				182C4B772E0255CB0006521F /* VCControllers.m */,
+			);
+			path = VCControllers;
 			sourceTree = "<group>";
 		};
 		183DBC402C74712F001FFBA4 /* GetTopViewController */ = {
@@ -2363,6 +2376,7 @@
 				1868F35B2AFB19160020FF1A /* MusicViewController.m in Sources */,
 				18929B212AD3D496006D6CE4 /* Car.m in Sources */,
 				18CD0D6B2C758CEB006DEAFE /* QRCodeViewController.m in Sources */,
+				182C4B782E0255CB0006521F /* VCControllers.m in Sources */,
 				1822760C2924908F00242C9A /* UIViewController+AddProperty.m in Sources */,
 				1868F3152AF8C4420020FF1A /* NSDate+Extension.m in Sources */,
 				183DBC432C747164001FFBA4 /* GetTopVCTool.m in Sources */,

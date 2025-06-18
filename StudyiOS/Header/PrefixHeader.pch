@@ -66,5 +66,6 @@
 #import "SQliteManager.h"
 #import "ApiHeader.h"
 #import "HttpCommonRequest.h"
+#import "VCControllers.h"
 
 #endif /* PrefixHeader_pch */
