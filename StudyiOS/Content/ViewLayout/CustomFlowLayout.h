@@ -10,6 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CustomFlowLayout : UICollectionViewFlowLayout
+
+/// 左对齐,无需传值
 @property (nonatomic,assign) CGFloat left;
 
 @end

@@ -27,10 +27,12 @@ UICollectionViewDataSource
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataArr = @[@"发展",@"是人类",@"社会的",@"永恒主题",@"共享",@"发展",@"是",@"建设",@"美好世界",@"的",@"重要路径",@"作为",@"最大的",@"发展中国家",@"中国",@"始终",@"将自身发展",@"置于人类发展的坐标系",@"以自身发展",@"为世界发展",@"创造新机遇",@"在过去的10年里",@"中国经济",@"总量占全球比重",@"由2012年的11.3%",@"提升到2022年的18%左右",@"对世界",@"经济增长",@"年平均贡献率超过30%",@"始终是",@"世界经济",@"稳定增长",@"重要动力源",@"今日之中国",@"是全球",@"第一货物贸易大国",@"140多个国家",@"和地区",@"主要贸易伙伴",@"吸引外资",@"对外投资居",@"世界前列",@"为各国",@"提供了",@"更多市场机遇",@"投资机遇",@"增长机遇",@"发展",@"是人类",@"社会的",@"永恒主题",@"共享",@"发展",@"是",@"建设",@"美好世界",@"的",@"重要路径",@"作为",@"最大的",@"发展中国家",@"中国",@"始终",@"将自身发展",@"置于人类发展的坐标系",@"以自身发展",@"为世界发展",@"创造新机遇",@"在过去的10年里",@"中国经济",@"总量占全球比重",@"由2012年的11.3%",@"提升到2022年的18%左右",@"对世界",@"经济增长",@"年平均贡献率超过30%",@"始终是",@"世界经济",@"稳定增长",@"重要动力源",@"今日之中国",@"是全球",@"第一货物贸易大国",@"140多个国家",@"和地区",@"主要贸易伙伴",@"吸引外资",@"对外投资居",@"世界前列",@"为各国",@"提供了",@"更多市场机遇",@"投资机遇",@"增长机遇"];
+    self.dataArr = @[@"科技感", @"创新", @"研发", @"突破",@"教育", @"培训", @"学习",@"知识",@"健康", @"医疗", @"保健", @"养生",@"环保", @"绿化带", @"低碳", @"可持续",@"文化", @"艺术", @"历史", @"传承",@"经济", @"金融只是", @"投资", @"贸易",@"旅游", @"观光", @"风景", @"体验",@"美食", @"烹饪", @"食材", @"口味",@"运动", @"健身方案", @"锻炼", @"活力",@"娱乐", @"休闲区", @"游戏", @"放松",@"社交", @"交流", @"互动", @"人脉",@"职场规划", @"工作", @"职业", @"发展",@"家庭", @"亲情游戏", @"关爱", @"温暖",@"情感", @"爱情", @"友情", @"心情",@"时尚", @"潮流", @"风格", @"个性",@"数码", @"电子游戏", @"智能", @"科技",@"汽车", @"交通", @"驾驶", @"安全",@"房产", @"住房", @"装修", @"社区",@"音乐", @"歌曲", @"演奏", @"欣赏",@"电影", @"影视", @"剧情", @"cosplay角色",@"书籍", @"阅读", @"知识渊博", @"思想",@"摄影摄像", @"照片", @"画面", @"美感",@"旅行", @"旅途", @"目的地", @"记忆",@"宠物", @"动物世界", @"陪伴", @"照顾",@"农业发展", @"种植技术", @"养殖", @"丰收之年",@"工业", @"制造", @"生产", @"效率",@"商业", @"企业", @"销售", @"利润",@"政府", @"政策", @"服务", @"管理",@"公益事业", @"志愿", @"帮助", @"奉献精神",@"自然", @"生态", @"环境", @"保护",@"宇宙", @"星空", @"探索", @"奥秘"];
     [self.view addSubview:self.collectionV];
     [self.collectionV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_equalTo(self.view);
+        make.left.mas_equalTo(self.view.mas_left).offset(10);
+        make.right.mas_equalTo(self.view.mas_right).offset(-10);
+        make.top.bottom.mas_equalTo(self.view);
     }];
 }
 
@@ -50,7 +52,7 @@ UICollectionViewDataSource
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat margin = 10;
     CGFloat H = 30;
-    CGRect itemFrame = [[self.dataArr objectAtIndex:indexPath.row] boundingRectWithSize:CGSizeMake(KScreenW, H) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:ZiHao]} context:nil];
+    CGRect itemFrame = [[self.dataArr objectAtIndex:indexPath.row] boundingRectWithSize:CGSizeMake(KScreenW-20, H) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:ZiHao]} context:nil];
     CGFloat W = itemFrame.size.width + margin;
     return CGSizeMake(W, H);
 }
@@ -64,6 +66,8 @@ UICollectionViewDataSource
         _collectionV = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.cFlowLayout];
         _collectionV.delegate = self;
         _collectionV.dataSource = self;
+        _collectionV.showsVerticalScrollIndicator = NO;
+        _collectionV.showsHorizontalScrollIndicator = NO;
         [_collectionV registerClass:[CustomCollectionViewCell class] forCellWithReuseIdentifier:CELLID];
     }
     return _collectionV;
@@ -72,8 +76,6 @@ UICollectionViewDataSource
 - (CustomFlowLayout *)cFlowLayout{
     if(!_cFlowLayout){
         _cFlowLayout = [[CustomFlowLayout alloc] init];
-        // item 布局属性设置
-        _cFlowLayout.left = 10;
     }
     return _cFlowLayout;
 }
