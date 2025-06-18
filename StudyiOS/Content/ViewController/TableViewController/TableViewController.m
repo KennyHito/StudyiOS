@@ -118,7 +118,7 @@ UITableViewDataSource>
 
 /* 行数 */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return 6;
 }
 
 /* 组头高度*/
@@ -196,6 +196,8 @@ UITableViewDataSource>
         NSIndexSet *sectionToReload = [NSIndexSet indexSetWithIndexesInRange:range];
         [self.tableView reloadSections:sectionToReload withRowAnimation:UITableViewRowAnimationAutomatic];
     }
+    
+    [self.tableView reloadData];
 }
 
 //右侧索引

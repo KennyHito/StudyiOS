@@ -110,7 +110,9 @@
     
     /***********************************华丽的分割线**************************************/
     
-    dispatch_queue_t concurrentQueue = dispatch_queue_create("bj", DISPATCH_QUEUE_CONCURRENT);
+    //只有在并发队列开启异步线程,才会并发执行任务
+    
+    dispatch_queue_t concurrentQueue = dispatch_get_main_queue();
     // 当前线程（假设为主线程）
     NSLog(@"主线程执行中，线程ID: %@", [NSThread currentThread]);
     // 同步提交任务1
