@@ -60,8 +60,11 @@
     NSDictionary *dic = [vcs lastObject];//使用最后一个
     
     BaseViewController *vc = [[NSClassFromString(dic[Tab_Url]) alloc] init];
-    vc.hidesBottomBarWhenPushed = YES;
     vc.navTitle = dic[Tab_Title];
+    vc.MyBBLock = ^(NSString * _Nonnull des) {
+        KLog(@"MyBBLock --- %@",des);
+    };
+    vc.hidesBottomBarWhenPushed = YES;
     [[[GetTopVCTool shareInstance] topViewController].navigationController pushViewController:vc animated:YES];
 }
 
