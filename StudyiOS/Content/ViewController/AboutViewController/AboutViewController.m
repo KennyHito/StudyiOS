@@ -102,7 +102,7 @@ UITableViewDataSource
         @{Tab_Title:@"手机型号",Tab_Flag:@0,Tab_Sub_Title:[NSString getCurrentDeviceModel]},
         @{Tab_Title:@"手机别名",Tab_Flag:@0,Tab_Sub_Title:[[UIDevice currentDevice] name]},
         @{Tab_Title:@"手机UUID",Tab_Flag:@0,Tab_Sub_Title:[[UIDevice currentDevice] identifierForVendor]},
-        ///下面可以点击跳转
+        ///下面可以点击跳转,即下标为7(含7)以后跳转,用self.row进行标记
         @{Tab_Title:@"允许访问定位权限",Tab_Flag:@(locationAuto),Tab_Sub_Title:[NSString stringWithFormat:@"用于需要获取位置信息的服务如查找营业部等(%@)",locationAuto == ECAuthorizationStatusAuthorized ?  @"已开启" : @"去设置"]},
         @{Tab_Title:@"允许访问推送权限",Tab_Flag:@(pushAuth),Tab_Sub_Title:[NSString stringWithFormat:@"用于接收APP通知推送消息等(%@)",pushAuth == ECAuthorizationStatusAuthorized ?  @"已开启" : @"去设置"]},
         @{Tab_Title:@"允许访问相机权限",Tab_Flag:@(cameraAuth),Tab_Sub_Title:[NSString stringWithFormat:@"用于拍照、扫描、录制视频等(%@)",cameraAuth == ECAuthorizationStatusAuthorized ?  @"已开启" : @"去设置"]},

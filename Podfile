@@ -44,9 +44,9 @@ post_install do |installer|
   end
   
   #------------下面两条是修复MLeaksFinder问题----------------#
-  ## Fix for XCode 12.5
+  ## Fix for Xcode 12.5
   find_and_replace("Pods/FBRetainCycleDetector/FBRetainCycleDetector/Layout/Classes/FBClassStrongLayout.mm","layoutCache[currentClass] = ivars;", "layoutCache[(id<NSCopying>)currentClass] = ivars;")
-  ## Fix for XCode 13.0
+  ## Fix for Xcode 13.0
   find_and_replace("Pods/FBRetainCycleDetector/fishhook/fishhook.c","indirect_symbol_bindings[i] = cur->rebindings[j].replacement;", "if (i < (sizeof(indirect_symbol_bindings) / sizeof(indirect_symbol_bindings[0]))) { \n indirect_symbol_bindings[i]=cur->rebindings[j].replacement; \n }")
 end
 
