@@ -10,11 +10,7 @@
 @interface MultiThreadViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *djsBtn;
 
-@property (nonatomic, strong) TTReadWhiteSafeDic *safeDic;
-/// iphone的数量
-@property (nonatomic,assign) int iphoneNumber;
-/// 互斥用的信号量
-@property (nonatomic,strong) dispatch_semaphore_t semaphore;
+
 
 @end
 
@@ -23,19 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.bgView setHidden:YES];
-    [self initViewStyle];
-    //    [self demo1];
-    //    [self demo2];
-    //    [self demo3];
-    //    [self demo4];
-    //    [self demo5];
-    //    [self demo6];
-    //    [self demo7];
-    //    [self demo8];
+    [self demo];
+//    [self demo1];
+//    [self demo2];
+//    [self demo3];
+//    [self demo4];
+//    [self demo5];
+//    [self demo6];
+//    [self demo7];
 }
 
-- (void)initViewStyle{
-    //倒计时开始的样子
+#pragma mark -- GCD实现倒计时按钮
+- (void)demo{
     self.djsBtn.layer.masksToBounds = YES;
     self.djsBtn.layer.borderWidth = 1;
     self.djsBtn.layer.borderColor = UIColorFromRGB(0xE6E6E6).CGColor;
@@ -45,21 +40,16 @@
     self.djsBtn.userInteractionEnabled = YES;
 }
 
-#pragma mark --- 倒计时
 - (IBAction)djsBtnClick:(UIButton *)sender {
     __block NSInteger time = 59; //倒计时时间
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-    
     dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
     WS(weakSelf);//⚠️必须使用弱引用,否则会导致循环引用!
     dispatch_source_set_event_handler(_timer, ^{
-        
         if(time <= 0){ //倒计时结束，关闭
-            
             dispatch_source_cancel(_timer);
             dispatch_async(dispatch_get_main_queue(), ^{
-                
                 //设置按钮的样式
                 [weakSelf.djsBtn setTitle:@"再次发送" forState:UIControlStateNormal];
                 [weakSelf.djsBtn setTitleColor:UIColorFromRGB(0xEF4034) forState:UIControlStateNormal];
@@ -67,10 +57,8 @@
             });
             
         }else{
-            
             int seconds = time % 60;
             dispatch_async(dispatch_get_main_queue(), ^{
-                
                 //设置按钮显示读秒效果
                 [weakSelf.djsBtn setTitle:[NSString stringWithFormat:@"重新发送(%.2ds)", seconds] forState:UIControlStateNormal];
                 [weakSelf.djsBtn setTitleColor:UIColorFromRGB(0xE6E6E6) forState:UIControlStateNormal];
@@ -82,6 +70,7 @@
     dispatch_resume(_timer);
 }
 
+#pragma mark -- dispatch_group_t
 - (void)demo1{
     KLog(@"👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻");
     dispatch_group_t testGroup = dispatch_group_create();
@@ -89,12 +78,14 @@
     dispatch_group_enter(testGroup);
     dispatch_group_async(testGroup, dispatch_get_main_queue(), ^{
         KLog(@"------2");
+        sleep(2);
         dispatch_group_leave(testGroup);
     });
     
     dispatch_group_enter(testGroup);
     dispatch_group_async(testGroup, dispatch_get_main_queue(), ^{
         KLog(@"------3");
+        sleep(2);
         dispatch_group_leave(testGroup);
     });
     
@@ -104,6 +95,7 @@
     KLog(@"------5");
 }
 
+#pragma mark -- NSThread currentThread
 - (void)demo2{
     KLog(@"👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻");
     KLog(@"%@",[NSThread mainThread]);
@@ -114,6 +106,7 @@
     });
 }
 
+#pragma mark -- NSInvocationOperation
 - (void)demo3{
     KLog(@"👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻");
     NSInvocationOperation *opt1 = [[NSInvocationOperation alloc]initWithTarget:self selector:@selector(opt1Event) object:nil];
@@ -147,6 +140,7 @@
     KLog(@"------opt3Event-----");
 }
 
+#pragma mark -- NSBlockOperation
 - (void)demo4{
     KLog(@"👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻");
     //代码题：假设ABCDE五个任务，D依赖AB的执行，E依赖BC的执行，怎么设计
@@ -184,6 +178,7 @@
     [qu addOperation:opE];
 }
 
+#pragma mark -- 接口请求
 - (void)demo5{
     KLog(@"👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻");
     KLog(@"currentThread: %@",[NSThread currentThread]);
@@ -197,125 +192,64 @@
     }];
 }
 
+#pragma mark -- 死锁
 - (void)demo6{
     KLog(@"👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻");
-    //出现死锁的情况
-    //情况1.
-    //    dispatch_queue_t queue = dispatch_queue_create("serial", DISPATCH_QUEUE_SERIAL);
-    //    KLog(@"1");
-    //    dispatch_async(queue, ^{
-    //        KLog(@"2");
-    //        dispatch_sync(queue, ^{
-    //            KLog(@"3");
-    //        });
-    //        KLog(@"4");
-    //    });
-    //    KLog(@"5");
+    //⚠️死锁三要素：同一队列、同步提交、当前队列正在执行任务。
     
-    //情况2.
-    //    KLog(@"1");
-    //    dispatch_sync(dispatch_get_main_queue(), ^{
-    //        KLog(@"2");
-    //    });
-    //    KLog(@"3");
+    // 在主线程同步提交任务到主队列（必死锁）
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        NSLog(@"永远不会执行");
+    });
+    /*
+     死锁原因：
+     1.主线程正在执行当前代码块。
+     2.dispatch_sync要求立即执行任务，但主队列必须等待当前代码块完成。
+     3.两者互相等待，导致死锁。
+     */
+    
+    /***********************************华丽的分割线**************************************/
+    
+    // 在串行队列的任务中同步提交任务到自身
+    dispatch_queue_t serialQueue = dispatch_queue_create("com.example.serial", DISPATCH_QUEUE_SERIAL);
+    dispatch_async(serialQueue, ^{
+        NSLog(@"任务1开始");
+        // 错误！同步提交任务到当前正在执行的队列
+        dispatch_sync(serialQueue, ^{
+            NSLog(@"任务2（永远不会执行）");
+        });
+        NSLog(@"任务1结束（永远不会执行）");
+    });
+    /*
+     死锁原因：
+     1.任务 1 正在占用serialQueue执行。
+     2.dispatch_sync要求立即执行任务 2，但serialQueue被任务 1 占用。
+     3.任务 1 等待任务 2 完成，任务 2 等待队列释放，形成循环等待。
+     */
 }
 
+#pragma mark -- 异步async || 同步sync
 - (void)demo7{
-    KLog(@"👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻");
-    self.iphoneNumber = 10;
-    // 初始化1个信号量
-    self.semaphore = dispatch_semaphore_create(1);
+    //⚠️只有在并发队列开启异步线程,才会并发执行任务
     
-    /// 通过信号量进行互斥，开启三个窗口(线程)同时卖iphone
-    //    NSThread *thread1 = [[NSThread alloc] initWithTarget:self selector:@selector(sellIphone) object:nil];
-    //    thread1.name = @"窗口1";
-    //    NSThread *thread2 = [[NSThread alloc] initWithTarget:self selector:@selector(sellIphone) object:nil];
-    //    thread2.name = @"窗口2";
-    //    NSThread *thread3 = [[NSThread alloc] initWithTarget:self selector:@selector(sellIphone) object:nil];
-    //    thread3.name = @"窗口3";
-    
-    /// 通过同步锁进行互斥，开启三个窗口(线程)同时卖iphone
-    NSThread *thread1 = [[NSThread alloc] initWithTarget:self selector:@selector(sellIphoneWithSynchronization) object:nil];
-    thread1.name = @"窗口1";
-    NSThread *thread2 = [[NSThread alloc] initWithTarget:self selector:@selector(sellIphoneWithSynchronization) object:nil];
-    thread2.name = @"窗口2";
-    NSThread *thread3 = [[NSThread alloc] initWithTarget:self selector:@selector(sellIphoneWithSynchronization) object:nil];
-    thread3.name = @"窗口3";
-    [thread1 start];
-    [thread2 start];
-    [thread3 start];
+    dispatch_queue_t concurrentQueue = dispatch_get_main_queue();
+    // 当前线程（假设为主线程）
+    NSLog(@"主线程执行中，线程ID: %@", [NSThread currentThread]);
+    // 同步提交任务1
+    dispatch_async(concurrentQueue, ^{
+        NSLog(@"任务1执行，线程ID: %@", [NSThread currentThread]);
+        sleep(1); // 模拟耗时操作
+    });
+    // 同步提交任务2
+    dispatch_async(concurrentQueue, ^{
+        NSLog(@"任务2执行，线程ID: %@", [NSThread currentThread]);
+        sleep(1);
+    });
+    // 同步提交任务3
+    dispatch_async(concurrentQueue, ^{
+        NSLog(@"任务3执行，线程ID: %@", [NSThread currentThread]);
+        sleep(1);
+    });
+    NSLog(@"主线程继续执行");
 }
-
-/// 通过信号量达到互斥
-- (void)sellIphone{
-    KLog(@"活动准备开始,倒计时3,2,1");
-    while (1) {
-        // P操作对信号量进行减一，然后信号量变0，限制其他窗口(线程)进入
-        dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
-        // 检查还有没iphone可卖
-        if (self.iphoneNumber > 0){
-            KLog(@"卖出iphone剩下%d台iphone",--self.iphoneNumber);
-        }else{
-            KLog(@"iphone没有库存了");
-            return;
-        }
-        // V操作对信号量进行加一，然后信号量为1，其他窗口(线程)就能进入了
-        dispatch_semaphore_signal(self.semaphore);
-    }
-    KLog(@"活动结束了!");
-}
-
-/// 通过同步锁进行互斥，通过同步锁会比通过信号量控制的方式多进入该临界代码（线程数量-1）次
-- (void)sellIphoneWithSynchronization{
-    while (1) {
-        @synchronized (self) {
-            // 检查还有没iphone可卖
-            if (self.iphoneNumber > 0){
-                KLog(@"%@卖出iphone剩下%d台iphone",[NSThread currentThread].name,--self.iphoneNumber);
-            }else{
-                KLog(@"iphone没有库存了");
-                return;
-            }
-        }
-    }
-}
-
-- (void)demo8{
-    KLog(@"👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻");
-    self.safeDic = [[TTReadWhiteSafeDic alloc]init];
-    [self.safeDic setObject:@"xiaoming" forKey:@"name"];
-    KLog(@"%@",[self.safeDic objectForKey:@"name"]);
-    
-    NSThread *thread1 = [[NSThread alloc] initWithTarget:self selector:@selector(sell1) object:nil];
-    NSThread *thread2 = [[NSThread alloc] initWithTarget:self selector:@selector(sell2) object:nil];
-    NSThread *thread3 = [[NSThread alloc] initWithTarget:self selector:@selector(sell3) object:nil];
-    NSThread *thread4 = [[NSThread alloc] initWithTarget:self selector:@selector(sell4) object:nil];
-    NSThread *thread5 = [[NSThread alloc] initWithTarget:self selector:@selector(sell4) object:nil];
-    [thread1 start];
-    [thread2 start];
-    [thread3 start];
-    [thread4 start];
-    [thread5 start];
-}
-
-- (void)sell1{
-    KLog(@"%s",__func__);
-    [self.safeDic setObject:@"xiaoming1" forKey:@"name"];
-}
-
-- (void)sell2{
-    KLog(@"%s",__func__);
-    [self.safeDic setObject:@"xiaoming2" forKey:@"name"];
-}
-
-- (void)sell3{
-    KLog(@"%s",__func__);
-    [self.safeDic setObject:@"xiaoming3" forKey:@"name"];
-}
-
-- (void)sell4{
-    KLog(@"%@",[self.safeDic objectForKey:@"name"]);
-}
-
-
 @end

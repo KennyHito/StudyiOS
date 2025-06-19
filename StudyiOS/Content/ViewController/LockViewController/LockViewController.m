@@ -13,6 +13,10 @@
 @property (nonatomic,assign) int count;
 @property (nonatomic,assign) os_unfair_lock unfairLock;
 @property (nonatomic,strong) NSLock *nsLock;
+
+@property (nonatomic, strong) TTReadWhiteSafeDic *safeDic;
+@property (nonatomic,assign) int iphoneNumber;
+@property (nonatomic,strong) dispatch_semaphore_t semaphore;
 @end
 
 @implementation LockViewController
@@ -37,8 +41,13 @@
 
 - (void)initData{
     self.count = 101;
+    
     self.unfairLock = OS_UNFAIR_LOCK_INIT;
+    
     self.nsLock = [[NSLock alloc] init];
+    
+    self.iphoneNumber = 30;
+    self.semaphore = dispatch_semaphore_create(1);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -47,7 +56,8 @@
 //            [self synchronized_test];
 //        });
 //    }
-    [self deadlock];
+//    [self semaphore_test];
+    [self NSThread_test];
 }
 
 #pragma mark -- os_unfair_lock
@@ -74,63 +84,98 @@
     }
 }
 
-#pragma mark -- 死锁deadlock
-- (void)deadlock{
-    //⚠️死锁三要素：同一队列、同步提交、当前队列正在执行任务。
+#pragma mark -- 卖手机案例(semaphore || synchronized)
+- (void)semaphore_test{
+    KLog(@"👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻");
+    /// 通过信号量进行互斥，开启三个窗口(线程)同时卖iphone
+    NSThread *thread1 = [[NSThread alloc]  initWithTarget:self selector:@selector(sellIphone) object:nil];
+    thread1.name = @"窗口1";
+    NSThread *thread2 = [[NSThread alloc] initWithTarget:self selector:@selector(sellIphone) object:nil];
+    thread2.name = @"窗口2";
+    NSThread *thread3 = [[NSThread alloc] initWithTarget:self selector:@selector(sellIphone) object:nil];
+    thread3.name = @"窗口3";
     
-    // 在主线程同步提交任务到主队列（必死锁）
-    //    dispatch_sync(dispatch_get_main_queue(), ^{
-    //        NSLog(@"永远不会执行");
-    //    });
-    /*
-     死锁原因：
-     1.主线程正在执行当前代码块。
-     2.dispatch_sync要求立即执行任务，但主队列必须等待当前代码块完成。
-     3.两者互相等待，导致死锁。
-     */
-    
-    /***********************************华丽的分割线**************************************/
-    
-    // 在串行队列的任务中同步提交任务到自身
-    //    dispatch_queue_t serialQueue = dispatch_queue_create("com.example.serial", DISPATCH_QUEUE_SERIAL);
-    //    dispatch_async(serialQueue, ^{
-    //        NSLog(@"任务1开始");
-    //        // 错误！同步提交任务到当前正在执行的队列
-    //        dispatch_sync(serialQueue, ^{
-    //            NSLog(@"任务2（永远不会执行）");
-    //        });
-    //        NSLog(@"任务1结束（永远不会执行）");
-    //    });
-    /*
-     死锁原因：
-     1.任务 1 正在占用serialQueue执行。
-     2.dispatch_sync要求立即执行任务 2，但serialQueue被任务 1 占用。
-     3.任务 1 等待任务 2 完成，任务 2 等待队列释放，形成循环等待。
-     */
-    
-    /***********************************华丽的分割线**************************************/
-    
-    //只有在并发队列开启异步线程,才会并发执行任务
-    
-    dispatch_queue_t concurrentQueue = dispatch_get_main_queue();
-    // 当前线程（假设为主线程）
-    NSLog(@"主线程执行中，线程ID: %@", [NSThread currentThread]);
-    // 同步提交任务1
-    dispatch_async(concurrentQueue, ^{
-        NSLog(@"任务1执行，线程ID: %@", [NSThread currentThread]);
-        sleep(1); // 模拟耗时操作
-    });
-    // 同步提交任务2
-    dispatch_async(concurrentQueue, ^{
-        NSLog(@"任务2执行，线程ID: %@", [NSThread currentThread]);
-        sleep(1);
-    });
-    // 同步提交任务3
-    dispatch_async(concurrentQueue, ^{
-        NSLog(@"任务3执行，线程ID: %@", [NSThread currentThread]);
-        sleep(1);
-    });
-    NSLog(@"主线程继续执行");
+    /// 通过同步锁进行互斥，开启三个窗口(线程)同时卖iphone
+//    NSThread *thread1 = [[NSThread alloc] initWithTarget:self selector:@selector(sellIphoneWithSynchronization) object:nil];
+//    thread1.name = @"窗口1";
+//    NSThread *thread2 = [[NSThread alloc] initWithTarget:self selector:@selector(sellIphoneWithSynchronization) object:nil];
+//    thread2.name = @"窗口2";
+//    NSThread *thread3 = [[NSThread alloc] initWithTarget:self selector:@selector(sellIphoneWithSynchronization) object:nil];
+//    thread3.name = @"窗口3";
+    [thread1 start];
+    [thread2 start];
+    [thread3 start];
 }
+
+/// 通过信号量达到互斥
+- (void)sellIphone{
+    while (1) {
+        // P操作对信号量进行减一，然后信号量变0，限制其他窗口(线程)进入
+        dispatch_semaphore_wait(self.semaphore, DISPATCH_TIME_FOREVER);
+        // 检查还有没iphone可卖
+        if (self.iphoneNumber > 0){
+            KLog(@"%@卖出iphone剩下%d台iphone",[NSThread currentThread].name,--self.iphoneNumber);
+        }else{
+            KLog(@"iphone没有库存了");
+            return;
+        }
+        // V操作对信号量进行加一，然后信号量为1，其他窗口(线程)就能进入了
+        dispatch_semaphore_signal(self.semaphore);
+    }
+    KLog(@"活动结束了!");
+}
+
+/// 通过同步锁进行互斥，通过同步锁会比通过信号量控制的方式多进入该临界代码（线程数量-1）次
+- (void)sellIphoneWithSynchronization{
+    while (1) {
+        @synchronized (self) {
+            // 检查还有没iphone可卖
+            if (self.iphoneNumber > 0){
+                KLog(@"%@卖出iphone剩下%d台iphone",[NSThread currentThread].name,--self.iphoneNumber);
+            }else{
+                KLog(@"iphone没有库存了");
+                return;
+            }
+        }
+    }
+}
+
+#pragma mark -- 多读单写
+- (void)NSThread_test{
+    KLog(@"👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻👇🏻");
+    self.safeDic = [[TTReadWhiteSafeDic alloc]init];
+    [self.safeDic setObject:@"xiaoming" forKey:@"name"];
+    
+    NSThread *thread1 = [[NSThread alloc] initWithTarget:self selector:@selector(sell1) object:nil];
+    NSThread *thread2 = [[NSThread alloc] initWithTarget:self selector:@selector(sell2) object:nil];
+    NSThread *thread3 = [[NSThread alloc] initWithTarget:self selector:@selector(sell3) object:nil];
+    NSThread *thread4 = [[NSThread alloc] initWithTarget:self selector:@selector(sell4) object:nil];
+    NSThread *thread5 = [[NSThread alloc] initWithTarget:self selector:@selector(sell4) object:nil];
+    [thread1 start];
+    [thread2 start];
+    [thread3 start];
+    [thread4 start];
+    [thread5 start];
+}
+
+- (void)sell1{
+    KLog(@"%s",__func__);
+    [self.safeDic setObject:@"xiaoming1" forKey:@"name"];
+}
+
+- (void)sell2{
+    KLog(@"%s",__func__);
+    [self.safeDic setObject:@"xiaoming2" forKey:@"name"];
+}
+
+- (void)sell3{
+    KLog(@"%s",__func__);
+    [self.safeDic setObject:@"xiaoming3" forKey:@"name"];
+}
+
+- (void)sell4{
+    KLog(@"%@",[self.safeDic objectForKey:@"name"]);
+}
+
 
 @end
