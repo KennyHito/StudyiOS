@@ -21,7 +21,7 @@
 
 @interface MainTabBar : UITabBar
 
-@property (nonatomic, weak) id<MainTabBarDelegate>delegate;
+@property (nonatomic, weak) id<MainTabBarDelegate>subDelegate;
 
 
 @end

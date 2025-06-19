@@ -21,7 +21,7 @@
 - (instancetype)init{
     if (self = [super init]) {
         MainTabBar *tabBar = [[MainTabBar alloc]init];
-        tabBar.delegate = self;
+        tabBar.subDelegate = self;
         [self setValue:tabBar forKeyPath:@"tabBar"];
         
         [self setUpChildViewControllers];

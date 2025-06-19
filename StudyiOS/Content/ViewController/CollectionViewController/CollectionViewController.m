@@ -8,6 +8,7 @@
 #import "CollectionViewController.h"
 #import "CustomFlowLayout.h"
 #import "CustomCollectionViewCell.h"
+#import "ExerciseViewController.h"
 
 #define ZiHao       16
 #define CELLID      @"CustomCollectionViewCell"
@@ -59,6 +60,11 @@ UICollectionViewDataSource
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [DDToast showToast:self.dataArr[indexPath.row]];
+    
+    ExerciseViewController *vc = [[ExerciseViewController alloc] init];
+    vc.money = 123;
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (UICollectionView *)collectionV{

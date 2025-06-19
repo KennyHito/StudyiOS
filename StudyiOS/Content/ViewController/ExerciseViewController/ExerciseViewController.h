@@ -9,6 +9,7 @@
 
 @interface ExerciseViewController : BaseViewController
 
+@property (nonatomic, assign) int money;
 
 @end
 

@@ -26,6 +26,7 @@
     NSInteger index;
     int tem;
     BOOL isChangeLogo;//是否切换过logo
+    int xxxxx;
 }
 @property (nonatomic, strong)UIView *contentView;
 @property (nonatomic, strong)UIScrollView *scrollView;
@@ -39,6 +40,16 @@
 @end
 
 @implementation ExerciseViewController
+/*
+ @dynamic 告诉编译器：属性的 setter 与 getter 方法由用户自己实现，不自动生成。（当然对于 readonly 的属性只需提供 getter 即可）。假如一个属性被声明为 @dynamic var，然后你没有提供 @setter方法和 @getter 方法，编译的时候没问题，但是当程序运行到 instance.var = someVar，由于缺 setter 方法会导致程序崩溃；或者当运行到 someVar = var 时，由于缺 getter 方法同样会导致崩溃。编译时没问题，运行时才执行相应的方法，这就是所谓的动态绑定。
+ */
+@dynamic money;
+- (int)money{
+    return xxxxx;
+}
+- (void)setMoney:(int)money{
+    xxxxx = money;
+}
 
 - (void)dealloc{
     [self.webView.configuration.userContentController removeAllUserScripts];
@@ -51,6 +62,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    KLog(@"金额为:-----> %d,%d",self.money,xxxxx);
     [[HaInject shareInstance] requestApi];
     [self initData];
     [self demo1];
@@ -77,7 +89,7 @@
     self.count = 10;
     self.lock = [[NSLock alloc] init];
     [self addObserver:self forKeyPath:@"isOk" options:0 context:nil];
-    self.dataArr1 = [[NSArray alloc] initWithArray:@[@12,@54]];
+    self.dataArr1 = @[@12,@54];
     self.dataArr2 = [NSMutableArray arrayWithArray:@[@"zhangsan",@"lisi",@"wangwu"]];
     //禁止被LLDB调试!也就是说这样连接Xcode运行app就会闪退
     //🌰方法一:
