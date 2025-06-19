@@ -31,9 +31,9 @@
 
 // 设置子控制器
 - (void)setUpChildViewControllers {
-    [self addChildViewController:[[HomeViewController alloc] init] image:@"tab_home_nor" seletedImage:@"tab_home_press" title:@"首页"];
-    [self addChildViewController:[[TableViewController alloc] init] image:@"tab_classify_nor"  seletedImage:@"tab_classify_press" title:@"分类"];
-    [self addChildViewController:[[CollectionViewController alloc] init] image:@"tab_community_nor"  seletedImage:@"tab_community_press" title:@"社区"];
+    [self addChildViewController:[[HomeViewController alloc] init] image:@"tab_home_nor" seletedImage:@"tab_home_press" title:@"功能组"];
+    [self addChildViewController:[[TableViewController alloc] init] image:@"tab_classify_nor"  seletedImage:@"tab_classify_press" title:@"折叠"];
+    [self addChildViewController:[[CollectionViewController alloc] init] image:@"tab_community_nor"  seletedImage:@"tab_community_press" title:@"标签"];
     [self addChildViewController:[[AboutViewController alloc] init] image:@"tab_me_nor"  seletedImage:@"tab_me_press" title:@"我的"];
 }
 

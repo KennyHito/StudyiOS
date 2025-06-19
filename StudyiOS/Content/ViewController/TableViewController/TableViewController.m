@@ -10,10 +10,11 @@
 static NSString * cellID = @"cellID";
 
 @interface TableViewController ()
-<UITableViewDelegate,
-UITableViewDataSource>
+<
+UITableViewDelegate,
+UITableViewDataSource
+>
 
-@property (nonatomic,strong) NSMutableArray *flagArray;//标识
 @property (nonatomic,strong) UITableView *tableView;//列表
 @property (nonatomic,strong) NSMutableArray *dataArr;//数据源
 
@@ -73,9 +74,19 @@ UITableViewDataSource>
 
 - (void)setData{
     for (int i = 0; i<26; i++) {
-        [self.dataArr addObject:[NSString stringWithFormat:@"%c",i+65]];
-        [self.flagArray addObject:@"0"];
+        NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+        NSString *childTitle = [NSString stringWithFormat:@"%c",i+65];
+        dic[@"childTitle"] = childTitle;
+        dic[@"childFlag"] = @"0";
+        NSMutableArray *childArr = [[NSMutableArray alloc]init];
+        for (int j = 0; j<(arc4random_uniform(10)+1); j++) {
+            [childArr addObject:KStringWithFormat(@"%@中的第%d条数据",childTitle,j)];
+        }
+        dic[@"childArr"] = childArr;
+        [self.dataArr addObject:dic];
     }
+    NSLog(@"%@",self.dataArr);
+    NSLog(@"数据本地组装结束!");
 }
 
 /** 创建tableview */
@@ -111,19 +122,10 @@ UITableViewDataSource>
     return self.dataArr.count;
 }
 
-/* 组尾高度 */
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 0.01;
-}
-
 /* 行数 */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 6;
-}
-
-/* 组头高度*/
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 30;
+    NSArray *childArr = self.dataArr[section][@"childArr"];
+    return childArr.count;
 }
 
 /* cell显示 */
@@ -133,22 +135,31 @@ UITableViewDataSource>
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.clipsToBounds = YES;//必须加上
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@中的第%ld条记录",self.dataArr[indexPath.section],indexPath.row];
+    NSArray *childArr = self.dataArr[indexPath.section][@"childArr"];
+    cell.textLabel.text = childArr[indexPath.row];
     return cell;
 }
 
 //cell点击
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [DDToast showToast:[NSString stringWithFormat:@"点击了第%ld组的第%ld个",(long)indexPath.section,(long)indexPath.row]];
+    [DDToast showToast:[NSString stringWithFormat:@"点击了%@中的第%ld条数据",
+                        self.dataArr[indexPath.section][@"childTitle"],
+                        (long)indexPath.row]];
 }
 
 //cell的高度
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ([_flagArray[indexPath.section] isEqualToString:@"1"]){
+    NSString *flag = self.dataArr[indexPath.section][@"childFlag"];
+    if ([flag isEqualToString:@"1"]){
         return 0;
     }else{
         return 44;
     }
+}
+
+/* 组头高度*/
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 30;
 }
 
 //组头视图
@@ -158,13 +169,18 @@ UITableViewDataSource>
     headView.userInteractionEnabled = YES;
     headView.backgroundColor = UIColorFromRGB(0xF5F5F5);
     
+    NSDictionary *childDic = self.dataArr[section];
+    NSString *childTitle = childDic[@"childTitle"];
+    NSString *childFlag = childDic[@"childFlag"];
+    NSArray *childArr = childDic[@"childArr"];
+    
     UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, KScreenW-60, 30)];
-    label.text = self.dataArr[section];
+    label.text = KStringWithFormat(@"%@(共%ld条)",childTitle,childArr.count);
     label.backgroundColor = [UIColor clearColor];
     [headView addSubview:label];
     
     UIImageView *imageV = [[UIImageView alloc] initWithFrame:CGRectMake(KScreenW-35, 7, 16, 16)];
-    if ([_flagArray[section] isEqualToString:@"0"]) {
+    if ([childFlag isEqualToString:@"0"]) {
         [imageV setImage:[UIImage imageNamed:@"xia"]];
     }else{
         [imageV setImage:[UIImage imageNamed:@"you"]];
@@ -177,7 +193,12 @@ UITableViewDataSource>
     return headView;
 }
 
-//组头视图
+/* 组尾高度 */
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.01;
+}
+
+//组尾视图
 - (nullable UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     UIView *footView = [[UIView alloc]init];
     return footView;
@@ -185,13 +206,14 @@ UITableViewDataSource>
 
 - (void)sectionClick:(UITapGestureRecognizer *)tap{
     NSUInteger index = tap.view.tag;
-    if ([_flagArray[index] isEqualToString:@"0"]) {
-        _flagArray[index] = @"1";
+    NSString *flag = self.dataArr[index][@"childFlag"];
+    if ([flag isEqualToString:@"0"]) {
+        self.dataArr[index][@"childFlag"] = @"1";
         NSRange range = NSMakeRange(index, 1);
         NSIndexSet *sectionToReload = [NSIndexSet indexSetWithIndexesInRange:range];
         [self.tableView reloadSections:sectionToReload withRowAnimation:UITableViewRowAnimationAutomatic];
     } else {
-        _flagArray[index] = @"0";
+        self.dataArr[index][@"childFlag"] = @"0";
         NSRange range = NSMakeRange(index, 1);
         NSIndexSet *sectionToReload = [NSIndexSet indexSetWithIndexesInRange:range];
         [self.tableView reloadSections:sectionToReload withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -202,7 +224,11 @@ UITableViewDataSource>
 
 //右侧索引
 - (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView{
-    return self.dataArr;
+    NSMutableArray *titleArr = [[NSMutableArray alloc] init];
+    for (NSDictionary *dic in self.dataArr) {
+        [titleArr addObject:dic[@"childTitle"]];
+    }
+    return titleArr;
 }
 
 //根据索引定位位置
@@ -211,13 +237,6 @@ UITableViewDataSource>
     //点击索引 列表跳转到对应索引的行
     [tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:index] atScrollPosition:UITableViewScrollPositionTop animated:YES];
     return index;
-}
-
-- (NSMutableArray *)flagArray{
-    if(!_flagArray){
-        _flagArray = [[NSMutableArray alloc]init];
-    }
-    return _flagArray;
 }
 
 -(NSMutableArray *)dataArr{
