@@ -17,6 +17,7 @@
 @property (nonatomic, strong) TTReadWhiteSafeDic *safeDic;
 @property (nonatomic,assign) int iphoneNumber;
 @property (nonatomic,strong) dispatch_semaphore_t semaphore;
+
 @end
 
 @implementation LockViewController
