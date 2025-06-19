@@ -193,16 +193,16 @@
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.showsVerticalScrollIndicator = YES;
     //设置是否采用分页的方式
-    //    self.scrollView.pagingEnabled = YES;
+    //self.scrollView.pagingEnabled = YES;
     //设置是否允许滚动
-    //        self.scrollView.scrollEnabled = NO;
+    //self.scrollView.scrollEnabled = NO;
     //设置是否可以缩放
-    // self.scrollView.maximumZoomScale = 2.0;//最多放大到两倍
-    // self.scrollView.minimumZoomScale = 0.5;//最多缩小到0.5倍
+    //self.scrollView.maximumZoomScale = 2.0;//最多放大到两倍
+    //self.scrollView.minimumZoomScale = 0.5;//最多缩小到0.5倍
     //设置是否允许缩放超出倍数限制，超出后弹回
-    // self.scrollView.bouncesZoom = YES;
+    //self.scrollView.bouncesZoom = YES;
     //设置委托
-    // self.scrollView.delegate = self;
+    //self.scrollView.delegate = self;
     [self.contentView addSubview:self.scrollView];
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(self.contentView);

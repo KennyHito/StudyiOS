@@ -15,6 +15,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.downBtn.layer.cornerRadius = 5;
+    self.downBtn.layer.masksToBounds = YES;
     [self.view sendSubviewToBack:self.bgView];
 }
 
