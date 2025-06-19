@@ -10,13 +10,13 @@
 
 @interface LockViewController ()
 
-@property (nonatomic,assign) int count;
-@property (nonatomic,assign) os_unfair_lock unfairLock;
-@property (nonatomic,strong) NSLock *nsLock;
+@property (nonatomic, assign) int count;
+@property (nonatomic, assign) os_unfair_lock unfairLock;
+@property (nonatomic, strong) NSLock *nsLock;
 
 @property (nonatomic, strong) TTReadWhiteSafeDic *safeDic;
-@property (nonatomic,assign) int iphoneNumber;
-@property (nonatomic,strong) dispatch_semaphore_t semaphore;
+@property (nonatomic, assign) int iphoneNumber;
+@property (nonatomic, strong) dispatch_semaphore_t semaphore;
 
 @end
 
