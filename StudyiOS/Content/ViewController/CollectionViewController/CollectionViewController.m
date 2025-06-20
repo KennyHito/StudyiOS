@@ -10,8 +10,8 @@
 #import "CustomCollectionViewCell.h"
 #import "ExerciseViewController.h"
 
-#define ZiHao       16
-#define CELLID      @"CustomCollectionViewCell"
+#define FONTSIZE       16
+#define CELLID          @"CustomCollectionViewCell"
 
 @interface CollectionViewController ()
 <
@@ -44,7 +44,8 @@ UICollectionViewDataSource
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;{
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CELLID forIndexPath:indexPath];
     [cell.btn setTitle:self.dataArr[indexPath.row] forState:UIControlStateNormal];
-    cell.btn.titleLabel.font = [UIFont systemFontOfSize:ZiHao];
+    cell.btn.titleLabel.font = [UIFont systemFontOfSize:FONTSIZE];
+    //去掉可交互性,走的collectionView的didSelectItemAtIndexPath方法
     cell.btn.userInteractionEnabled = NO;
     return cell;
 }
@@ -53,7 +54,7 @@ UICollectionViewDataSource
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat margin = 10;
     CGFloat H = 30;
-    CGRect itemFrame = [[self.dataArr objectAtIndex:indexPath.row] boundingRectWithSize:CGSizeMake(KScreenW-20, H) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:ZiHao]} context:nil];
+    CGRect itemFrame = [[self.dataArr objectAtIndex:indexPath.row] boundingRectWithSize:CGSizeMake(KScreenW-20, H) options: NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:FONTSIZE]} context:nil];
     CGFloat W = itemFrame.size.width + margin;
     return CGSizeMake(W, H);
 }
