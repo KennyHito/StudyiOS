@@ -64,6 +64,8 @@ ASAuthorizationControllerPresentationContextProviding
             KLog(@"identifier: %@\n fullName: %@\n email: %@\n authorizationCode: %@\n token:%@",
                  identifier,fullName,email,authorizationCode,token);
             
+            [DDToast showToast:identifier];
+            
         }else if ([authorization.credential isKindOfClass:[ASPasswordCredential class]]){
             
             //// Sign in using an existing iCloud Keychain credential.
