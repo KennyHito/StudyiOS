@@ -49,6 +49,7 @@
         @{Tab_Title:@"36、Masonry库的使用",Tab_Url:@"MasonryViewController"},
         @{Tab_Title:@"37、类似vip会员样式",Tab_Url:@"VipCardViewController"},
         @{Tab_Title:@"38、学习各种锁",Tab_Url:@"LockViewController"},
+        @{Tab_Title:@"39、苹果ID登录",Tab_Url:@"APPLEIDLoginController"},
     ];
 }
 
