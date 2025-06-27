@@ -393,7 +393,7 @@
 
 #pragma mark -- demo9
 - (void)demo9{
-    KLog(@"两个大数相加算法:%@",[self addTwoNumberWithOneNumStr:@"123456789" anotherNumStr:@"987654321"]);
+    KLog(@"两个大数相加算法:%@",[self addTwoNumberWithOneNumStr:@"193456789" anotherNumStr:@"987654321"]);
     KLog(@"两个大数相加算法:%@",[self addTwoNumberWithOneNumStr:@"987678924" anotherNumStr:@"111111111"]);
 }
 
@@ -474,6 +474,13 @@
     TTStudySingle *singleT3 = [singleT1 copy];
     TTStudySingle *singleT4 = [singleT2 mutableCopy];
     KLog(@"demo10: %@-%@-%@-%@-%@",singleT,singleT1,singleT2,singleT3,singleT4);
+    
+    NSArray *arr = [[NSArray alloc] init];
+    KLog(@"%ld",CFGetRetainCount((__bridge CFTypeRef)(arr)));
+    arr = @[@"1"];
+    KLog(@"%ld",CFGetRetainCount((__bridge CFTypeRef)(arr)));
+    arr = @[@"2"];
+    KLog(@"%ld",CFGetRetainCount((__bridge CFTypeRef)(arr)));
 }
 
 #pragma mark -- demo11
@@ -663,7 +670,7 @@
     KLog(@"str getMD5Data : %@",[str getMD5Data]);
     
     //加盐后
-    NSString *salt = @"123";
+    NSString *salt = @"999";
     NSString *newStr = [str stringByAppendingString:salt];
     KLog(@"newStr getMD5Data : %@",[newStr getMD5Data]);
 }
@@ -706,7 +713,7 @@
     NSArray *a3 = [self.dataArr1 mutableCopy];
     KLog(@"操作前----> %@,%@,%@,%@",self.dataArr1,a1,a2,a3);
 
-    self.dataArr1 = @[@123];
+    self.dataArr1 = @[@999];
     KLog(@"操作后----> %@,%@,%@,%@",self.dataArr1,a1,a2,a3);
     
     /********************************深拷贝(copy&mutableCopy)*****************************/

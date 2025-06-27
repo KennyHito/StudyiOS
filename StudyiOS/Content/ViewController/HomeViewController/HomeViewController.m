@@ -54,7 +54,7 @@ UITableViewDataSource
     }
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = self.dataArr[indexPath.row][Tab_Title];
+    cell.textLabel.text = KStringWithFormat(@"%ld、%@",indexPath.row+1,self.dataArr[indexPath.row][Tab_Title]);
     return cell;
 }
 

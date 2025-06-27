@@ -111,8 +111,8 @@
 
 #pragma mark -- 设置桌面3D Touch
 - (void)longPressFunction{
-    NSArray * titleArr = @[@"截图分享功能",@"关于我们"];
-    NSArray * typeArr = @[@"share",@"about"];
+    NSArray * titleArr = @[@"切换App Logo",@"九宫格密码"];
+    NSArray * typeArr = @[@"change",@"ninePassword"];
     NSMutableArray * dataArr = [[NSMutableArray alloc]init];
     for (int i = 0; i<titleArr.count; i++) {
         // 创建标签的ICON图标。
@@ -138,13 +138,14 @@
 
 // 处理从3D Touch进来后的逻辑
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
-    UIViewController *vc = nil;
-    if ([shortcutItem.type isEqualToString:@"share"]) {
-        vc = [[NSClassFromString(@"ScreenShotViewController") alloc] init];
-    }else if ([shortcutItem.type isEqualToString:@"about"]) {
-        vc = [[NSClassFromString(@"AboutViewController") alloc] init];
+    BaseViewController *vc = nil;
+    if ([shortcutItem.type isEqualToString:@"change"]) {
+        vc = [[NSClassFromString(@"ChangeLogoViewController") alloc] init];
+    }else if ([shortcutItem.type isEqualToString:@"ninePassword"]) {
+        vc = [[NSClassFromString(@"SudokuViewController") alloc] init];
     }
-    if(vc!=nil){
+    if(vc != nil){
+        vc.navTitle = shortcutItem.localizedTitle;
         vc.hidesBottomBarWhenPushed = YES;
         [[[GetTopVCTool shareInstance] topViewController].navigationController pushViewController:vc animated:YES];
     }
@@ -167,7 +168,7 @@
         // 设置通知的类型可以为弹窗提示,声音提示,应用图标数字提示
         UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert categories:nil];
         // 授权通知
-        [[UIApplication sharedApplication] registerUserNotificationSettings:setting];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:setting];        
     }
 }
 

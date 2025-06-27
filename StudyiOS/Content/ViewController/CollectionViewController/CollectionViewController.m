@@ -63,7 +63,7 @@ UICollectionViewDataSource
     [DDToast showToast:self.dataArr[indexPath.row]];
     
     ExerciseViewController *vc = [[ExerciseViewController alloc] init];
-    vc.money = 123;
+    vc.money = 99;
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

@@ -58,12 +58,6 @@
 		1868F3312AFA16160020FF1A /* RXJDButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F3272AFA16160020FF1A /* RXJDButton.m */; };
 		1868F3322AFA16160020FF1A /* RXJDTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F3282AFA16160020FF1A /* RXJDTableCell.m */; };
 		1868F3362AFA16CA0020FF1A /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F3352AFA16CA0020FF1A /* AddressViewController.m */; };
-		1868F33A2AFA209D0020FF1A /* AVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F3392AFA209D0020FF1A /* AVPlayerViewController.m */; };
-		1868F33E2AFA21290020FF1A /* VideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F33D2AFA21290020FF1A /* VideoView.m */; };
-		1868F3422AFA22250020FF1A /* videoPause.png in Resources */ = {isa = PBXBuildFile; fileRef = 1868F33F2AFA22250020FF1A /* videoPause.png */; };
-		1868F3432AFA22250020FF1A /* videoPlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 1868F3402AFA22250020FF1A /* videoPlay.png */; };
-		1868F3442AFA22250020FF1A /* videoback.png in Resources */ = {isa = PBXBuildFile; fileRef = 1868F3412AFA22250020FF1A /* videoback.png */; };
-		1868F3462AFA22E30020FF1A /* fangda.png in Resources */ = {isa = PBXBuildFile; fileRef = 1868F3452AFA22E30020FF1A /* fangda.png */; };
 		1868F34A2AFA27410020FF1A /* GuoWuCheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F3492AFA27410020FF1A /* GuoWuCheViewController.m */; };
 		1868F34E2AFA27650020FF1A /* ShoppingCartTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F34C2AFA27650020FF1A /* ShoppingCartTool.m */; };
 		1868F3522AFA28070020FF1A /* xin.png in Resources */ = {isa = PBXBuildFile; fileRef = 1868F3502AFA28070020FF1A /* xin.png */; };
@@ -74,7 +68,6 @@
 		1868F3602AFB274D0020FF1A /* AppleShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F35F2AFB274D0020FF1A /* AppleShareViewController.m */; };
 		1868F3642AFB2EBD0020FF1A /* AlertControTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F3632AFB2EBD0020FF1A /* AlertControTool.m */; };
 		1868F3682AFB30350020FF1A /* CacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F3672AFB30350020FF1A /* CacheTool.m */; };
-		1868F36A2AFB55B80020FF1A /* 123.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1868F3692AFB55B80020FF1A /* 123.mp4 */; };
 		1868F3702AFB604B0020FF1A /* ChangeLogoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F36F2AFB604B0020FF1A /* ChangeLogoViewController.m */; };
 		1868F3722AFB61B20020FF1A /* moren.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1868F3712AFB61B20020FF1A /* moren.jpg */; };
 		1868F3742AFB67900020FF1A /* chubaobao.png in Resources */ = {isa = PBXBuildFile; fileRef = 1868F3732AFB67900020FF1A /* chubaobao.png */; };
@@ -393,14 +386,6 @@
 		1868F32C2AFA16160020FF1A /* RXJDButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXJDButton.h; sourceTree = "<group>"; };
 		1868F3342AFA16CA0020FF1A /* AddressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
 		1868F3352AFA16CA0020FF1A /* AddressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
-		1868F3382AFA209D0020FF1A /* AVPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerViewController.h; sourceTree = "<group>"; };
-		1868F3392AFA209D0020FF1A /* AVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerViewController.m; sourceTree = "<group>"; };
-		1868F33C2AFA21290020FF1A /* VideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoView.h; sourceTree = "<group>"; };
-		1868F33D2AFA21290020FF1A /* VideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoView.m; sourceTree = "<group>"; };
-		1868F33F2AFA22250020FF1A /* videoPause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videoPause.png; sourceTree = "<group>"; };
-		1868F3402AFA22250020FF1A /* videoPlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videoPlay.png; sourceTree = "<group>"; };
-		1868F3412AFA22250020FF1A /* videoback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = videoback.png; sourceTree = "<group>"; };
-		1868F3452AFA22E30020FF1A /* fangda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fangda.png; sourceTree = "<group>"; };
 		1868F3482AFA27410020FF1A /* GuoWuCheViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GuoWuCheViewController.h; sourceTree = "<group>"; };
 		1868F3492AFA27410020FF1A /* GuoWuCheViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GuoWuCheViewController.m; sourceTree = "<group>"; };
 		1868F34C2AFA27650020FF1A /* ShoppingCartTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartTool.m; sourceTree = "<group>"; };
@@ -417,7 +402,6 @@
 		1868F3632AFB2EBD0020FF1A /* AlertControTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertControTool.m; sourceTree = "<group>"; };
 		1868F3662AFB30350020FF1A /* CacheTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheTool.h; sourceTree = "<group>"; };
 		1868F3672AFB30350020FF1A /* CacheTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CacheTool.m; sourceTree = "<group>"; };
-		1868F3692AFB55B80020FF1A /* 123.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 123.mp4; sourceTree = "<group>"; };
 		1868F36E2AFB604B0020FF1A /* ChangeLogoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeLogoViewController.h; sourceTree = "<group>"; };
 		1868F36F2AFB604B0020FF1A /* ChangeLogoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeLogoViewController.m; sourceTree = "<group>"; };
 		1868F3712AFB61B20020FF1A /* moren.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = moren.jpg; sourceTree = "<group>"; };
@@ -827,7 +811,6 @@
 				1868F3652AFB301E0020FF1A /* CacheTool */,
 				1868F3612AFB2E840020FF1A /* UIAlertController */,
 				1868F34B2AFA27590020FF1A /* ShoppingCartTool */,
-				1868F33B2AFA211D0020FF1A /* VideoView */,
 				1868F3202AFA16160020FF1A /* JDAddressPicker */,
 				1868F30B2AF8C4420020FF1A /* WSDatePickerView */,
 				1887B5402AF4C97D00EEECAE /* CoreLock */,
@@ -1002,7 +985,6 @@
 				1868F35D2AFB272C0020FF1A /* AppleShareViewController */,
 				1868F3562AFB19040020FF1A /* MusicViewController */,
 				1868F3472AFA27370020FF1A /* GuoWuCheViewController */,
-				1868F3372AFA20960020FF1A /* AVPlayerViewController */,
 				1868F3332AFA16760020FF1A /* AddressViewController */,
 				1868F3192AF9CF1D0020FF1A /* HTML5ViewController */,
 				1887B57C2AF8BCFF00EEECAE /* DatePickerViewController */,
@@ -1117,24 +1099,6 @@
 				1868F3352AFA16CA0020FF1A /* AddressViewController.m */,
 			);
 			path = AddressViewController;
-			sourceTree = "<group>";
-		};
-		1868F3372AFA20960020FF1A /* AVPlayerViewController */ = {
-			isa = PBXGroup;
-			children = (
-				1868F3382AFA209D0020FF1A /* AVPlayerViewController.h */,
-				1868F3392AFA209D0020FF1A /* AVPlayerViewController.m */,
-			);
-			path = AVPlayerViewController;
-			sourceTree = "<group>";
-		};
-		1868F33B2AFA211D0020FF1A /* VideoView */ = {
-			isa = PBXGroup;
-			children = (
-				1868F33C2AFA21290020FF1A /* VideoView.h */,
-				1868F33D2AFA21290020FF1A /* VideoView.m */,
-			);
-			path = VideoView;
 			sourceTree = "<group>";
 		};
 		1868F3472AFA27370020FF1A /* GuoWuCheViewController */ = {
@@ -1460,12 +1424,7 @@
 		1887B5742AF8768F00EEECAE /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				1868F3692AFB55B80020FF1A /* 123.mp4 */,
 				1868F3542AFB18AC0020FF1A /* 你还要我怎样.mp3 */,
-				1868F3452AFA22E30020FF1A /* fangda.png */,
-				1868F3412AFA22250020FF1A /* videoback.png */,
-				1868F33F2AFA22250020FF1A /* videoPause.png */,
-				1868F3402AFA22250020FF1A /* videoPlay.png */,
 				1887B5752AF8769E00EEECAE /* qidong.mp4 */,
 			);
 			path = Video;
@@ -2198,14 +2157,12 @@
 				1868F3522AFA28070020FF1A /* xin.png in Resources */,
 				18B1ED2C290F9CDB00647F15 /* Assets.xcassets in Resources */,
 				18CD0DBB2C75F26F006DEAFE /* 美女24.jpg in Resources */,
-				1868F3422AFA22250020FF1A /* videoPause.png in Resources */,
 				18C832122C75F8F0002AA9DD /* niao_2.png in Resources */,
 				1887B5682AF4C9DD00EEECAE /* SudokuViewController.xib in Resources */,
 				1887B5392AF4C58D00EEECAE /* headIcon-9.jpg in Resources */,
 				18CD0D852C75E70F006DEAFE /* Guidance03.jpg in Resources */,
 				18DBE7622ADFB94200E78A31 /* LaunchLogo.png in Resources */,
 				18C832172C75F8F0002AA9DD /* niao_7.png in Resources */,
-				1868F3442AFA22250020FF1A /* videoback.png in Resources */,
 				18CD0DB42C75F26F006DEAFE /* 美女17.jpg in Resources */,
 				186FD3FF2924B1C0003A31C0 /* 2.png in Resources */,
 				18CD0DB92C75F26F006DEAFE /* 美女22.jpg in Resources */,
@@ -2245,14 +2202,12 @@
 				1887B52E2AF4C58D00EEECAE /* headIcon-10.jpg in Resources */,
 				186FD4002924B1C0003A31C0 /* 3.png in Resources */,
 				18CD0DBA2C75F26F006DEAFE /* 美女23.jpg in Resources */,
-				1868F3462AFA22E30020FF1A /* fangda.png in Resources */,
 				18CD0DAA2C75F26F006DEAFE /* 美女07.jpg in Resources */,
 				18B8429E2C73361400886209 /* star_gray@2x.png in Resources */,
 				186FD3F92924AB9A003A31C0 /* TimerViewController.xib in Resources */,
 				1868F3722AFB61B20020FF1A /* moren.jpg in Resources */,
 				18349A0A2C7423C500F83A52 /* changeLogo_2.png in Resources */,
 				18C2D5792C69E0D1003011DD /* YYKeyChainData_2.png in Resources */,
-				1868F36A2AFB55B80020FF1A /* 123.mp4 in Resources */,
 				18C832432C75FC54002AA9DD /* showViewController.xib in Resources */,
 				1887B5012AF4C2A900EEECAE /* RuntimeViewController.xib in Resources */,
 				18C832132C75F8F0002AA9DD /* niao_3.png in Resources */,
@@ -2284,7 +2239,6 @@
 				1887B52D2AF4C58D00EEECAE /* headIcon-11.jpg in Resources */,
 				1887B55A2AF4C97D00EEECAE /* CLLockVC.xib in Resources */,
 				18CD0DB82C75F26F006DEAFE /* 美女21.jpg in Resources */,
-				1868F3432AFA22250020FF1A /* videoPlay.png in Resources */,
 				18CD0DB32C75F26F006DEAFE /* 美女16.jpg in Resources */,
 				18CD0DB22C75F26F006DEAFE /* 美女15.jpg in Resources */,
 				1887B5372AF4C58D00EEECAE /* introduce-2.gif in Resources */,
@@ -2396,7 +2350,6 @@
 				18DBE76B2AE1143E00E78A31 /* RuntimeViewController.m in Sources */,
 				1887B5672AF4C9DD00EEECAE /* SudokuViewController.m in Sources */,
 				18B1ED27290F9CDA00647F15 /* ExerciseViewController.m in Sources */,
-				1868F33A2AFA209D0020FF1A /* AVPlayerViewController.m in Sources */,
 				18C832402C75FC54002AA9DD /* MenuModel.m in Sources */,
 				1887B5612AF4C97D00EEECAE /* CLLockLabel.m in Sources */,
 				18227637292490B600242C9A /* TTCrash.m in Sources */,
@@ -2423,7 +2376,6 @@
 				18CD0D7B2C75E4D1006DEAFE /* UIImage+GIF_ONE.m in Sources */,
 				18C832612C76CC82002AA9DD /* MasonryViewController.m in Sources */,
 				1868F32D2AFA16160020FF1A /* RXHexColor.m in Sources */,
-				1868F33E2AFA21290020FF1A /* VideoView.m in Sources */,
 				188D09E92AD7BEB600FCAD36 /* CrashHandler.m in Sources */,
 				1887B5102AF4C4C800EEECAE /* ScreenShotViewController.m in Sources */,
 				182C4B6E2E000DF40006521F /* LockViewController.m in Sources */,

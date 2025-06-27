@@ -278,7 +278,7 @@ UITableViewDataSource
             [AlertControTool alertTitle:@"温馨提示" andMessage:@"确定删除所有缓存?" andAction1:@"取消" andAction2:@"确定" andBlock:^(NSInteger errorCode) {
                 if (errorCode == 0) {
                     [CacheTool clearCache];
-                    [HsConfig writeUserDefaultWithKey:VersionCache WithValue:@"123"];
+                    [HsConfig writeUserDefaultWithKey:VersionCache WithValue:@"99"];
                     [DDToast showToast:@"清除成功!"];
                     [weakSelf initData];
                 }
