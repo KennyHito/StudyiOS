@@ -12,8 +12,8 @@
 
 + (void)load{
     [self swizz_exchangeInstanceMethod:[self class] originalSelector:@selector(viewDidLoad) newSEL:@selector(viewDidLoadLog)];
-    [self swizz_exchangeInstanceMethod:[self class] originalSelector:@selector(viewWillAppear:) newSEL:@selector(viewWillAppearLog:)];
-    [self swizz_exchangeInstanceMethod:[self class] originalSelector:@selector(viewWillDisappear:) newSEL:@selector(viewWillDisappearLog:)];
+    //[self swizz_exchangeInstanceMethod:[self class] originalSelector:@selector(viewWillAppear:) newSEL:@selector(viewWillAppearLog:)];
+    //[self swizz_exchangeInstanceMethod:[self class] originalSelector:@selector(viewWillDisappear:) newSEL:@selector(viewWillDisappearLog:)];
 }
 
 +(void) swizz_exchangeInstanceMethod:(Class) class_ originalSelector:(SEL) originalSelector newSEL:(SEL) alternativeSelector{
