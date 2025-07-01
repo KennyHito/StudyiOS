@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <accessibilityOverrides/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4D-aw-7Pk">
-                    <rect key="frame" x="121.66666666666669" y="59" width="150" height="50"/>
+                    <rect key="frame" x="121.66666666666669" y="69" width="150" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="2sZ-tF-ydF"/>
                         <constraint firstAttribute="width" constant="150" id="DUo-7s-wJV"/>
@@ -35,11 +35,20 @@
                         <action selector="djsBtnClick:" destination="-1" eventType="touchUpInside" id="kA3-OC-CDC"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="代码中写了很多例子, 请移驾代码中查看。" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRN-mH-D5Q">
+                    <rect key="frame" x="10" y="139" width="373" height="19.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="w4D-aw-7Pk" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="Vbk-Fm-KhK"/>
+                <constraint firstItem="cRN-mH-D5Q" firstAttribute="top" secondItem="w4D-aw-7Pk" secondAttribute="bottom" constant="20" id="AJF-oG-9P7"/>
+                <constraint firstItem="cRN-mH-D5Q" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="Gfh-cB-Cwk"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="cRN-mH-D5Q" secondAttribute="trailing" constant="10" id="Uca-Or-aEq"/>
+                <constraint firstItem="w4D-aw-7Pk" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="10" id="Vbk-Fm-KhK"/>
                 <constraint firstItem="w4D-aw-7Pk" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="ZHY-tQ-d79"/>
             </constraints>
             <point key="canvasLocation" x="140" y="21"/>
@@ -47,7 +56,7 @@
     </objects>
     <resources>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

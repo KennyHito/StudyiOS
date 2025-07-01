@@ -15,7 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton * btn = [self createButtonTitle:@"分享一下" andFont:15 andTitleColor:[UIColor yellowColor] andBackColor:[UIColor redColor] andTag:100 andFrame:CGRectMake(KScreenW/2-50, 100, 100, 40)];
+    UIButton * btn = [self createButtonTitle:@"分享一下" andFont:15 andTitleColor:[UIColor whiteColor] andBackColor:[UIColor redColor] andTag:100 andFrame:CGRectMake(KScreenW/2-50, 100, 100, 40)];
     [self.view addSubview:btn];
 }
 
@@ -35,7 +35,7 @@
 }
 
 - (void)btnClick:(UIButton *)btn{
-    UIActivityViewController *avc = [[UIActivityViewController alloc]initWithActivityItems:@[@"您好,我是iOS开发人员。",[NSURL URLWithString:@"https://www.baidu.com"]] applicationActivities:nil];
+    UIActivityViewController *avc = [[UIActivityViewController alloc]initWithActivityItems:@[@"您好,我是iOS开发人员。",[NSURL URLWithString:@"https://github.com/KennyHito"]] applicationActivities:nil];
     [self presentViewController:avc animated:YES completion:nil];
 }
 

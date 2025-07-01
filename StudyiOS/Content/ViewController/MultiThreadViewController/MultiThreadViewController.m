@@ -13,17 +13,21 @@
 
 @implementation MultiThreadViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.bgView setHidden:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.bgView setHidden:YES];
     [self demo];
-    [self demo1];
-    [self demo2];
-    [self demo3];
-    [self demo4];
-    [self demo5];
+//    [self demo1];
+//    [self demo2];
+//    [self demo3];
+//    [self demo4];
+//    [self demo5];
 //    [self demo6];
-    [self demo7];
+//    [self demo7];
 }
 
 #pragma mark -- GCD实现倒计时按钮
