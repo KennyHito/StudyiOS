@@ -13,6 +13,16 @@
 
 @implementation MultiThreadViewController
 
+/*
+ 一、同步队列
+ 1、全局队列: dispatch_get_global_queue(0, 0)
+ 2、手动创建的同步队列: dispatch_queue_create("bj", DISPATCH_QUEUE_CONCURRENT)
+ 
+ 二、串行队列
+ 1、主队列: dispatch_get_main_queue()
+ 2、手动创建的串行队列: dispatch_queue_create("bj", DISPATCH_QUEUE_SERIAL)
+ */
+
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.bgView setHidden:YES];
