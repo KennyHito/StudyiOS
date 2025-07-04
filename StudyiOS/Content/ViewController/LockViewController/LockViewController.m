@@ -52,13 +52,22 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-//    for (int i = 0; i < 10; i++) {
-//        dispatch_async(dispatch_get_global_queue(0, 0), ^{
-//            [self synchronized_test];
-//        });
-//    }
+    /*
+     一、同步队列
+     1、全局队列: dispatch_get_global_queue(0, 0)
+     2、手动创建的同步队列: dispatch_queue_create("bj", DISPATCH_QUEUE_CONCURRENT)
+     
+     二、串行队列
+     1、主队列: dispatch_get_main_queue()
+     2、手动创建的串行队列: dispatch_queue_create("bj", DISPATCH_QUEUE_SERIAL)
+     */
+    for (int i = 0; i < 10; i++) {
+        dispatch_async(dispatch_queue_create("bj", DISPATCH_QUEUE_CONCURRENT), ^{
+            [self synchronized_test];
+        });
+    }
 //    [self semaphore_test];
-    [self NSThread_test];
+//    [self NSThread_test];
 }
 
 #pragma mark -- os_unfair_lock
