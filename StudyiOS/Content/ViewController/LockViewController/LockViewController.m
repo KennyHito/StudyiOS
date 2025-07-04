@@ -62,9 +62,14 @@
      2、手动创建的串行队列: dispatch_queue_create("bj", DISPATCH_QUEUE_SERIAL)
      */
     for (int i = 0; i < 10; i++) {
-        dispatch_async(dispatch_queue_create("bj", DISPATCH_QUEUE_CONCURRENT), ^{
-            [self synchronized_test];
-        });
+         dispatch_async(dispatch_get_global_queue(0, 0), ^{
+             [self synchronized_test];
+         });
+        //或
+        //dispatch_get_global_queue(0, 0)
+//        dispatch_async(dispatch_queue_create("bj", DISPATCH_QUEUE_CONCURRENT), ^{
+//            [self synchronized_test];
+//        });
     }
 //    [self semaphore_test];
 //    [self NSThread_test];
