@@ -8,7 +8,7 @@
 #import "UIView+CommonView.h"
 #import <objc/runtime.h>
 
-static const char *kButtonActionBlockKey = "kButtonActionBlockKey";
+static const void *kButtonActionBlockKey = &kButtonActionBlockKey;
 
 @implementation UIView (CommonView)
 /* UILabel封装 */
