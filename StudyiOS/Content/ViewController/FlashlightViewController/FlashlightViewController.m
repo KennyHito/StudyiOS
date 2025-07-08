@@ -8,32 +8,22 @@
 #import "FlashlightViewController.h"
 
 @interface FlashlightViewController ()
-@property (strong,nonatomic) UIButton *btn;
+
 @end
 
 @implementation FlashlightViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.backgroundColor = [UIColor yellowColor];
-    [btn setTitle:@"打开/关闭闪光灯" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-    [self.bgView addSubview:btn];
-    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    btn.layer.cornerRadius = 5;
-    btn.layer.masksToBounds = YES;
-    self.btn = btn;
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(self.bgView.mas_centerX);
-        make.top.mas_equalTo(self.bgView.mas_top).offset(15);
-        make.height.mas_equalTo(40);
-        make.width.mas_equalTo(180);
+    kWeakify(self)
+    [self.bgView createButtonTitle:@"打开/关闭闪光灯" andFont:20 andTitleColor:[UIColor whiteColor] andBackgroundColor:[UIColor redColor] andFrame:CGRectMake((KScreenW-200)/2, 10, 200, 50) actionBlock:^(UIButton * _Nonnull button) {
+        KStrongify(self);
+        [self commonMethod:button];
     }];
 }
 
 //按钮点击事件的实现
-- (void)btnClick:(UIButton *)sender{
+- (void)commonMethod:(UIButton *)sender{
     sender.selected = !sender.selected;
     if (sender.isSelected) {
         

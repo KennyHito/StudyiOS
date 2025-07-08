@@ -22,19 +22,10 @@
      */
 
     //方式一 : 创建按钮
-    UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.backgroundColor = [UIColor yellowColor];
-    [btn setTitle:@"保存相册" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-    btn.layer.cornerRadius = 5;
-    btn.layer.masksToBounds = YES;
-    [self.bgView addSubview:btn];
-    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(self.bgView.mas_centerX);
-        make.top.mas_equalTo(self.bgView.mas_top).offset(15);
-        make.width.mas_equalTo(90);
-        make.height.mas_equalTo(40);
+    kWeakify(self)
+    UIButton * btn = [self.bgView createButtonTitle:@"保存相册" andFont:20 andTitleColor:[UIColor whiteColor] andBackgroundColor:[UIColor redColor] andFrame:CGRectMake((KScreenW-200)/2, 10, 200, 50) actionBlock:^(UIButton * _Nonnull button) {
+        KStrongify(self)
+        [self savePicture:self.imageV.image];
     }];
     
     //显示图片
@@ -58,7 +49,7 @@
     [self.imageV addGestureRecognizer:longPress];
     
     UILabel * lab = [[UILabel alloc] init];
-    lab.text = @"⚠️ : 该模块的功能是将图片保存到系统的相册中,保存的方式有两种,一是通过点击保存按钮;二是通过长按图片即可保存!";
+    lab.text = @"⚠️: 该模块的功能是将图片保存到系统的相册中,保存的方式有两种,一是通过点击保存按钮;二是通过长按图片即可保存!";
     lab.font = [UIFont systemFontOfSize:17];
     lab.lineBreakMode = NSLineBreakByWordWrapping;
     lab.numberOfLines = 3;
@@ -80,7 +71,7 @@
 
 //按钮点击事件的实现
 - (void)btnClick:(UIButton *)btn{
-    [self savePicture:self.imageV.image];
+   
 }
 
 /* 保存图片的方法 */

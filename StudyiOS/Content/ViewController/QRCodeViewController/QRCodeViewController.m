@@ -23,25 +23,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.backgroundColor = [UIColor yellowColor];
-    [btn setTitle:@"扫描二维码" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-    [self.bgView addSubview:btn];
-    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    btn.layer.cornerRadius = 5;
-    btn.layer.masksToBounds = YES;
-    self.btn = btn;
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(self.bgView.mas_centerX);
-        make.top.mas_equalTo(self.bgView.mas_top).offset(15);
-        make.height.mas_equalTo(40);
-        make.width.mas_equalTo(120);
+    kWeakify(self)
+    [self.bgView createButtonTitle:@"扫描二维码" andFont:20 andTitleColor:[UIColor whiteColor] andBackgroundColor:[UIColor redColor] andFrame:CGRectMake((KScreenW-200)/2, 10, 200, 50) actionBlock:^(UIButton * _Nonnull button) {
+        KStrongify(self);
+        [self commonMethod];
     }];
 }
 
 //按钮点击事件的实现
-- (void)btnClick:(UIButton *)btn{
+- (void)commonMethod{
     // Device 实例化设备
     _device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     
@@ -66,7 +56,19 @@
     }
     
     // 条码类型 AVMetadataObjectTypeQRCode
-    _output.metadataObjectTypes =@[AVMetadataObjectTypeCode128Code,AVMetadataObjectTypeUPCECode,AVMetadataObjectTypeCode39Code,AVMetadataObjectTypeCode39Mod43Code,AVMetadataObjectTypeEAN13Code,AVMetadataObjectTypeEAN8Code,AVMetadataObjectTypeCode93Code,AVMetadataObjectTypePDF417Code,AVMetadataObjectTypeQRCode,AVMetadataObjectTypeAztecCode,AVMetadataObjectTypeInterleaved2of5Code,AVMetadataObjectTypeITF14Code,AVMetadataObjectTypeDataMatrixCode];
+    _output.metadataObjectTypes =@[AVMetadataObjectTypeCode128Code,
+                                   AVMetadataObjectTypeUPCECode,
+                                   AVMetadataObjectTypeCode39Code,
+                                   AVMetadataObjectTypeCode39Mod43Code,
+                                   AVMetadataObjectTypeEAN13Code,
+                                   AVMetadataObjectTypeEAN8Code,
+                                   AVMetadataObjectTypeCode93Code,
+                                   AVMetadataObjectTypePDF417Code,
+                                   AVMetadataObjectTypeQRCode,
+                                   AVMetadataObjectTypeAztecCode,
+                                   AVMetadataObjectTypeInterleaved2of5Code,
+                                   AVMetadataObjectTypeITF14Code,
+                                   AVMetadataObjectTypeDataMatrixCode];
     
     // Preview 扫描窗口设置
     _preview =[AVCaptureVideoPreviewLayer layerWithSession:self.session];

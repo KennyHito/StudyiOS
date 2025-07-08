@@ -26,7 +26,6 @@
         @{Tab_Title:@"仿京东地址选择器",Tab_Url:@"AddressViewController"},
         @{Tab_Title:@"AVPlayer播放音频",Tab_Url:@"MusicViewController"},
         @{Tab_Title:@"电商类软件加购动画效果",Tab_Url:@"GuoWuCheViewController"},
-        @{Tab_Title:@"苹果系统自带分享功能",Tab_Url:@"AppleShareViewController"},
         @{Tab_Title:@"判断手机是否越狱",Tab_Url:@"PrisonBreakViewController"},
         @{Tab_Title:@"倒计时功能",Tab_Url:@"CountDownViewcontroller"},
         @{Tab_Title:@"图片保存功能",Tab_Url:@"SavePicViewController"},

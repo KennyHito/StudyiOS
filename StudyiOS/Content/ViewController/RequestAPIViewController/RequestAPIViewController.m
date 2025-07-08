@@ -23,19 +23,10 @@
 }
 
 - (void)setUpUI{
-    UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.backgroundColor = [UIColor yellowColor];
-    [btn setTitle:@"请求一下" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-    [self.bgView addSubview:btn];
-    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    btn.layer.cornerRadius = 5;
-    btn.layer.masksToBounds = YES;
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(self.bgView.mas_centerX);
-        make.top.mas_equalTo(self.bgView.mas_top).offset(15);
-        make.width.mas_equalTo(90);
-        make.height.mas_equalTo(40);
+    kWeakify(self)
+    UIButton * btn = [self.bgView createButtonTitle:@"请求一下接口" andFont:20 andTitleColor:[UIColor whiteColor] andBackgroundColor:[UIColor redColor] andFrame:CGRectMake((KScreenW-200)/2, 10, 200, 50) actionBlock:^(UIButton * _Nonnull button) {
+        KStrongify(self)
+        [self RequestMethod];
     }];
     
     UILabel * lab = [[UILabel alloc] init];
@@ -51,8 +42,7 @@
     }];
 }
 
-//按钮点击事件的实现
-- (void)btnClick:(UIButton *)btn{
+- (void)RequestMethod{
     kWeakify(self);
     [HttpCommonRequest requestByGetWithUrl:Request_Api_1 param:nil success:^(id _Nonnull responseObject) {
         KStrongify(self);

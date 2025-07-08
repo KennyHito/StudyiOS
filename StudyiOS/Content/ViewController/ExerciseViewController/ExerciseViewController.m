@@ -82,6 +82,7 @@
     [self demo23];
     [self demo24];
     [self demo25];
+    [self demo26];
 }
 
 - (void)initData{
@@ -691,6 +692,16 @@
     [autoScrollLabel observeApplicationNotifications];
     autoScrollLabel.frame = CGRectMake(10,70+(View_Height+View_Space)*6, KScreenW-20, View_Height);
     [self.contentView addSubview:autoScrollLabel];
+}
+
+#pragma mark -- demo26
+- (void)demo26{
+    kWeakify(self)
+    [self.contentView createButtonTitle:@"系统自带的分享" andFont:20 andTitleColor:[UIColor whiteColor] andBackgroundColor:[UIColor redColor] andFrame:CGRectMake((KScreenW-200)/2,70+(View_Height+View_Space)*7, 200, View_Height) actionBlock:^(UIButton * _Nonnull button) {
+        KStrongify(self)
+        UIActivityViewController *avc = [[UIActivityViewController alloc]initWithActivityItems:@[@"您好,我是iOS开发人员。",[NSURL URLWithString:@"https://github.com/KennyHito"]] applicationActivities:nil];
+        [self presentViewController:avc animated:YES completion:nil];
+    }];
 }
 
 @end

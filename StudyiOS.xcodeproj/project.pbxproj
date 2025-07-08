@@ -65,7 +65,6 @@
 		1868F3552AFB18AC0020FF1A /* 你还要我怎样.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1868F3542AFB18AC0020FF1A /* 你还要我怎样.mp3 */; };
 		1868F35B2AFB19160020FF1A /* MusicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F3592AFB19160020FF1A /* MusicViewController.m */; };
 		1868F35C2AFB19160020FF1A /* MusicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1868F35A2AFB19160020FF1A /* MusicViewController.xib */; };
-		1868F3602AFB274D0020FF1A /* AppleShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F35F2AFB274D0020FF1A /* AppleShareViewController.m */; };
 		1868F3642AFB2EBD0020FF1A /* AlertControTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F3632AFB2EBD0020FF1A /* AlertControTool.m */; };
 		1868F3682AFB30350020FF1A /* CacheTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F3672AFB30350020FF1A /* CacheTool.m */; };
 		1868F3702AFB604B0020FF1A /* ChangeLogoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1868F36F2AFB604B0020FF1A /* ChangeLogoViewController.m */; };
@@ -395,8 +394,6 @@
 		1868F3582AFB19160020FF1A /* MusicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicViewController.h; sourceTree = "<group>"; };
 		1868F3592AFB19160020FF1A /* MusicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicViewController.m; sourceTree = "<group>"; };
 		1868F35A2AFB19160020FF1A /* MusicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MusicViewController.xib; sourceTree = "<group>"; };
-		1868F35E2AFB274D0020FF1A /* AppleShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleShareViewController.h; sourceTree = "<group>"; };
-		1868F35F2AFB274D0020FF1A /* AppleShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppleShareViewController.m; sourceTree = "<group>"; };
 		1868F3622AFB2EBD0020FF1A /* AlertControTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertControTool.h; sourceTree = "<group>"; };
 		1868F3632AFB2EBD0020FF1A /* AlertControTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertControTool.m; sourceTree = "<group>"; };
 		1868F3662AFB30350020FF1A /* CacheTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheTool.h; sourceTree = "<group>"; };
@@ -977,7 +974,6 @@
 				18CD0D582C757A54006DEAFE /* SavePicViewController */,
 				189C998B2C6C41BB008DFEE7 /* CountDownViewcontroller */,
 				18CCDCF62C5379D100968855 /* PrisonBreakViewController */,
-				1868F35D2AFB272C0020FF1A /* AppleShareViewController */,
 				1868F3562AFB19040020FF1A /* MusicViewController */,
 				1868F3472AFA27370020FF1A /* GuoWuCheViewController */,
 				1868F3332AFA16760020FF1A /* AddressViewController */,
@@ -1131,15 +1127,6 @@
 				1868F35A2AFB19160020FF1A /* MusicViewController.xib */,
 			);
 			path = MusicViewController;
-			sourceTree = "<group>";
-		};
-		1868F35D2AFB272C0020FF1A /* AppleShareViewController */ = {
-			isa = PBXGroup;
-			children = (
-				1868F35E2AFB274D0020FF1A /* AppleShareViewController.h */,
-				1868F35F2AFB274D0020FF1A /* AppleShareViewController.m */,
-			);
-			path = AppleShareViewController;
 			sourceTree = "<group>";
 		};
 		1868F3612AFB2E840020FF1A /* UIAlertController */ = {
@@ -2384,7 +2371,6 @@
 				18B842882C7334B300886209 /* UIView+Frame.m in Sources */,
 				1868B5482AEA614D000E8C04 /* NSDictionary+JSON.m in Sources */,
 				1868F3162AF8C4420020FF1A /* UIView+Extension.m in Sources */,
-				1868F3602AFB274D0020FF1A /* AppleShareViewController.m in Sources */,
 				1868F34A2AFA27410020FF1A /* GuoWuCheViewController.m in Sources */,
 				18B842792C73210700886209 /* MainTabBar.m in Sources */,
 				1868F31F2AF9E7050020FF1A /* HsWeakScriptMessageDelegate.m in Sources */,
