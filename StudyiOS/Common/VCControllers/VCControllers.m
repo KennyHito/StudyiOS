@@ -11,7 +11,7 @@
 
 + (NSArray *)getVCController{
     return @[
-        @{Tab_Title:@"实时学习",Tab_Url:@"ExerciseViewController"},
+        @{Tab_Title:@"各种学习/小功能集合",Tab_Url:@"ExerciseViewController"},
         @{Tab_Title:@"使用定时器注意事项",Tab_Url:@"TimerViewController"},
         @{Tab_Title:@"ReactiveObjC",Tab_Url:@"ReactiveObjCViewController"},
         @{Tab_Title:@"切换App Logo",Tab_Url:@"ChangeLogoViewController"},
