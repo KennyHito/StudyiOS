@@ -12,15 +12,13 @@
 #import <WebKit/WebKit.h>
 #import <HaHaHa/HaInject.h>
 
-#define Start_X     10.0f// 第一个按钮的X坐标
-#define Start_Y     50.0f// 第一个按钮的Y坐标
-#define Width_Space     5.0f// 2个按钮之间的横间距
-#define Height_Space    20.0f// 竖间距
-#define Button_Height   122.0f// 高
-#define Button_Width    75.0f// 宽
-#define btnHeight  50
+#define View_Width    120.0f// 宽
+#define View_Height   50.0f// 高
+#define View_Space    10.0f//间隙
 
-@interface ExerciseViewController (){
+@interface ExerciseViewController ()
+<starStarDelegate>
+{
     NSArray*arr;
     BOOL isOk;
     NSInteger index;
@@ -36,7 +34,6 @@
 @property (nonatomic, strong)WKWebView *webView;
 @property (nonatomic, strong)NSArray *dataArr1;
 @property (nonatomic, strong)NSMutableArray *dataArr2;
-@property (nonatomic, strong)UIButton *lastBtn;
 @end
 
 @implementation ExerciseViewController
@@ -83,6 +80,8 @@
     [self demo21];
     [self demo22];
     [self demo23];
+    [self demo24];
+    [self demo25];
 }
 
 - (void)initData{
@@ -324,71 +323,21 @@
 
 #pragma mark -- demo8
 - (void)demo8{
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.backgroundColor = [UIColor redColor];
-    [btn setTitle:@"跳转page" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    btn.titleLabel.font = DDFont_PF_M(22);
-    btn.layer.cornerRadius = btnHeight/2.0;
-    btn.layer.masksToBounds = YES;
-    btn.tag = 1000;
-    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.contentView addSubview:btn];
-    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.scrollView.mas_bottom).offset(5);
-        make.centerX.mas_equalTo(self.scrollView.mas_centerX);
-        make.width.mas_equalTo(200);
-        make.height.mas_equalTo(btnHeight);
-    }];
-    
-    UIButton *changeLogoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    changeLogoBtn.backgroundColor = [UIColor redColor];
-    changeLogoBtn.tag = 1001;
-    [changeLogoBtn setTitle:@"Toast＋延迟5s" forState:UIControlStateNormal];
-    [changeLogoBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    changeLogoBtn.titleLabel.font = DDFont_PF_M(22);
-    changeLogoBtn.layer.cornerRadius = btnHeight/2.0;
-    changeLogoBtn.layer.masksToBounds = YES;
-    [changeLogoBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.contentView addSubview:changeLogoBtn];
-    [changeLogoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(btn.mas_bottom).offset(5);
-        make.centerX.mas_equalTo(self.scrollView.mas_centerX);
-        make.width.mas_equalTo(200);
-        make.height.mas_equalTo(btnHeight);
-    }];
-    
-    UIButton *autoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    autoBtn.backgroundColor = [UIColor redColor];
-    autoBtn.tag = 1002;
-    [autoBtn setTitle:@"Toast" forState:UIControlStateNormal];
-    [autoBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    autoBtn.titleLabel.font = DDFont_PF_M(22);
-    autoBtn.layer.cornerRadius = btnHeight/2.0;
-    autoBtn.layer.masksToBounds = YES;
-    [autoBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
-    //⚠️sendActionsForControlEvents实现代码自动触发UIControlEventTouchUpInside事件。
-    //[autoBtn sendActionsForControlEvents:UIControlEventTouchUpInside];
-    [self.contentView addSubview:autoBtn];
-    [autoBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(changeLogoBtn.mas_bottom).offset(5);
-        make.centerX.mas_equalTo(self.scrollView.mas_centerX);
-        make.width.mas_equalTo(200);
-        make.height.mas_equalTo(btnHeight);
-    }];
-    self.lastBtn = autoBtn;
-}
-
-- (void)btnClick:(UIButton *)btn{
-    if(btn.tag == 1000){
+    kWeakify(self);
+    [self.contentView createButtonTitle:@"跳转page123" andFont:22 andTitleColor:[UIColor whiteColor] andBackgroundColor:[UIColor redColor] andFrame:CGRectMake((KScreenW-200)/2, 70, 200, View_Height) actionBlock:^(UIButton * _Nonnull button) {
+        KStrongify(self);
         TimerViewController *vc = [[TimerViewController alloc]init];
         vc.name = @"王五";
         [self.navigationController pushViewController:vc animated:YES];
-    }else if(btn.tag == 1001){
+    }];
+    
+    [self.contentView createButtonTitle:@"Toast＋延迟5s" andFont:22 andTitleColor:[UIColor whiteColor] andBackgroundColor:[UIColor redColor] andFrame:CGRectMake((KScreenW-200)/2, 70+View_Height+View_Space, 200, View_Height) actionBlock:^(UIButton * _Nonnull button) {
         [DDToast showToast:ToastTypeSuccess text:@"成功" closeAfterDelay:5];
-    }else if(btn.tag == 1002){
+    }];
+    
+    [self.contentView createButtonTitle:@"Toast" andFont:22 andTitleColor:[UIColor whiteColor] andBackgroundColor:[UIColor redColor] andFrame:CGRectMake((KScreenW-200)/2,70+(View_Height+View_Space)*2, 200, View_Height) actionBlock:^(UIButton * _Nonnull button) {
         [DDToast showToast:@"我是Toast"];
-    }
+    }];
 }
 
 #pragma mark -- demo9
@@ -689,40 +638,59 @@
 
 #pragma mark -- demo23
 - (void)demo23{
-    UIButton *testBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    testBtn.backgroundColor = [UIColor redColor];
-    [testBtn setTitle:@"测试深拷贝&浅拷贝" forState:UIControlStateNormal];
-    [testBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    testBtn.titleLabel.font = DDFont_PF_M(22);
-    testBtn.layer.cornerRadius = btnHeight/2.0;
-    testBtn.layer.masksToBounds = YES;
-    [testBtn addTarget:self action:@selector(testBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.contentView addSubview:testBtn];
-    [testBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.lastBtn.mas_bottom).offset(5);
-        make.centerX.mas_equalTo(self.scrollView.mas_centerX);
-        make.width.mas_equalTo(300);
-        make.height.mas_equalTo(btnHeight);
+    kWeakify(self);
+    [self.contentView createButtonTitle:@"测试深拷贝&浅拷贝" andFont:22 andTitleColor:[UIColor whiteColor] andBackgroundColor:[UIColor redColor] andFrame:CGRectMake((KScreenW-300)/2,70+(View_Height+View_Space)*3, 300, View_Height) actionBlock:^(UIButton * _Nonnull button) {
+        
+        KStrongify(self);
+        /********************************浅拷贝(copy&mutableCopy)*****************************/
+        NSArray *a1 = self.dataArr1;
+        NSArray *a2 = [self.dataArr1 copy];
+        NSArray *a3 = [self.dataArr1 mutableCopy];
+        KLog(@"操作前----> %@,%@,%@,%@",self.dataArr1,a1,a2,a3);
+
+        self.dataArr1 = @[@999];
+        KLog(@"操作后----> %@,%@,%@,%@",self.dataArr1,a1,a2,a3);
+        
+        /********************************深拷贝(copy&mutableCopy)*****************************/
+        NSMutableArray *b1 = self.dataArr2;
+        NSMutableArray *b2 = [self.dataArr2 copy];
+        NSMutableArray *b3 = [self.dataArr2 mutableCopy];
+        KLog(@"操作前====> %@\n%@\n%@",b1,b2,b3);
+
+        [self.dataArr2 addObject:@"maliu"];
+        KLog(@"操作后====> %@\n%@\n%@",b1,b2,b3);
+        
     }];
 }
 
-- (void)testBtnClick:(UIButton *)btn{
-    /********************************浅拷贝(copy&mutableCopy)*****************************/
-    NSArray *a1 = self.dataArr1;
-    NSArray *a2 = [self.dataArr1 copy];
-    NSArray *a3 = [self.dataArr1 mutableCopy];
-    KLog(@"操作前----> %@,%@,%@,%@",self.dataArr1,a1,a2,a3);
-
-    self.dataArr1 = @[@999];
-    KLog(@"操作后----> %@,%@,%@,%@",self.dataArr1,a1,a2,a3);
+#pragma mark -- demo24
+- (void)demo24{
+    [self.contentView createLabelTitle:@"你没有评论呢?" andFont:15 andTitleColor:[UIColor blackColor] andBackColor:[UIColor whiteColor] andTag:10000 andFrame:CGRectMake((KScreenW-220)/2,70+(View_Height+View_Space)*4, 220, View_Height) andTextAlignment:NSTextAlignmentCenter];
     
-    /********************************深拷贝(copy&mutableCopy)*****************************/
-    NSMutableArray *b1 = self.dataArr2;
-    NSMutableArray *b2 = [self.dataArr2 copy];
-    NSMutableArray *b3 = [self.dataArr2 mutableCopy];
-    KLog(@"操作前====> %@\n%@\n%@",b1,b2,b3);
-
-    [self.dataArr2 addObject:@"maliu"];
-    KLog(@"操作后====> %@\n%@\n%@",b1,b2,b3);
+    starView * star = [[starView alloc]initWithFrame:CGRectMake((KScreenW-200)/2,70+(View_Height+View_Space)*5, 200, View_Height)];
+    star.delegate = self;
+    [self.contentView addSubview:star];
+    
+    [star setScore:0 withAnimation:YES completion:^(BOOL finished) {
+        KLog(@"这里可以设置相关的内容");
+    }];
 }
+
+//代理方法
+- (void)starRatingViewScore:(float)score{
+    UILabel *lab = [self.contentView viewWithTag:10000];
+    lab.text = [NSString stringWithFormat:@"%0.1f分", score * 5];
+}
+
+#pragma mark -- demo25
+- (void)demo25{
+    CBAutoScrollLabel *autoScrollLabel = [[CBAutoScrollLabel alloc]init];
+    autoScrollLabel.textColor = UIColorFromRGB(0x8B008B);
+    autoScrollLabel.font = [UIFont systemFontOfSize:20];
+    autoScrollLabel.text = @"习近平指出，你这次来华首站到访广东，很有意义。100年前，胡志明主席赴广州开展革命活动，他的革命足迹遍布中国多地，最终领导越南取得八月革命胜利，实现国家独立。那段峥嵘岁月成为中越两党交往史中不可磨灭的红色记忆，共同的理想信念成为中越两党血脉中代代传承的红色基因，凝结成“越中情谊深，同志加兄弟”的传统友谊。苏林说：“这是我当选越共中央总书记后的第一次出访，也是我当选后首次访问中国，充分体现出越南党和国家一贯重视对华关系，视之为越南对外政策的战略选择和头等优先。我与越南党政高层领导集体，非常愿意同习近平总书记、国家主席同志及中国党政高层领导不断培育友好传统，进一步深化和提升全面战略合作伙伴关系。作为同志加兄弟，我们始终关心并关注中国的每一步发展。我们再次强调，越南坚定奉行一个中国政策，台湾是中国领土不可分割的一部分。”";
+    [autoScrollLabel observeApplicationNotifications];
+    autoScrollLabel.frame = CGRectMake(10,70+(View_Height+View_Space)*6, KScreenW-20, View_Height);
+    [self.contentView addSubview:autoScrollLabel];
+}
+
 @end

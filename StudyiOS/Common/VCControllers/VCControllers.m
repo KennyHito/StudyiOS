@@ -29,8 +29,6 @@
         @{Tab_Title:@"苹果系统自带分享功能",Tab_Url:@"AppleShareViewController"},
         @{Tab_Title:@"判断手机是否越狱",Tab_Url:@"PrisonBreakViewController"},
         @{Tab_Title:@"倒计时功能",Tab_Url:@"CountDownViewcontroller"},
-        @{Tab_Title:@"星级评分功能",Tab_Url:@"StarStarViewController"},
-        @{Tab_Title:@"UILabel滚动,类似于跑马灯效果",Tab_Url:@"RollingLightViewController"},
         @{Tab_Title:@"图片保存功能",Tab_Url:@"SavePicViewController"},
         @{Tab_Title:@"网络请求功能",Tab_Url:@"RequestAPIViewController"},
         @{Tab_Title:@"实现本地通知功能",Tab_Url:@"LocalpushViewController"},

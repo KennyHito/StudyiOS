@@ -143,6 +143,7 @@
 		18B1ED46290F9CDB00647F15 /* StudyiOSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B1ED45290F9CDB00647F15 /* StudyiOSUITests.m */; };
 		18B1ED48290F9CDB00647F15 /* StudyiOSUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B1ED47290F9CDB00647F15 /* StudyiOSUITestsLaunchTests.m */; };
 		18B1ED59290F9D7D00647F15 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B1ED55290F9D7D00647F15 /* HomeViewController.m */; };
+		18B53F4D2E1CBAAD004E835A /* UIView+CommonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B53F4C2E1CBAAD004E835A /* UIView+CommonView.m */; };
 		18B842762C73205D00886209 /* MainNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842752C73205D00886209 /* MainNavViewController.m */; };
 		18B842792C73210700886209 /* MainTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842782C73210700886209 /* MainTabBar.m */; };
 		18B842882C7334B300886209 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842872C7334B300886209 /* UIView+Frame.m */; };
@@ -151,8 +152,6 @@
 		18B8429F2C73361400886209 /* star_yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B8428B2C73361400886209 /* star_yellow.png */; };
 		18B842A02C73361400886209 /* star_yellow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B8428C2C73361400886209 /* star_yellow@2x.png */; };
 		18B842A12C73361400886209 /* starView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B8428F2C73361400886209 /* starView.m */; };
-		18B842AC2C73363500886209 /* StarStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842AB2C73363500886209 /* StarStarViewController.m */; };
-		18B842B02C73388C00886209 /* RollingLightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842AF2C73388C00886209 /* RollingLightViewController.m */; };
 		18B842B42C7338B600886209 /* CBAutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B842B32C7338B600886209 /* CBAutoScrollLabel.m */; };
 		18C0318429AC78DB0098BE0D /* TryCatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C0318229AC78DB0098BE0D /* TryCatchViewController.m */; };
 		18C0318529AC78DB0098BE0D /* TryCatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C0318329AC78DB0098BE0D /* TryCatchViewController.xib */; };
@@ -518,6 +517,8 @@
 		18B1ED57290F9D7D00647F15 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		18B1ED60290F9D9E00647F15 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		18B1ED61290F9DAA00647F15 /* Contast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contast.h; sourceTree = "<group>"; };
+		18B53F4B2E1CBAAD004E835A /* UIView+CommonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CommonView.h"; sourceTree = "<group>"; };
+		18B53F4C2E1CBAAD004E835A /* UIView+CommonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CommonView.m"; sourceTree = "<group>"; };
 		18B842742C73205D00886209 /* MainNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNavViewController.h; sourceTree = "<group>"; };
 		18B842752C73205D00886209 /* MainNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNavViewController.m; sourceTree = "<group>"; };
 		18B842772C73210700886209 /* MainTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBar.h; sourceTree = "<group>"; };
@@ -530,10 +531,6 @@
 		18B8428C2C73361400886209 /* star_yellow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_yellow@2x.png"; sourceTree = "<group>"; };
 		18B8428E2C73361400886209 /* starView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = starView.h; sourceTree = "<group>"; };
 		18B8428F2C73361400886209 /* starView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = starView.m; sourceTree = "<group>"; };
-		18B842AA2C73363500886209 /* StarStarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarStarViewController.h; sourceTree = "<group>"; };
-		18B842AB2C73363500886209 /* StarStarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarStarViewController.m; sourceTree = "<group>"; };
-		18B842AE2C73388C00886209 /* RollingLightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RollingLightViewController.h; sourceTree = "<group>"; };
-		18B842AF2C73388C00886209 /* RollingLightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RollingLightViewController.m; sourceTree = "<group>"; };
 		18B842B22C7338B600886209 /* CBAutoScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAutoScrollLabel.h; sourceTree = "<group>"; };
 		18B842B32C7338B600886209 /* CBAutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAutoScrollLabel.m; sourceTree = "<group>"; };
 		18C0318129AC78DB0098BE0D /* TryCatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TryCatchViewController.h; sourceTree = "<group>"; };
@@ -978,8 +975,6 @@
 				18CD0D642C758A82006DEAFE /* LocalpushViewController */,
 				18CD0D5C2C757F0B006DEAFE /* RequestAPIViewController */,
 				18CD0D582C757A54006DEAFE /* SavePicViewController */,
-				18B842AD2C73388200886209 /* RollingLightViewController */,
-				18B842A92C73361F00886209 /* StarStarViewController */,
 				189C998B2C6C41BB008DFEE7 /* CountDownViewcontroller */,
 				18CCDCF62C5379D100968855 /* PrisonBreakViewController */,
 				1868F35D2AFB272C0020FF1A /* AppleShareViewController */,
@@ -1650,6 +1645,8 @@
 			children = (
 				18B842862C7334B300886209 /* UIView+Frame.h */,
 				18B842872C7334B300886209 /* UIView+Frame.m */,
+				18B53F4B2E1CBAAD004E835A /* UIView+CommonView.h */,
+				18B53F4C2E1CBAAD004E835A /* UIView+CommonView.m */,
 			);
 			path = "UIView+Category";
 			sourceTree = "<group>";
@@ -1673,24 +1670,6 @@
 				18B8428F2C73361400886209 /* starView.m */,
 			);
 			path = Star;
-			sourceTree = "<group>";
-		};
-		18B842A92C73361F00886209 /* StarStarViewController */ = {
-			isa = PBXGroup;
-			children = (
-				18B842AA2C73363500886209 /* StarStarViewController.h */,
-				18B842AB2C73363500886209 /* StarStarViewController.m */,
-			);
-			path = StarStarViewController;
-			sourceTree = "<group>";
-		};
-		18B842AD2C73388200886209 /* RollingLightViewController */ = {
-			isa = PBXGroup;
-			children = (
-				18B842AE2C73388C00886209 /* RollingLightViewController.h */,
-				18B842AF2C73388C00886209 /* RollingLightViewController.m */,
-			);
-			path = RollingLightViewController;
 			sourceTree = "<group>";
 		};
 		18B842B12C7338AF00886209 /* CBAutoScrollLabel */ = {
@@ -2330,7 +2309,6 @@
 				187A93F62AF0DFAD000EAB05 /* MainTabBarViewController.m in Sources */,
 				18C832212C75F9C9002AA9DD /* LocationModel.m in Sources */,
 				18C2D57D2C69E153003011DD /* YYKeyChainData.m in Sources */,
-				18B842AC2C73363500886209 /* StarStarViewController.m in Sources */,
 				1822760F2924908F00242C9A /* NSArray+ObjectAtIndex.m in Sources */,
 				1822760E2924908F00242C9A /* NSMutableArray+ObjectAtIndex.m in Sources */,
 				1868F3642AFB2EBD0020FF1A /* AlertControTool.m in Sources */,
@@ -2376,6 +2354,7 @@
 				18CD0D7B2C75E4D1006DEAFE /* UIImage+GIF_ONE.m in Sources */,
 				18C832612C76CC82002AA9DD /* MasonryViewController.m in Sources */,
 				1868F32D2AFA16160020FF1A /* RXHexColor.m in Sources */,
+				18B53F4D2E1CBAAD004E835A /* UIView+CommonView.m in Sources */,
 				188D09E92AD7BEB600FCAD36 /* CrashHandler.m in Sources */,
 				1887B5102AF4C4C800EEECAE /* ScreenShotViewController.m in Sources */,
 				182C4B6E2E000DF40006521F /* LockViewController.m in Sources */,
@@ -2432,7 +2411,6 @@
 				18C832442C75FC54002AA9DD /* YHTScrollViewController.m in Sources */,
 				186FD3F52924AB38003A31C0 /* BaseViewController.m in Sources */,
 				18CD0D762C75AD27006DEAFE /* TagModel.m in Sources */,
-				18B842B02C73388C00886209 /* RollingLightViewController.m in Sources */,
 				18CD0D7F2C75E5B1006DEAFE /* GuidanceController.m in Sources */,
 				1868F3312AFA16160020FF1A /* RXJDButton.m in Sources */,
 				1887B5622AF4C97D00EEECAE /* CLLockMainView.m in Sources */,

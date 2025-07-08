@@ -33,6 +33,7 @@
 #import "UIImage+Category.h"
 #import "UIView+Frame.h"
 #import "UIImage+GIF.h"
+#import "UIView+CommonView.h"
 
 /* 自定义功能 */
 #import "GetTopVCTool.h"
