@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1500"
+   LastUpgradeVersion = "1600"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "94CFBA7D633ECA58DF85C327B035E6A3"
-               BuildableName = "SDWebImage.bundle"
-               BlueprintName = "SDWebImage-SDWebImage"
+               BlueprintIdentifier = "0E647912D2B71D47B98C02E8E0ECA41A"
+               BuildableName = "FBRetainCycleDetector.framework"
+               BlueprintName = "FBRetainCycleDetector"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

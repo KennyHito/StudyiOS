@@ -15,9 +15,9 @@ PODS:
   - MLeaksFinder (1.0.0):
     - FBRetainCycleDetector
   - ReactiveObjC (3.1.1)
-  - SDWebImage (5.19.6):
-    - SDWebImage/Core (= 5.19.6)
-  - SDWebImage/Core (5.19.6)
+  - SDWebImage (5.19.7):
+    - SDWebImage/Core (= 5.19.7)
+  - SDWebImage/Core (5.19.7)
   - Test01 (1.0.0):
     - AFNetworking
   - YYText (1.0.7)
@@ -66,7 +66,7 @@ SPEC CHECKSUMS:
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   FMDB: 57486c1117fd8e0e6b947b2f54c3f42bf8e57a4e
   FTPopOverMenu: da960f2a4ada015d6bec585cad7a7d33f5d1b643
-  HaHaHa: f72c252d7ca0940c4502eae136391492fa66620e
+  HaHaHa: cd4d80c5219923a388e1f171fdce52519cad043a
   IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
@@ -74,10 +74,10 @@ SPEC CHECKSUMS:
   MJRefresh: 2fe7fb43a5167ceda20bb7e63f130c04fd1814a5
   MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  SDWebImage: a79252b60f4678812d94316c91da69ec83089c9f
-  Test01: 119ccf64feea50a1e1562a552eb702c6951a0a04
+  SDWebImage: 8a6b7b160b4d710e2a22b6900e25301075c34cb3
+  Test01: 3b4aadfa7d8e617e6cfb27c416792790411869c3
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: b7fbc1d35b542ca75cd9e6151c847e49c8fe1798
+PODFILE CHECKSUM: bcf5c4ab133ecc22db647b5117fe4606658bc046
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2
