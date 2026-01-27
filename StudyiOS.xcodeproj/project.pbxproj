@@ -2711,7 +2711,7 @@
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "需要您的同意，才能访问日历，用于设置日历提醒等";
 				INFOPLIST_KEY_NSCameraUsageDescription = "需要您的同意，才能访问相机，用于拍照、扫描、录制视频等";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "需要您的同意，才能访问面部识别，以便您正常使用面部识别登录功能";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "需要您的同意，才能访问定位，用于需要获取位置信息的服务如查找营业部等";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "需要您的同意，才能访问定位，用于需要获取位置信息的服务如查找营业部等";
 				INFOPLIST_KEY_NSLocationUsageDescription = "需要您的同意，才能访问定位，用于需要获取位置信息的服务如查找营业部等";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "需要您的同意，才能访问定位，用于需要获取位置信息的服务如查找营业部等";
@@ -2775,7 +2775,7 @@
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "需要您的同意，才能访问日历，用于设置日历提醒等";
 				INFOPLIST_KEY_NSCameraUsageDescription = "需要您的同意，才能访问相机，用于拍照、扫描、录制视频等";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "需要您的同意，才能访问面部识别，以便您正常使用面部识别登录功能";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "需要您的同意，才能访问定位，用于需要获取位置信息的服务如查找营业部等";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "需要您的同意，才能访问定位，用于需要获取位置信息的服务如查找营业部等";
 				INFOPLIST_KEY_NSLocationUsageDescription = "需要您的同意，才能访问定位，用于需要获取位置信息的服务如查找营业部等";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "需要您的同意，才能访问定位，用于需要获取位置信息的服务如查找营业部等";

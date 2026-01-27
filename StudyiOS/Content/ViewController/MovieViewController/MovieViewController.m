@@ -185,31 +185,28 @@
 }
 
 - (AVPlayer *)player{
-    if (!_player) {
-        _player = [[AVPlayer alloc]initWithPlayerItem:self.playerItem];
-        _layer = [AVPlayerLayer playerLayerWithPlayer:_player];
-        _layer.frame = CGRectMake(0, 0, KScreenW, KScreenH);
-        _layer.videoGravity = AVLayerVideoGravityResizeAspectFill;//视频拉伸显示
-        //_layer.backgroundColor = [UIColor blackColor].CGColor;
-        [self.view.layer addSublayer:_layer];
+    if (_player) {
+        _player = nil;
     }
+    //通过随机来播放本地视频还是网络视频
+    int x = arc4random()%2;
+    self.isLocalVideo = x;
+    //选择本地的视频
+    NSURL *movieURL = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"qidong" ofType:@"mp4"]];
+    if (x == 1) {
+        //网络视频url
+        movieURL = [NSURL URLWithString:MP4_URL];
+    }
+    _playerItem = [AVPlayerItem playerItemWithURL:movieURL];
+    self.playerItem = _playerItem;
+    
+    _player = [[AVPlayer alloc]initWithPlayerItem:_playerItem];
+    _layer = [AVPlayerLayer playerLayerWithPlayer:_player];
+    _layer.frame = CGRectMake(0, 0, KScreenW, KScreenH);
+    _layer.videoGravity = AVLayerVideoGravityResizeAspectFill;//视频拉伸显示
+    //_layer.backgroundColor = [UIColor blackColor].CGColor;
+    [self.view.layer addSublayer:_layer];
     return _player;
-}
-
-- (AVPlayerItem *)playerItem{
-    if(!_playerItem){
-        //通过随机来播放本地视频还是网络视频
-        int x = arc4random()%2;
-        self.isLocalVideo = x;
-        //选择本地的视频
-        NSURL *movieURL = [NSURL fileURLWithPath:[[NSBundle mainBundle]pathForResource:@"qidong" ofType:@"mp4"]];
-        if (x == 1) {
-            //网络视频url
-            movieURL = [NSURL URLWithString:MP4_URL];
-        }
-        _playerItem = [AVPlayerItem playerItemWithURL:movieURL];
-    }
-    return _playerItem;
 }
 
 @end
