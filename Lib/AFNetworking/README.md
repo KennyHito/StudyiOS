@@ -24,7 +24,7 @@ pod 'AFNetworking'
 
 ## Author
 
-李东博, lidongbo@lczq.com
+哈哈哈, xxx@haha.com
 
 ## License
 
